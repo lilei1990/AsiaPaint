@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Android="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.asia.paint">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".biz.AsiaPaintApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_app_icon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup">
+        <!--      <activity
+                  android:name=".biz.mine.SELLER.train.TrainActivity">
+                  <intent-filter>
+                      <action android:name="android.intent.action.MAIN" />
+                      <category android:name="android.intent.category.LAUNCHER" />
+                  </intent-filter>
+              </activity>-->
+        <activity
+            android:name=".biz.splash.SplashActivity"
+            Android:theme="@android:style/Theme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".biz.login.LoginActivity" />
+        <activity android:name=".biz.login.forget.ForgetPasswordActivity" />
+        <activity android:name=".biz.login.reset.ResetPasswordActivity" />
+        <activity android:name=".biz.shop.detail.GoodsDetailActivity" />
+        <activity android:name=".biz.mine.settings.SettingsActivity" />
+        <activity android:name=".biz.mine.coupon.CouponActivity" />
+        <activity android:name=".biz.order.checkout.OrderCheckoutActivity" />
+        <activity android:name=".biz.mine.money.MoneyActivity" />
+        <activity android:name=".biz.mine.money.detail.MoneyDetailActivity" />
+        <activity android:name=".biz.mine.favorites.FavoritesActivity" />
+        <activity android:name=".biz.mine.money.recharge.RechargeActivity" />
+        <activity android:name=".biz.mine.seller.auth.ApplyResellActivity" />
+        <activity android:name=".biz.mine.seller.auth.AuthRealNameActivity" />
+        <activity android:name=".biz.shop.TestActivity" />
+        <activity android:name=".biz.other.PhotoActivity" />
+        <activity android:name=".biz.comment.CommentActivity" />
+        <activity android:name=".biz.mine.settings.about.AboutUsActivity" />
+        <activity android:name=".biz.mine.settings.address.AddressActivity" />
+        <activity android:name=".biz.mine.settings.address.EditAddressActivity" />
+        <activity android:name=".biz.mine.settings.feedback.FeedbackActivity" />
+        <activity android:name=".biz.order.mine.OrderMineActivity" />
+        <activity android:name=".biz.comment.add.AddCommentActivity" />
+        <activity
+            android:name=".base.widgets.selectimage.MatisseActivity"
+            Android:theme="@android:style/Theme.Translucent"
+
+            />
+        <activity android:name=".biz.mine.user.EditUserActivity" />
+        <activity android:name=".biz.mine.message.MessageActivity" />
+        <activity android:name=".biz.pay.password.SetPayPwdActivity" />
+        <activity
+            android:name=".biz.main.MainActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".biz.mine.receipt.ReceiptActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".biz.mine.settings.password.NewPwdActivity" />
+        <activity android:name=".biz.order.mine.aftersale.order.OrderAfterSaleActivity" />
+        <activity android:name=".biz.order.mine.detail.OrderDetailActivity" />
+        <activity android:name=".biz.find.post.detail.PostDetailActivity" />
+        <activity android:name=".biz.find.post.publish.PublishPostActivity" />
+        <activity android:name=".biz.mine.seller.task.TaskCenterActivity" />
+        <activity android:name=".biz.mine.seller.recommend.RecommendCodeActivity" />
+        <activity android:name=".biz.mine.seller.train.detail.TrainDetailActivity" />
+        <activity
+            android:name=".biz.mine.seller.monthly.MonthlyActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".biz.mine.seller.meeting.MeetingActivity" />
+        <activity
+            android:name=".biz.mine.seller.staff.StaffActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".biz.mine.seller.train.TrainActivity" />
+        <activity android:name=".biz.order.mine.aftersale.apply.SelectAfterSaleTypeActivity" />
+        <activity
+            android:name=".biz.order.mine.aftersale.apply.ApplyAfterSaleActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".biz.order.mine.aftersale.detail.AfterSaleDetailActivity" />
+        <activity android:name=".biz.mine.seller.staff.detail.StaffDetailActivity" />
+        <activity
+            android:name=".biz.mine.seller.meeting.hold.HoldMeetingActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".biz.mine.seller.meeting.member.MeetingMemberActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".android.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity android:name=".biz.mine.seller.meeting.detail.MeetingDetailActivity" />
+        <activity android:name=".biz.mine.seller.goals.SellerGoalsActivity" />
+        <activity android:name=".biz.mine.seller.goals.WebViewActivity" />
+        <activity android:name=".biz.mine.seller.monthly.detail.MonthlyDetailActivity" />
+        <activity
+            android:name=".android.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity android:name=".biz.login.bind.BindPhoneActivity" />
+        <activity android:name=".biz.mine.coupon.CouponCenterActivity" />
+        <activity android:name=".biz.mine.seller.score.ScoreActivity" />
+        <activity android:name=".biz.mine.seller.score.detail.ScoreDetailActivity" />
+        <activity android:name=".biz.mine.seller.score.record.ScoreRecordActivity" />
+        <activity
+            android:name=".biz.mine.service.CustomerServiceActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".biz.mine.settings.bind.BindNewPhoneActivity" />
+        <activity android:name=".biz.mine.service.history.CustomerServiceHistoryActivity" />
+        <activity
+            android:name=".biz.mine.seller.score.cash.CashActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".biz.mine.settings.account.BindCashAccountActivity" />
+        <activity android:name=".biz.mine.settings.account.index.AccountIndexActivity" />
+        <activity android:name=".biz.mine.seller.score.record.detail.CashRecordDetailActivity" />
+        <activity android:name=".biz.mine.settings.unsubscribe.UnsubscribeAccountActivity" />
+        <activity android:name=".biz.mine.money.DistributionTasksActivity" />
+        <activity android:name=".biz.order.group.GroupDetailActivity" />
+        <activity android:name=".biz.order.mine.MyPinTuanActivity" />
+        <activity android:name=".biz.shop.index.GroupAndFlashActivity" />
+        <activity android:name=".biz.decoration.DecorationDetailActivity" />
+        <activity android:name=".biz.mine.seller.train.detail.PlayVideoActivity" />
+        <activity android:name=".biz.pay.password.GetPayPwdCodeActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="PhotoPicker"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/photo_path" />
+        </provider>
+    </application>
+
+</manifest>

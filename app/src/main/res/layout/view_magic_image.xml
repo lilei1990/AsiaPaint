@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <com.asia.paint.base.widgets.SquareLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:visibility="invisible" />
+            </com.asia.paint.base.widgets.SquareLayout>
+
+            <Space
+                android:layout_width="6dp"
+                android:layout_height="1px" />
+
+            <com.asia.paint.base.widgets.SquareLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:visibility="invisible" />
+            </com.asia.paint.base.widgets.SquareLayout>
+
+            <Space
+                android:layout_width="6dp"
+                android:layout_height="1px" />
+
+            <com.asia.paint.base.widgets.SquareLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:visibility="invisible" />
+            </com.asia.paint.base.widgets.SquareLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <com.asia.paint.base.widgets.SquareLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:visibility="invisible" />
+            </com.asia.paint.base.widgets.SquareLayout>
+
+            <Space
+                android:layout_width="6dp"
+                android:layout_height="1px" />
+
+            <com.asia.paint.base.widgets.SquareLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:visibility="invisible" />
+            </com.asia.paint.base.widgets.SquareLayout>
+
+            <Space
+                android:layout_width="6dp"
+                android:layout_height="1px" />
+
+            <com.asia.paint.base.widgets.SquareLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:visibility="invisible" />
+            </com.asia.paint.base.widgets.SquareLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

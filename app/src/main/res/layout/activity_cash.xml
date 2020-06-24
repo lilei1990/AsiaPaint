@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_F8F8F8"
+                android:orientation="vertical"
+                android:paddingBottom="100dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/color_FFFFFF"
+                    android:gravity="center_vertical"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp">
+
+                    <TextView
+                        android:id="@+id/tv_account_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="提现到支付宝："
+                        android:textColor="@color/color_333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_cash_account"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:hint="尚未绑定收款账户"
+                        android:textColor="@color/color_333333"
+                        android:textColorHint="@color/color_DBDBDB"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_bind_account"
+                        android:layout_width="63dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bg_common_border_4"
+                        android:gravity="center"
+                        android:text="绑定"
+                        android:textColor="@color/color_1054CB"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/color_FFFFFF"
+                    android:orientation="vertical"
+                    android:paddingStart="14dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="提现积分"
+                        android:textColor="@color/color_333333"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="63dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_score_to_cash" />
+
+                        <EditText
+                            android:id="@+id/et_cash_score"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="本次最多可提现0积分"
+                            android:textColor="@color/color_333333"
+                            android:textColorHint="@color/color_DBDBDB"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_all_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="2dp"
+                            android:text="全部"
+                            android:textColor="@color/color_1054CB"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/color_DBDBDB" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_can_cash_tips"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="可提现250积分=￥25"
+                            android:textColor="@color/color_333333"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_cash_max"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="每日提现上线0积分"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            android:textColor="@color/color_333333"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_cash_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="您本月已提现0元，根据税法规定本次提现需要承担税费0元，如提供提现金额的对公发票可减免抵扣税费，可在下方提现税费处理方式选择。"
+                        android:textColor="@color/color_999999"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/color_FFFFFF"
+                    android:gravity="center_vertical"
+                    android:paddingStart="14dp"
+                    android:text="提现税费处理方式"
+                    android:textColor="@color/color_333333"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_DBDBDB" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@color/color_FFFFFF"
+                    android:gravity="center_vertical"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="扣除税费"
+                        android:textColor="@color/color_333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_receipt_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:hint="发票存量可抵扣0元"
+                        android:textColor="@color/color_DBDBDB"
+                        android:textSize="9sp" />
+
+                    <com.asia.paint.base.widgets.CheckBox
+                        android:id="@+id/cb_check_receipt"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@color/color_FFFFFF"
+                    android:gravity="center_vertical"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="自行提供发票"
+                        android:textColor="@color/color_333333"
+                        android:textSize="12sp" />
+
+                    <com.asia.paint.base.widgets.CheckBox
+                        android:id="@+id/cb_check_receipt_self"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_receipt_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@color/color_FFFFFF"
+                    android:gravity="center_vertical"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="8dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="开票方公司抬头"
+                        android:textColor="@color/color_333333"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/et_receipt_header"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="请输入抬头名称"
+                        android:textColor="@color/color_333333"
+                        android:textColorHint="@color/color_DBDBDB"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/color_FFFFFF"
+                    android:orientation="vertical"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp">
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="发送验证码至 "
+                        android:textColor="@color/color_333333"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_sms_code"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="请输入验证码"
+                            android:textColor="@color/color_333333"
+                            android:textColorHint="@color/color_DBDBDB"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_send_sms_code"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/bg_common_border_4"
+                            android:gravity="center"
+                            android:text="获取验证码"
+                            android:textColor="@color/color_1054CB"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.asia.paint.base.widgets.CheckBox
+                    android:id="@+id/cb_check_agree"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_cash_items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="点击提现默认同意《提现协议》"
+                    android:textColor="@color/color_333333"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_sure_cash"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_common_gradient_4"
+                android:text="确认提现"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </FrameLayout>
+</layout>
