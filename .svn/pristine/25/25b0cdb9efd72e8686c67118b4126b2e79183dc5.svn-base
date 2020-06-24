@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><!-- 10dp圆角，填充为红色，小圆点专用 ，带数字-->
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <solid android:color="@color/color_F41021" />
-    <corners android:radius="18dp" />
-</shape>
