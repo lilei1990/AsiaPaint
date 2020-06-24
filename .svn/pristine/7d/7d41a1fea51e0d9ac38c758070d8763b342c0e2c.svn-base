@@ -1,0 +1,99 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import com.asia.paint.base.widgets.ClearEditText;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class ActivityUnsubscribeAccountBinding extends ViewDataBinding {
+  @NonNull
+  public final Button btnNext;
+
+  @NonNull
+  public final ClearEditText etPhone;
+
+  @NonNull
+  public final EditText etSmsCode;
+
+  @NonNull
+  public final TextView tvNoSmsCode;
+
+  @NonNull
+  public final TextView tvSendSmsCode;
+
+  protected ActivityUnsubscribeAccountBinding(Object _bindingComponent, View _root,
+      int _localFieldCount, Button btnNext, ClearEditText etPhone, EditText etSmsCode,
+      TextView tvNoSmsCode, TextView tvSendSmsCode) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.btnNext = btnNext;
+    this.etPhone = etPhone;
+    this.etSmsCode = etSmsCode;
+    this.tvNoSmsCode = tvNoSmsCode;
+    this.tvSendSmsCode = tvSendSmsCode;
+  }
+
+  @NonNull
+  public static ActivityUnsubscribeAccountBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_unsubscribe_account, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityUnsubscribeAccountBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<ActivityUnsubscribeAccountBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_unsubscribe_account, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static ActivityUnsubscribeAccountBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_unsubscribe_account, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityUnsubscribeAccountBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<ActivityUnsubscribeAccountBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_unsubscribe_account, null, false, component);
+  }
+
+  public static ActivityUnsubscribeAccountBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static ActivityUnsubscribeAccountBinding bind(@NonNull View view,
+      @Nullable Object component) {
+    return (ActivityUnsubscribeAccountBinding)bind(component, view, com.asia.paint.R.layout.activity_unsubscribe_account);
+  }
+}

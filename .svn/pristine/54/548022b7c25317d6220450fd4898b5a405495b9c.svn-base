@@ -1,0 +1,161 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
+import com.asia.paint.base.widgets.CountView;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class ActivityApplyAfterSaleBinding extends ViewDataBinding {
+  @NonNull
+  public final Button btnSure;
+
+  @NonNull
+  public final EditText etRemake;
+
+  @NonNull
+  public final ImageView ivGoodsImg;
+
+  @NonNull
+  public final LinearLayout layoutReason;
+
+  @NonNull
+  public final LinearLayout layoutReturnGoods;
+
+  @NonNull
+  public final LinearLayout layoutReturnMoney;
+
+  @NonNull
+  public final RecyclerView rvImage;
+
+  @NonNull
+  public final TextView tvGoodsName;
+
+  @NonNull
+  public final TextView tvGoodsSpec;
+
+  @NonNull
+  public final TextView tvImage;
+
+  @NonNull
+  public final TextView tvImageTips;
+
+  @NonNull
+  public final TextView tvIssue;
+
+  @NonNull
+  public final TextView tvIssueTips;
+
+  @NonNull
+  public final TextView tvRemakeCount;
+
+  @NonNull
+  public final TextView tvReturnMoney;
+
+  @NonNull
+  public final TextView tvReturnMoneyTips;
+
+  @NonNull
+  public final TextView tvReturnReason;
+
+  @NonNull
+  public final TextView tvReturnReasonTips;
+
+  @NonNull
+  public final CountView viewCount;
+
+  protected ActivityApplyAfterSaleBinding(Object _bindingComponent, View _root,
+      int _localFieldCount, Button btnSure, EditText etRemake, ImageView ivGoodsImg,
+      LinearLayout layoutReason, LinearLayout layoutReturnGoods, LinearLayout layoutReturnMoney,
+      RecyclerView rvImage, TextView tvGoodsName, TextView tvGoodsSpec, TextView tvImage,
+      TextView tvImageTips, TextView tvIssue, TextView tvIssueTips, TextView tvRemakeCount,
+      TextView tvReturnMoney, TextView tvReturnMoneyTips, TextView tvReturnReason,
+      TextView tvReturnReasonTips, CountView viewCount) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.btnSure = btnSure;
+    this.etRemake = etRemake;
+    this.ivGoodsImg = ivGoodsImg;
+    this.layoutReason = layoutReason;
+    this.layoutReturnGoods = layoutReturnGoods;
+    this.layoutReturnMoney = layoutReturnMoney;
+    this.rvImage = rvImage;
+    this.tvGoodsName = tvGoodsName;
+    this.tvGoodsSpec = tvGoodsSpec;
+    this.tvImage = tvImage;
+    this.tvImageTips = tvImageTips;
+    this.tvIssue = tvIssue;
+    this.tvIssueTips = tvIssueTips;
+    this.tvRemakeCount = tvRemakeCount;
+    this.tvReturnMoney = tvReturnMoney;
+    this.tvReturnMoneyTips = tvReturnMoneyTips;
+    this.tvReturnReason = tvReturnReason;
+    this.tvReturnReasonTips = tvReturnReasonTips;
+    this.viewCount = viewCount;
+  }
+
+  @NonNull
+  public static ActivityApplyAfterSaleBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_apply_after_sale, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityApplyAfterSaleBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<ActivityApplyAfterSaleBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_apply_after_sale, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static ActivityApplyAfterSaleBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_apply_after_sale, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityApplyAfterSaleBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<ActivityApplyAfterSaleBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_apply_after_sale, null, false, component);
+  }
+
+  public static ActivityApplyAfterSaleBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static ActivityApplyAfterSaleBinding bind(@NonNull View view, @Nullable Object component) {
+    return (ActivityApplyAfterSaleBinding)bind(component, view, com.asia.paint.R.layout.activity_apply_after_sale);
+  }
+}

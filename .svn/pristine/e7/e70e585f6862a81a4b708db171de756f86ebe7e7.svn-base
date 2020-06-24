@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="25dp"
+        android:background="@color/color_FFFFFF"
+        android:paddingEnd="25dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="31dp"
+            android:src="@mipmap/ic_login_logo" />
+
+        <com.asia.paint.base.widgets.ClearEditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/bg_edit" />
+
+        <LinearLayout
+            android:id="@+id/layout_sms_code"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_edit"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_sms_code"
+                style="@style/SubTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="输入验证码"
+                android:inputType="phone"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColorHint="@color/color_999999" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="24dp"
+                android:background="@color/color_999999" />
+
+            <TextView
+                android:id="@+id/tv_send_sms_code"
+                style="@style/SubTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/color_send_sms_code" />
+        </LinearLayout>
+
+        <com.asia.paint.base.widgets.PasswordEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_edit"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_referrer_code"
+                style="@style/SubTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="47dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit"
+                android:digits="1234567890"
+                android:gravity="center_vertical"
+                android:hint="输入推荐人亚士号（选填）"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColorHint="@color/color_999999" />
+
+            <ImageView
+                android:id="@+id/iv_scan_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:src="@mipmap/ic_scan_code" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_pwd_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="用密码登录"
+                android:textColor="@color/color_1054CB"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_sms_code_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="用验证码登录"
+                android:textColor="@color/color_1054CB"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_no_sms_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="收不到验证码？"
+                android:textColor="@color/color_1054CB"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_forget_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="忘记密码？"
+                android:textColor="@color/color_1054CB"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_btn_selector"
+            android:enabled="false"
+            android:text="登录"
+            android:textColor="@color/color_FFFFFF"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="37dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@color/color_D8D8D8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"
+                android:text="其他方式登录"
+                android:textColor="@color/color_999999"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@color/color_D8D8D8" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="125dp"
+            android:layout_height="43dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/bg_weixin_login"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_wei_xin_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/ic_weixin_flag"
+                android:drawablePadding="7dp"
+                android:gravity="center"
+                android:text="微信登录"
+                android:textColor="@color/color_333333"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_statement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="33dp"
+            android:textColor="@color/color_666666"
+            android:textSize="9sp" />
+
+
+    </LinearLayout>
+</layout>

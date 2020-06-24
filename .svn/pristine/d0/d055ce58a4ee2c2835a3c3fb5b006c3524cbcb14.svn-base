@@ -1,0 +1,123 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import com.asia.paint.base.widgets.PasswordInputView;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class DialogCashPayBinding extends ViewDataBinding {
+  @NonNull
+  public final ImageView ivClose;
+
+  @NonNull
+  public final LinearLayout layoutMoney;
+
+  @NonNull
+  public final TextView tvScore;
+
+  @NonNull
+  public final TextView tvTax;
+
+  @NonNull
+  public final TextView tvTips1;
+
+  @NonNull
+  public final TextView tvTips2;
+
+  @NonNull
+  public final TextView tvToMoney;
+
+  @NonNull
+  public final TextView tvToMoneyTips;
+
+  @NonNull
+  public final View viewDivider;
+
+  @NonNull
+  public final View viewDivider1;
+
+  @NonNull
+  public final PasswordInputView viewPwd;
+
+  protected DialogCashPayBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      ImageView ivClose, LinearLayout layoutMoney, TextView tvScore, TextView tvTax,
+      TextView tvTips1, TextView tvTips2, TextView tvToMoney, TextView tvToMoneyTips,
+      View viewDivider, View viewDivider1, PasswordInputView viewPwd) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.ivClose = ivClose;
+    this.layoutMoney = layoutMoney;
+    this.tvScore = tvScore;
+    this.tvTax = tvTax;
+    this.tvTips1 = tvTips1;
+    this.tvTips2 = tvTips2;
+    this.tvToMoney = tvToMoney;
+    this.tvToMoneyTips = tvToMoneyTips;
+    this.viewDivider = viewDivider;
+    this.viewDivider1 = viewDivider1;
+    this.viewPwd = viewPwd;
+  }
+
+  @NonNull
+  public static DialogCashPayBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.dialog_cash_pay, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static DialogCashPayBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<DialogCashPayBinding>inflateInternal(inflater, com.asia.paint.R.layout.dialog_cash_pay, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static DialogCashPayBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.dialog_cash_pay, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static DialogCashPayBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<DialogCashPayBinding>inflateInternal(inflater, com.asia.paint.R.layout.dialog_cash_pay, null, false, component);
+  }
+
+  public static DialogCashPayBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static DialogCashPayBinding bind(@NonNull View view, @Nullable Object component) {
+    return (DialogCashPayBinding)bind(component, view, com.asia.paint.R.layout.dialog_cash_pay);
+  }
+}

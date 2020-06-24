@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F8F8F8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_return"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_FFFFFF"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp">
+
+                <ImageView
+                    android:id="@+id/iv_goods_img"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_goods_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/iv_goods_img"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@+id/iv_goods_img"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/color_333333"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_goods_spec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_goods_name"
+                    android:layout_alignStart="@+id/tv_goods_name"
+                    android:layout_marginTop="18dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_return_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/color_FFFFFF">
+
+
+                <ImageView
+                    android:id="@+id/iv_return_money_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@mipmap/ic_return_money" />
+
+                <TextView
+                    android:id="@+id/tv_return_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@+id/iv_return_money_icon"
+                    android:text="我要退款(无需退货)"
+                    android:textColor="@color/color_333333"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_return_money_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_return_money"
+                    android:layout_alignStart="@+id/tv_return_money"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="未收到货，商品破损"
+                    android:textColor="@color/color_999999"
+                    android:textSize="9sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:src="@mipmap/ic_next" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:background="@color/color_F8F8F8" />
+
+            <RelativeLayout
+                android:id="@+id/layout_return_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_FFFFFF">
+
+
+                <ImageView
+                    android:id="@+id/iv_return_money_and_goods_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@mipmap/ic_return_money_and_goods" />
+
+                <TextView
+                    android:id="@+id/tv_return_money_and_goods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@+id/iv_return_money_and_goods_icon"
+                    android:text="我要退货退款"
+                    android:textColor="@color/color_333333"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_return_money_and_goods_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_return_money_and_goods"
+                    android:layout_alignStart="@+id/tv_return_money_and_goods"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="已收到货，需要退还已收到的货物"
+                    android:textColor="@color/color_999999"
+                    android:textSize="9sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:src="@mipmap/ic_next" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:background="@color/color_F8F8F8" />
+
+            <RelativeLayout
+                android:id="@+id/layout_exchange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_FFFFFF">
+
+
+                <ImageView
+                    android:id="@+id/iv_exchange_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@mipmap/ic_exchange" />
+
+                <TextView
+                    android:id="@+id/tv_exchange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@+id/iv_exchange_icon"
+                    android:text="我要换货"
+                    android:textColor="@color/color_333333"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_exchange_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_exchange"
+                    android:layout_alignStart="@+id/tv_exchange"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="已收到货，或与客服协商同意换货"
+                    android:textColor="@color/color_999999"
+                    android:textSize="9sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:src="@mipmap/ic_next" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_return_overdue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:drawableTop="@mipmap/ic_return_overdue"
+            android:drawablePadding="24dp"
+            android:gravity="center"
+            android:text="售后期已过，如有问题请联系客服"
+            android:textColor="@color/color_999999"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</layout>

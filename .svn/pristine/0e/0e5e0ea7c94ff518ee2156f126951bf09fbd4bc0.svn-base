@@ -1,0 +1,83 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class DialogJoinMeetingBinding extends ViewDataBinding {
+  @NonNull
+  public final Button btnFindMeeting;
+
+  @NonNull
+  public final EditText etMeetingNo;
+
+  protected DialogJoinMeetingBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      Button btnFindMeeting, EditText etMeetingNo) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.btnFindMeeting = btnFindMeeting;
+    this.etMeetingNo = etMeetingNo;
+  }
+
+  @NonNull
+  public static DialogJoinMeetingBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.dialog_join_meeting, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static DialogJoinMeetingBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<DialogJoinMeetingBinding>inflateInternal(inflater, com.asia.paint.R.layout.dialog_join_meeting, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static DialogJoinMeetingBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.dialog_join_meeting, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static DialogJoinMeetingBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<DialogJoinMeetingBinding>inflateInternal(inflater, com.asia.paint.R.layout.dialog_join_meeting, null, false, component);
+  }
+
+  public static DialogJoinMeetingBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static DialogJoinMeetingBinding bind(@NonNull View view, @Nullable Object component) {
+    return (DialogJoinMeetingBinding)bind(component, view, com.asia.paint.R.layout.dialog_join_meeting);
+  }
+}

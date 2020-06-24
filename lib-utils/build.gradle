@@ -1,0 +1,6 @@
+apply plugin: 'com.android.library'
+apply from: "${project.rootDir}/android.gradle"
+
+dependencies {
+    api 'com.google.zxing:core:3.4.0'
+}

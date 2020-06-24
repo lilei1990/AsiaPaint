@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:maxLines="6"
+            tools:text="大家风范就啊的叫啊叫发达放假啊李江发酒疯啊放假啊可怜的叫啊发大家风范就啊的叫啊叫发达放假啊李江发酒疯啊放假啊可怜的叫啊发大家风范就啊的叫啊叫发达放假啊李江发酒疯啊放假啊可怜的叫啊发大家风范就啊的叫啊叫发达放假啊李江发酒疯啊放假啊可怜的叫啊发"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_disable_holo"
+            android:hint="说点什么..."
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/bg_btn_selector"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:visibility="visible"
+            tools:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>

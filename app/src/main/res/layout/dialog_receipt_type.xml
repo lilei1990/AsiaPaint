@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_FFFFFF">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="请选择发票类型"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:padding="14dp"
+            android:src="@mipmap/ic_delete" />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_title"
+            android:background="@color/color_F6F6F6" />
+
+        <LinearLayout
+            android:id="@+id/layout_e"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/view_divider"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="电子发票(上传图片)"
+                android:textColor="@color/color_333333"
+                android:textSize="12sp" />
+
+            <com.asia.paint.base.widgets.CheckBox
+                android:id="@+id/cb_e_receipt"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_paper"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/layout_e"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="纸质发票（提供邮寄快递单号）"
+                android:textColor="@color/color_333333"
+                android:textSize="12sp" />
+
+            <com.asia.paint.base.widgets.CheckBox
+                android:id="@+id/cb_paper_receipt"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/layout_paper"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_common_gradient"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@color/color_FFFFFF"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+</layout>

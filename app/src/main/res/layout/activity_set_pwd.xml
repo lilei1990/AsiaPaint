@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:text="设置6位数字支付密码"
+            android:textColor="@color/color_666666"
+            android:textSize="12sp" />
+
+        <com.asia.paint.base.widgets.PasswordInputView
+            android:id="@+id/view_pwd"
+            android:layout_width="252dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="27dp"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:inputType="number"
+            android:maxLength="6"
+            app:borderColor="@color/color_DBDBDB"
+            app:borderRadius="0dp"
+            app:borderWidth="1dp"
+            app:passwordColor="@color/color_000000"
+            app:passwordLength="6"
+            app:passwordWidth="6dp" />
+
+        <com.asia.paint.base.widgets.PasswordInputView
+            android:id="@+id/view_sure_pwd"
+            android:layout_width="252dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="27dp"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:inputType="number"
+            android:maxLength="6"
+            android:visibility="gone"
+            app:borderColor="@color/color_DBDBDB"
+            app:borderRadius="0dp"
+            app:borderWidth="1dp"
+            app:passwordColor="@color/color_000000"
+            app:passwordLength="6"
+            app:passwordWidth="6dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/bg_common_gradient"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@color/color_FFFFFF"
+            android:textSize="18sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</layout>

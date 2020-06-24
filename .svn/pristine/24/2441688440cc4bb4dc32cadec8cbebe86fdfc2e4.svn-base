@@ -1,0 +1,88 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
+import com.asia.paint.banner.Banner;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class ViewGoodsShowBinding extends ViewDataBinding {
+  @NonNull
+  public final RecyclerView rvGoods;
+
+  @NonNull
+  public final Banner viewGoodsBanner;
+
+  @NonNull
+  public final ViewPager viewPagerShop;
+
+  protected ViewGoodsShowBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      RecyclerView rvGoods, Banner viewGoodsBanner, ViewPager viewPagerShop) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.rvGoods = rvGoods;
+    this.viewGoodsBanner = viewGoodsBanner;
+    this.viewPagerShop = viewPagerShop;
+  }
+
+  @NonNull
+  public static ViewGoodsShowBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.view_goods_show, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ViewGoodsShowBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<ViewGoodsShowBinding>inflateInternal(inflater, com.asia.paint.R.layout.view_goods_show, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static ViewGoodsShowBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.view_goods_show, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ViewGoodsShowBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<ViewGoodsShowBinding>inflateInternal(inflater, com.asia.paint.R.layout.view_goods_show, null, false, component);
+  }
+
+  public static ViewGoodsShowBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static ViewGoodsShowBinding bind(@NonNull View view, @Nullable Object component) {
+    return (ViewGoodsShowBinding)bind(component, view, com.asia.paint.R.layout.view_goods_show);
+  }
+}

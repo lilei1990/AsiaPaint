@@ -1,0 +1,530 @@
+[
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_group_and_flash.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_group_and_flash.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_sure_meeting.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_sure_meeting.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_staff.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_staff.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_score.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_score.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_tab_host.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_tab_host.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_after_sale.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_after_sale.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_apply_after_sale.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_apply_after_sale.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_train.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_train.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_settings.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_settings.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_order_detail.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_order_detail.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_feedback.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_feedback.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_seller_goals.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_seller_goals.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_reset_password.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_reset_password.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_goods_spec.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_goods_spec.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_unsubscribe_account.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_unsubscribe_account.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_cash.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_cash.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_pintuan.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_pintuan.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_recommend_code.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_recommend_code.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_customer_service.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_customer_service.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_hold_meeting.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_hold_meeting.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_cash_record_detail.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_cash_record_detail.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_apply_resell.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_apply_resell.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_post_detail.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_post_detail.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_coupon_center.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_coupon_center.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_meeting.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_meeting.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_host_tab.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_host_tab.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_about_us.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_about_us.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_message.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_message.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_monthly.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_monthly.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_find.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_find.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_receipt_upload.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_receipt_upload.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_photo.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_photo.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_bottom_cart.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_bottom_cart.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_pay.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_pay.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_hold_meeting.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_hold_meeting.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_item_layout.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_item_layout.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_bind_phone.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_bind_phone.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_search.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_search.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_task_center.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_task_center.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_shop.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_shop.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_goods.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_goods.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_fold_panel.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_fold_panel.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_staff.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_staff.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_order_coupon.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_order_coupon.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_join_meeting.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_join_meeting.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_coupon.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_coupon.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_message.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_message.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_password_editext.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_password_editext.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_order_mine.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_order_mine.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_get_pay_pwd_code.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_get_pay_pwd_code.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_publish_post.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_publish_post.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/test_tes.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/test_tes.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_check_box.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_check_box.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_schedule.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_schedule.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_comment_layout.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_comment_layout.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_magic_image.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_magic_image.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_seller_options.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_seller_options.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_goods_detail.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_goods_detail.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_recharge.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_recharge.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_my_pintuan.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_my_pintuan.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_service_schedule.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_service_schedule.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_option.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_option.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_seller_result.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_seller_result.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_receipt_type.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_receipt_type.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_money.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_money.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_score_record.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_score_record.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_clear_editext.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_clear_editext.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_post.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_post.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_task_center.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_task_center.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_goods_show.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_goods_show.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_select_image.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_select_image.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_web_view.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_web_view.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_decoration_detail.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_decoration_detail.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_decoration.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_decoration.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_meeting.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_meeting.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_edit_user.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_edit_user.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_mine_service.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_mine_service.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_meeting_detail.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_meeting_detail.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_comment.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_add_comment.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_forget_password.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_forget_password.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_bind_cash_account.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_bind_cash_account.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_clip_board.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_clip_board.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_settings_item.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_settings_item.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_after_sale_reason.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_after_sale_reason.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_order_select_pay_type.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_order_select_pay_type.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_deliver.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_deliver.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_comment.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_comment.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_order_receipt.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_order_receipt.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_cash_pay.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_cash_pay.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_receipt.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_receipt.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_test.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_test.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_pwd.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_set_pwd.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_cart.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_cart.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_train_detail.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_train_detail.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_post_header.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_post_header.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_base.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_base.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_mine_order.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_mine_order.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_select_after_sale_type.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_select_after_sale_type.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_pintuan.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_pintuan.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_cash_type.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_cash_type.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_new_password.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_new_password.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_favorites.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_favorites.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_coupon.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_coupon.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_customer_history_service.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_customer_history_service.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_score_detail.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_score_detail.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_base_title.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_base_title.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_distribution_tasks.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_distribution_tasks.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_staff_detail.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_staff_detail.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_mine_options.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_mine_options.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_store_code.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_store_code.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_train.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_train.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_goods_show.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_goods_show.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_play_video.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_play_video.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_mine.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_mine.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_edit_address.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_edit_address.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_meeting_member.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_meeting_member.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_after_sale_detail.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_after_sale_detail.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_address.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_address.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_money_detail.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_money_detail.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_account_index.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_account_index.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_goods_show_panel.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_goods_show_panel.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_task_panel.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/view_task_panel.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_order_checkout.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_order_checkout.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_group_detail.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_group_detail.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_add_delvery.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/dialog_add_delvery.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_auth_real_name.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_auth_real_name.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_monthly_detail.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_monthly_detail.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_login.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_order.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_order.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_service.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_zone.xml",
+        "source": "/Users/tangkun/project/songlei/yashiqi_android/app/src/main/res/layout/fragment_zone.xml"
+    }
+]

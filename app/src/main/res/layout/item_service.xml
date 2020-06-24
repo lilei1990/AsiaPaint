@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_FFFFFF"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_default" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_toEndOf="@+id/iv_icon"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@+id/iv_icon"
+            android:drawableStart="@mipmap/ic_service_link"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_333333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tel"
+            android:layout_alignStart="@+id/tv_tel"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/iv_icon"
+            android:drawableStart="@mipmap/ic_service_time"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_333333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_address_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_time"
+            android:layout_alignStart="@+id/tv_tel"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/iv_icon"
+            android:drawableStart="@mipmap/ic_service_address"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:text="门店地址："
+            android:textColor="@color/color_333333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_address_flag"
+            android:layout_toEndOf="@+id/tv_address_flag"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_333333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_address"
+            android:layout_alignStart="@+id/tv_tel"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/bg_common_gradient_4"
+            android:gravity="center"
+            android:paddingStart="14dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="6dp"
+            android:text="预约服务"
+            android:textColor="@color/color_FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_schedule"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="6dp"
+            android:drawableStart="@mipmap/ic_service_location"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_999999"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

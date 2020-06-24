@@ -1,0 +1,178 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
+import com.asia.paint.base.widgets.CheckBox;
+import com.asia.paint.base.widgets.SmartRecyclerView;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class ActivityOrderCheckoutBinding extends ViewDataBinding {
+  @NonNull
+  public final CheckBox cbUsedScore;
+
+  @NonNull
+  public final EditText etCustomerMsg;
+
+  @NonNull
+  public final ImageView ivNext;
+
+  @NonNull
+  public final LinearLayout layoutAddress;
+
+  @NonNull
+  public final LinearLayout layoutAddressDetail;
+
+  @NonNull
+  public final LinearLayout layoutCoupon;
+
+  @NonNull
+  public final LinearLayout layoutReceipt;
+
+  @NonNull
+  public final LinearLayout layoutUsedScore;
+
+  @NonNull
+  public final LinearLayout llGroup;
+
+  @NonNull
+  public final SmartRecyclerView rvCheckout;
+
+  @NonNull
+  public final RecyclerView rvGroupMember;
+
+  @NonNull
+  public final SmartRecyclerView rvOrderGoods;
+
+  @NonNull
+  public final TextView tvAddress;
+
+  @NonNull
+  public final TextView tvAddressTips;
+
+  @NonNull
+  public final TextView tvArea;
+
+  @NonNull
+  public final TextView tvCheckout;
+
+  @NonNull
+  public final TextView tvCheckoutPrice;
+
+  @NonNull
+  public final TextView tvCoupon;
+
+  @NonNull
+  public final TextView tvNameAndTel;
+
+  @NonNull
+  public final TextView tvPintuannStatus;
+
+  @NonNull
+  public final TextView tvReceipt;
+
+  @NonNull
+  public final TextView tvScoreTips;
+
+  @NonNull
+  public final TextView tvTagDefaultAddress;
+
+  protected ActivityOrderCheckoutBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      CheckBox cbUsedScore, EditText etCustomerMsg, ImageView ivNext, LinearLayout layoutAddress,
+      LinearLayout layoutAddressDetail, LinearLayout layoutCoupon, LinearLayout layoutReceipt,
+      LinearLayout layoutUsedScore, LinearLayout llGroup, SmartRecyclerView rvCheckout,
+      RecyclerView rvGroupMember, SmartRecyclerView rvOrderGoods, TextView tvAddress,
+      TextView tvAddressTips, TextView tvArea, TextView tvCheckout, TextView tvCheckoutPrice,
+      TextView tvCoupon, TextView tvNameAndTel, TextView tvPintuannStatus, TextView tvReceipt,
+      TextView tvScoreTips, TextView tvTagDefaultAddress) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.cbUsedScore = cbUsedScore;
+    this.etCustomerMsg = etCustomerMsg;
+    this.ivNext = ivNext;
+    this.layoutAddress = layoutAddress;
+    this.layoutAddressDetail = layoutAddressDetail;
+    this.layoutCoupon = layoutCoupon;
+    this.layoutReceipt = layoutReceipt;
+    this.layoutUsedScore = layoutUsedScore;
+    this.llGroup = llGroup;
+    this.rvCheckout = rvCheckout;
+    this.rvGroupMember = rvGroupMember;
+    this.rvOrderGoods = rvOrderGoods;
+    this.tvAddress = tvAddress;
+    this.tvAddressTips = tvAddressTips;
+    this.tvArea = tvArea;
+    this.tvCheckout = tvCheckout;
+    this.tvCheckoutPrice = tvCheckoutPrice;
+    this.tvCoupon = tvCoupon;
+    this.tvNameAndTel = tvNameAndTel;
+    this.tvPintuannStatus = tvPintuannStatus;
+    this.tvReceipt = tvReceipt;
+    this.tvScoreTips = tvScoreTips;
+    this.tvTagDefaultAddress = tvTagDefaultAddress;
+  }
+
+  @NonNull
+  public static ActivityOrderCheckoutBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_order_checkout, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityOrderCheckoutBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<ActivityOrderCheckoutBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_order_checkout, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static ActivityOrderCheckoutBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_order_checkout, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityOrderCheckoutBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<ActivityOrderCheckoutBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_order_checkout, null, false, component);
+  }
+
+  public static ActivityOrderCheckoutBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static ActivityOrderCheckoutBinding bind(@NonNull View view, @Nullable Object component) {
+    return (ActivityOrderCheckoutBinding)bind(component, view, com.asia.paint.R.layout.activity_order_checkout);
+  }
+}

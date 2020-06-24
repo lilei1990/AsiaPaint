@@ -1,0 +1,96 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class DialogClipBoardBinding extends ViewDataBinding {
+  @NonNull
+  public final ImageView ivClose;
+
+  @NonNull
+  public final ImageView ivIcon;
+
+  @NonNull
+  public final TextView tvCheckDetail;
+
+  @NonNull
+  public final TextView tvName;
+
+  @NonNull
+  public final TextView tvPrice;
+
+  protected DialogClipBoardBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      ImageView ivClose, ImageView ivIcon, TextView tvCheckDetail, TextView tvName,
+      TextView tvPrice) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.ivClose = ivClose;
+    this.ivIcon = ivIcon;
+    this.tvCheckDetail = tvCheckDetail;
+    this.tvName = tvName;
+    this.tvPrice = tvPrice;
+  }
+
+  @NonNull
+  public static DialogClipBoardBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.dialog_clip_board, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static DialogClipBoardBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<DialogClipBoardBinding>inflateInternal(inflater, com.asia.paint.R.layout.dialog_clip_board, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static DialogClipBoardBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.dialog_clip_board, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static DialogClipBoardBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<DialogClipBoardBinding>inflateInternal(inflater, com.asia.paint.R.layout.dialog_clip_board, null, false, component);
+  }
+
+  public static DialogClipBoardBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static DialogClipBoardBinding bind(@NonNull View view, @Nullable Object component) {
+    return (DialogClipBoardBinding)bind(component, view, com.asia.paint.R.layout.dialog_clip_board);
+  }
+}

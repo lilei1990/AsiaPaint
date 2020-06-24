@@ -1,0 +1,108 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class ViewMagicImageBinding extends ViewDataBinding {
+  @NonNull
+  public final ImageView iv1;
+
+  @NonNull
+  public final ImageView iv2;
+
+  @NonNull
+  public final ImageView iv3;
+
+  @NonNull
+  public final ImageView iv4;
+
+  @NonNull
+  public final ImageView iv5;
+
+  @NonNull
+  public final ImageView iv6;
+
+  @NonNull
+  public final LinearLayout layout1;
+
+  @NonNull
+  public final LinearLayout layout2;
+
+  protected ViewMagicImageBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      ImageView iv1, ImageView iv2, ImageView iv3, ImageView iv4, ImageView iv5, ImageView iv6,
+      LinearLayout layout1, LinearLayout layout2) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.iv1 = iv1;
+    this.iv2 = iv2;
+    this.iv3 = iv3;
+    this.iv4 = iv4;
+    this.iv5 = iv5;
+    this.iv6 = iv6;
+    this.layout1 = layout1;
+    this.layout2 = layout2;
+  }
+
+  @NonNull
+  public static ViewMagicImageBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.view_magic_image, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ViewMagicImageBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<ViewMagicImageBinding>inflateInternal(inflater, com.asia.paint.R.layout.view_magic_image, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static ViewMagicImageBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.view_magic_image, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ViewMagicImageBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<ViewMagicImageBinding>inflateInternal(inflater, com.asia.paint.R.layout.view_magic_image, null, false, component);
+  }
+
+  public static ViewMagicImageBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static ViewMagicImageBinding bind(@NonNull View view, @Nullable Object component) {
+    return (ViewMagicImageBinding)bind(component, view, com.asia.paint.R.layout.view_magic_image);
+  }
+}

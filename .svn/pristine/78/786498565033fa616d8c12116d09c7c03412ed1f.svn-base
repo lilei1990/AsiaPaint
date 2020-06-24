@@ -1,0 +1,134 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class ActivitySellerGoalsBinding extends ViewDataBinding {
+  @NonNull
+  public final ImageView icBack;
+
+  @NonNull
+  public final ImageView ivTop;
+
+  @NonNull
+  public final TextView tvDealAmount;
+
+  @NonNull
+  public final TextView tvDealCount;
+
+  @NonNull
+  public final TextView tvEndTime;
+
+  @NonNull
+  public final TextView tvNewPartner;
+
+  @NonNull
+  public final TextView tvNewUser;
+
+  @NonNull
+  public final TextView tvPartnership;
+
+  @NonNull
+  public final TextView tvPrimaryCommissionRate;
+
+  @NonNull
+  public final TextView tvSaleRoyalties;
+
+  @NonNull
+  public final TextView tvScore;
+
+  @NonNull
+  public final TextView tvSecondaryCommissionRate;
+
+  @NonNull
+  public final TextView tvSellRule;
+
+  @NonNull
+  public final TextView tvStartTime;
+
+  protected ActivitySellerGoalsBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      ImageView icBack, ImageView ivTop, TextView tvDealAmount, TextView tvDealCount,
+      TextView tvEndTime, TextView tvNewPartner, TextView tvNewUser, TextView tvPartnership,
+      TextView tvPrimaryCommissionRate, TextView tvSaleRoyalties, TextView tvScore,
+      TextView tvSecondaryCommissionRate, TextView tvSellRule, TextView tvStartTime) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.icBack = icBack;
+    this.ivTop = ivTop;
+    this.tvDealAmount = tvDealAmount;
+    this.tvDealCount = tvDealCount;
+    this.tvEndTime = tvEndTime;
+    this.tvNewPartner = tvNewPartner;
+    this.tvNewUser = tvNewUser;
+    this.tvPartnership = tvPartnership;
+    this.tvPrimaryCommissionRate = tvPrimaryCommissionRate;
+    this.tvSaleRoyalties = tvSaleRoyalties;
+    this.tvScore = tvScore;
+    this.tvSecondaryCommissionRate = tvSecondaryCommissionRate;
+    this.tvSellRule = tvSellRule;
+    this.tvStartTime = tvStartTime;
+  }
+
+  @NonNull
+  public static ActivitySellerGoalsBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_seller_goals, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivitySellerGoalsBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<ActivitySellerGoalsBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_seller_goals, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static ActivitySellerGoalsBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_seller_goals, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivitySellerGoalsBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<ActivitySellerGoalsBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_seller_goals, null, false, component);
+  }
+
+  public static ActivitySellerGoalsBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static ActivitySellerGoalsBinding bind(@NonNull View view, @Nullable Object component) {
+    return (ActivitySellerGoalsBinding)bind(component, view, com.asia.paint.R.layout.activity_seller_goals);
+  }
+}

@@ -1,0 +1,2 @@
+include ':app', ':lib-network', ':lib-utils', ':lib-ui', ':lib-banner', ':lib-pay'
+rootProject.name='AsiaPaint'

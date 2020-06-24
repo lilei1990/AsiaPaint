@@ -1,0 +1,202 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
+import com.asia.paint.banner.Banner;
+import com.asia.paint.base.widgets.BottomCart;
+import com.asia.paint.base.widgets.ItemLayout;
+import com.asia.paint.base.widgets.comment.CommentLayout;
+import com.asia.paint.base.widgets.show.GoodsShowPanel;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class ActivityGoodsDetailBinding extends ViewDataBinding {
+  @NonNull
+  public final ImageView ivBack;
+
+  @NonNull
+  public final ImageView ivLike;
+
+  @NonNull
+  public final ImageView ivShare;
+
+  @NonNull
+  public final LinearLayout llComplimentary;
+
+  @NonNull
+  public final LinearLayout llGroupEndtimeNumber;
+
+  @NonNull
+  public final LinearLayout llGroupNumber;
+
+  @NonNull
+  public final LinearLayout llPintuan;
+
+  @NonNull
+  public final RecyclerView rvComplimentary;
+
+  @NonNull
+  public final RecyclerView rvPintuan;
+
+  @NonNull
+  public final RecyclerView rvPromotionCompose;
+
+  @NonNull
+  public final TextView tvCheckAll;
+
+  @NonNull
+  public final TextView tvGoodsName;
+
+  @NonNull
+  public final TextView tvGoodsOriginPrice;
+
+  @NonNull
+  public final TextView tvGoodsPrice;
+
+  @NonNull
+  public final TextView tvGroupNumber;
+
+  @NonNull
+  public final TextView tvReturnTicket;
+
+  @NonNull
+  public final TextView tvScore;
+
+  @NonNull
+  public final TextView tvShopHour1;
+
+  @NonNull
+  public final TextView tvShopMinute1;
+
+  @NonNull
+  public final TextView tvShopSecond1;
+
+  @NonNull
+  public final Banner viewBanner;
+
+  @NonNull
+  public final BottomCart viewBottomCart;
+
+  @NonNull
+  public final CommentLayout viewComment;
+
+  @NonNull
+  public final ItemLayout viewDelivery;
+
+  @NonNull
+  public final GoodsShowPanel viewGoodsShow;
+
+  @NonNull
+  public final ItemLayout viewProtect;
+
+  @NonNull
+  public final ItemLayout viewSpec;
+
+  @NonNull
+  public final WebView wvDetail;
+
+  protected ActivityGoodsDetailBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      ImageView ivBack, ImageView ivLike, ImageView ivShare, LinearLayout llComplimentary,
+      LinearLayout llGroupEndtimeNumber, LinearLayout llGroupNumber, LinearLayout llPintuan,
+      RecyclerView rvComplimentary, RecyclerView rvPintuan, RecyclerView rvPromotionCompose,
+      TextView tvCheckAll, TextView tvGoodsName, TextView tvGoodsOriginPrice, TextView tvGoodsPrice,
+      TextView tvGroupNumber, TextView tvReturnTicket, TextView tvScore, TextView tvShopHour1,
+      TextView tvShopMinute1, TextView tvShopSecond1, Banner viewBanner, BottomCart viewBottomCart,
+      CommentLayout viewComment, ItemLayout viewDelivery, GoodsShowPanel viewGoodsShow,
+      ItemLayout viewProtect, ItemLayout viewSpec, WebView wvDetail) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.ivBack = ivBack;
+    this.ivLike = ivLike;
+    this.ivShare = ivShare;
+    this.llComplimentary = llComplimentary;
+    this.llGroupEndtimeNumber = llGroupEndtimeNumber;
+    this.llGroupNumber = llGroupNumber;
+    this.llPintuan = llPintuan;
+    this.rvComplimentary = rvComplimentary;
+    this.rvPintuan = rvPintuan;
+    this.rvPromotionCompose = rvPromotionCompose;
+    this.tvCheckAll = tvCheckAll;
+    this.tvGoodsName = tvGoodsName;
+    this.tvGoodsOriginPrice = tvGoodsOriginPrice;
+    this.tvGoodsPrice = tvGoodsPrice;
+    this.tvGroupNumber = tvGroupNumber;
+    this.tvReturnTicket = tvReturnTicket;
+    this.tvScore = tvScore;
+    this.tvShopHour1 = tvShopHour1;
+    this.tvShopMinute1 = tvShopMinute1;
+    this.tvShopSecond1 = tvShopSecond1;
+    this.viewBanner = viewBanner;
+    this.viewBottomCart = viewBottomCart;
+    this.viewComment = viewComment;
+    this.viewDelivery = viewDelivery;
+    this.viewGoodsShow = viewGoodsShow;
+    this.viewProtect = viewProtect;
+    this.viewSpec = viewSpec;
+    this.wvDetail = wvDetail;
+  }
+
+  @NonNull
+  public static ActivityGoodsDetailBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_goods_detail, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityGoodsDetailBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<ActivityGoodsDetailBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_goods_detail, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static ActivityGoodsDetailBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_goods_detail, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityGoodsDetailBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<ActivityGoodsDetailBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_goods_detail, null, false, component);
+  }
+
+  public static ActivityGoodsDetailBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static ActivityGoodsDetailBinding bind(@NonNull View view, @Nullable Object component) {
+    return (ActivityGoodsDetailBinding)bind(component, view, com.asia.paint.R.layout.activity_goods_detail);
+  }
+}

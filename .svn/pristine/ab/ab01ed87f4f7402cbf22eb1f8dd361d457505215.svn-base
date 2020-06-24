@@ -1,0 +1,120 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import com.asia.paint.base.widgets.CheckBox;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class ActivityEditUserBinding extends ViewDataBinding {
+  @NonNull
+  public final CheckBox cbFemale;
+
+  @NonNull
+  public final CheckBox cbMale;
+
+  @NonNull
+  public final EditText etNickname;
+
+  @NonNull
+  public final ImageView ivAvatar;
+
+  @NonNull
+  public final ImageView ivBack;
+
+  @NonNull
+  public final LinearLayout layoutAsia;
+
+  @NonNull
+  public final LinearLayout layoutBirthday;
+
+  @NonNull
+  public final TextView tvAsiaNo;
+
+  @NonNull
+  public final TextView tvBirthday;
+
+  @NonNull
+  public final TextView tvSave;
+
+  protected ActivityEditUserBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      CheckBox cbFemale, CheckBox cbMale, EditText etNickname, ImageView ivAvatar, ImageView ivBack,
+      LinearLayout layoutAsia, LinearLayout layoutBirthday, TextView tvAsiaNo, TextView tvBirthday,
+      TextView tvSave) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.cbFemale = cbFemale;
+    this.cbMale = cbMale;
+    this.etNickname = etNickname;
+    this.ivAvatar = ivAvatar;
+    this.ivBack = ivBack;
+    this.layoutAsia = layoutAsia;
+    this.layoutBirthday = layoutBirthday;
+    this.tvAsiaNo = tvAsiaNo;
+    this.tvBirthday = tvBirthday;
+    this.tvSave = tvSave;
+  }
+
+  @NonNull
+  public static ActivityEditUserBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_edit_user, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityEditUserBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<ActivityEditUserBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_edit_user, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static ActivityEditUserBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_edit_user, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityEditUserBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<ActivityEditUserBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_edit_user, null, false, component);
+  }
+
+  public static ActivityEditUserBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static ActivityEditUserBinding bind(@NonNull View view, @Nullable Object component) {
+    return (ActivityEditUserBinding)bind(component, view, com.asia.paint.R.layout.activity_edit_user);
+  }
+}

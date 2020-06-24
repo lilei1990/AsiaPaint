@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/lib-utils/build/intermediates/res/merged/debug/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/tangkun/.gradle/caches/transforms-2/files-2.1/2c2ddb52930bf499beb9d1f4adc6dea7/res/layout-watch-v20/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/lib-utils/build/intermediates/res/merged/debug/layout-watch-v20/abc_alert_dialog_title_material.xml",
+        "source": "/Users/tangkun/.gradle/caches/transforms-2/files-2.1/2c2ddb52930bf499beb9d1f4adc6dea7/res/layout-watch-v20/abc_alert_dialog_title_material.xml"
+    }
+]

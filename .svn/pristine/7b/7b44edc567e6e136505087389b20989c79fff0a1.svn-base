@@ -1,0 +1,117 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import com.asia.paint.base.widgets.SmartRecyclerView;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class ActivityHoldMeetingBinding extends ViewDataBinding {
+  @NonNull
+  public final Button btnHoldMeeting;
+
+  @NonNull
+  public final EditText etMeetingAddress;
+
+  @NonNull
+  public final EditText etMeetingContent;
+
+  @NonNull
+  public final EditText etMeetingName;
+
+  @NonNull
+  public final ImageView ivInviteMember;
+
+  @NonNull
+  public final ImageView ivNext;
+
+  @NonNull
+  public final LinearLayout layoutMeetingTime;
+
+  @NonNull
+  public final SmartRecyclerView rvMeetingMember;
+
+  @NonNull
+  public final TextView tvMeetingTime;
+
+  protected ActivityHoldMeetingBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      Button btnHoldMeeting, EditText etMeetingAddress, EditText etMeetingContent,
+      EditText etMeetingName, ImageView ivInviteMember, ImageView ivNext,
+      LinearLayout layoutMeetingTime, SmartRecyclerView rvMeetingMember, TextView tvMeetingTime) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.btnHoldMeeting = btnHoldMeeting;
+    this.etMeetingAddress = etMeetingAddress;
+    this.etMeetingContent = etMeetingContent;
+    this.etMeetingName = etMeetingName;
+    this.ivInviteMember = ivInviteMember;
+    this.ivNext = ivNext;
+    this.layoutMeetingTime = layoutMeetingTime;
+    this.rvMeetingMember = rvMeetingMember;
+    this.tvMeetingTime = tvMeetingTime;
+  }
+
+  @NonNull
+  public static ActivityHoldMeetingBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_hold_meeting, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityHoldMeetingBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<ActivityHoldMeetingBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_hold_meeting, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static ActivityHoldMeetingBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_hold_meeting, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityHoldMeetingBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<ActivityHoldMeetingBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_hold_meeting, null, false, component);
+  }
+
+  public static ActivityHoldMeetingBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static ActivityHoldMeetingBinding bind(@NonNull View view, @Nullable Object component) {
+    return (ActivityHoldMeetingBinding)bind(component, view, com.asia.paint.R.layout.activity_hold_meeting);
+  }
+}

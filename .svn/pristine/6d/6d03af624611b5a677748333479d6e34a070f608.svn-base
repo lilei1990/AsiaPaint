@@ -1,0 +1,5 @@
+package com.asia.paint.utils;
+
+public class BR {
+  public static int _all = 0;
+}

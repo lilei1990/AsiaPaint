@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp">
+
+        <com.asia.paint.base.widgets.ClearEditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/bg_edit" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_edit"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_sms_code"
+                style="@style/SubTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="输入验证码"
+                android:inputType="phone"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColorHint="@color/color_999999" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="24dp"
+                android:background="@color/color_999999" />
+
+            <TextView
+                android:id="@+id/tv_send_sms_code"
+                style="@style/SubTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/color_send_sms_code" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_no_sms_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="收不到验证码？"
+                android:textColor="@color/color_1054CB"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_btn_selector"
+            android:enabled="false"
+            android:text="确定"
+            android:textColor="@color/color_FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,113 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatRatingBar;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import com.asia.paint.base.widgets.selectimage.SelectImage;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class ActivityAddCommentBinding extends ViewDataBinding {
+  @NonNull
+  public final SelectImage addImgAndVideo;
+
+  @NonNull
+  public final EditText etAddComment;
+
+  @NonNull
+  public final ImageView ivGoodsImg;
+
+  @NonNull
+  public final LinearLayout layoutRatingBar;
+
+  @NonNull
+  public final AppCompatRatingBar ratingBarScore;
+
+  @NonNull
+  public final TextView tvAddComment;
+
+  @NonNull
+  public final TextView tvGoodsName;
+
+  @NonNull
+  public final View viewDivider;
+
+  protected ActivityAddCommentBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      SelectImage addImgAndVideo, EditText etAddComment, ImageView ivGoodsImg,
+      LinearLayout layoutRatingBar, AppCompatRatingBar ratingBarScore, TextView tvAddComment,
+      TextView tvGoodsName, View viewDivider) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.addImgAndVideo = addImgAndVideo;
+    this.etAddComment = etAddComment;
+    this.ivGoodsImg = ivGoodsImg;
+    this.layoutRatingBar = layoutRatingBar;
+    this.ratingBarScore = ratingBarScore;
+    this.tvAddComment = tvAddComment;
+    this.tvGoodsName = tvGoodsName;
+    this.viewDivider = viewDivider;
+  }
+
+  @NonNull
+  public static ActivityAddCommentBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_add_comment, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityAddCommentBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<ActivityAddCommentBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_add_comment, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static ActivityAddCommentBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_add_comment, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityAddCommentBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<ActivityAddCommentBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_add_comment, null, false, component);
+  }
+
+  public static ActivityAddCommentBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static ActivityAddCommentBinding bind(@NonNull View view, @Nullable Object component) {
+    return (ActivityAddCommentBinding)bind(component, view, com.asia.paint.R.layout.activity_add_comment);
+  }
+}

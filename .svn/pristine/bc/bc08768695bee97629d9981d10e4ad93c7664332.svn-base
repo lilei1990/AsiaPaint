@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/lib-network/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/tangkun/.gradle/caches/transforms-2/files-2.1/2c2ddb52930bf499beb9d1f4adc6dea7/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/lib-network/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/tangkun/.gradle/caches/transforms-2/files-2.1/2c2ddb52930bf499beb9d1f4adc6dea7/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/lib-network/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/Users/tangkun/.gradle/caches/transforms-2/files-2.1/2c2ddb52930bf499beb9d1f4adc6dea7/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/lib-network/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/Users/tangkun/.gradle/caches/transforms-2/files-2.1/2c2ddb52930bf499beb9d1f4adc6dea7/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/lib-network/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/tangkun/.gradle/caches/transforms-2/files-2.1/2c2ddb52930bf499beb9d1f4adc6dea7/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/lib-network/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/Users/tangkun/.gradle/caches/transforms-2/files-2.1/3a4528ee013a0b32d9ccb661d52e4b37/res/color-v23/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/lib-network/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/Users/tangkun/.gradle/caches/transforms-2/files-2.1/2c2ddb52930bf499beb9d1f4adc6dea7/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/lib-network/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/Users/tangkun/.gradle/caches/transforms-2/files-2.1/2c2ddb52930bf499beb9d1f4adc6dea7/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/lib-network/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/Users/tangkun/.gradle/caches/transforms-2/files-2.1/2c2ddb52930bf499beb9d1f4adc6dea7/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/tangkun/project/songlei/yashiqi_android/lib-network/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/tangkun/.gradle/caches/transforms-2/files-2.1/2c2ddb52930bf499beb9d1f4adc6dea7/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    }
+]

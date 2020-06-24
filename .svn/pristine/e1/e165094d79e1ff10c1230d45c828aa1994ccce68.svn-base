@@ -1,0 +1,143 @@
+package com.asia.paint.databinding;
+import com.asia.paint.R;
+import com.asia.paint.BR;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import android.view.View;
+@SuppressWarnings("unchecked")
+public class ActivityGoodsDetailBindingImpl extends ActivityGoodsDetailBinding  {
+
+    @Nullable
+    private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
+    @Nullable
+    private static final android.util.SparseIntArray sViewsWithIds;
+    static {
+        sIncludes = null;
+        sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.view_banner, 1);
+        sViewsWithIds.put(R.id.tv_goods_price, 2);
+        sViewsWithIds.put(R.id.tv_goods_origin_price, 3);
+        sViewsWithIds.put(R.id.tv_score, 4);
+        sViewsWithIds.put(R.id.ll_group_endtime_number, 5);
+        sViewsWithIds.put(R.id.tv_shop_hour1, 6);
+        sViewsWithIds.put(R.id.tv_shop_minute1, 7);
+        sViewsWithIds.put(R.id.tv_shop_second1, 8);
+        sViewsWithIds.put(R.id.ll_group_number, 9);
+        sViewsWithIds.put(R.id.tv_group_number, 10);
+        sViewsWithIds.put(R.id.tv_return_ticket, 11);
+        sViewsWithIds.put(R.id.tv_goods_name, 12);
+        sViewsWithIds.put(R.id.view_protect, 13);
+        sViewsWithIds.put(R.id.view_spec, 14);
+        sViewsWithIds.put(R.id.view_delivery, 15);
+        sViewsWithIds.put(R.id.ll_pintuan, 16);
+        sViewsWithIds.put(R.id.tv_check_all, 17);
+        sViewsWithIds.put(R.id.rv_pintuan, 18);
+        sViewsWithIds.put(R.id.ll_complimentary, 19);
+        sViewsWithIds.put(R.id.rv_complimentary, 20);
+        sViewsWithIds.put(R.id.rv_promotion_compose, 21);
+        sViewsWithIds.put(R.id.view_goods_show, 22);
+        sViewsWithIds.put(R.id.view_comment, 23);
+        sViewsWithIds.put(R.id.wv_detail, 24);
+        sViewsWithIds.put(R.id.iv_back, 25);
+        sViewsWithIds.put(R.id.iv_like, 26);
+        sViewsWithIds.put(R.id.iv_share, 27);
+        sViewsWithIds.put(R.id.view_bottom_cart, 28);
+    }
+    // views
+    @NonNull
+    private final android.widget.FrameLayout mboundView0;
+    // variables
+    // values
+    // listeners
+    // Inverse Binding Event Handlers
+
+    public ActivityGoodsDetailBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 29, sIncludes, sViewsWithIds));
+    }
+    private ActivityGoodsDetailBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
+        super(bindingComponent, root, 0
+            , (android.widget.ImageView) bindings[25]
+            , (android.widget.ImageView) bindings[26]
+            , (android.widget.ImageView) bindings[27]
+            , (android.widget.LinearLayout) bindings[19]
+            , (android.widget.LinearLayout) bindings[5]
+            , (android.widget.LinearLayout) bindings[9]
+            , (android.widget.LinearLayout) bindings[16]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[20]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[18]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[21]
+            , (android.widget.TextView) bindings[17]
+            , (android.widget.TextView) bindings[12]
+            , (android.widget.TextView) bindings[3]
+            , (android.widget.TextView) bindings[2]
+            , (android.widget.TextView) bindings[10]
+            , (android.widget.TextView) bindings[11]
+            , (android.widget.TextView) bindings[4]
+            , (android.widget.TextView) bindings[6]
+            , (android.widget.TextView) bindings[7]
+            , (android.widget.TextView) bindings[8]
+            , (com.asia.paint.banner.Banner) bindings[1]
+            , (com.asia.paint.base.widgets.BottomCart) bindings[28]
+            , (com.asia.paint.base.widgets.comment.CommentLayout) bindings[23]
+            , (com.asia.paint.base.widgets.ItemLayout) bindings[15]
+            , (com.asia.paint.base.widgets.show.GoodsShowPanel) bindings[22]
+            , (com.asia.paint.base.widgets.ItemLayout) bindings[13]
+            , (com.asia.paint.base.widgets.ItemLayout) bindings[14]
+            , (android.webkit.WebView) bindings[24]
+            );
+        this.mboundView0 = (android.widget.FrameLayout) bindings[0];
+        this.mboundView0.setTag(null);
+        setRootTag(root);
+        // listeners
+        invalidateAll();
+    }
+
+    @Override
+    public void invalidateAll() {
+        synchronized(this) {
+                mDirtyFlags = 0x1L;
+        }
+        requestRebind();
+    }
+
+    @Override
+    public boolean hasPendingBindings() {
+        synchronized(this) {
+            if (mDirtyFlags != 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean setVariable(int variableId, @Nullable Object variable)  {
+        boolean variableSet = true;
+            return variableSet;
+    }
+
+    @Override
+    protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
+        switch (localFieldId) {
+        }
+        return false;
+    }
+
+    @Override
+    protected void executeBindings() {
+        long dirtyFlags = 0;
+        synchronized(this) {
+            dirtyFlags = mDirtyFlags;
+            mDirtyFlags = 0;
+        }
+        // batch finished
+    }
+    // Listener Stub Implementations
+    // callback impls
+    // dirty flag
+    private  long mDirtyFlags = 0xffffffffffffffffL;
+    /* flag mapping
+        flag 0 (0x1L): null
+    flag mapping end*/
+    //end
+}

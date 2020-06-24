@@ -1,0 +1,92 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class DialogOrderCouponBinding extends ViewDataBinding {
+  @NonNull
+  public final ImageView ivClose;
+
+  @NonNull
+  public final RecyclerView rvOrderCoupon;
+
+  @NonNull
+  public final TextView tvSure;
+
+  @NonNull
+  public final TextView tvTitle;
+
+  protected DialogOrderCouponBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      ImageView ivClose, RecyclerView rvOrderCoupon, TextView tvSure, TextView tvTitle) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.ivClose = ivClose;
+    this.rvOrderCoupon = rvOrderCoupon;
+    this.tvSure = tvSure;
+    this.tvTitle = tvTitle;
+  }
+
+  @NonNull
+  public static DialogOrderCouponBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.dialog_order_coupon, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static DialogOrderCouponBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<DialogOrderCouponBinding>inflateInternal(inflater, com.asia.paint.R.layout.dialog_order_coupon, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static DialogOrderCouponBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.dialog_order_coupon, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static DialogOrderCouponBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<DialogOrderCouponBinding>inflateInternal(inflater, com.asia.paint.R.layout.dialog_order_coupon, null, false, component);
+  }
+
+  public static DialogOrderCouponBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static DialogOrderCouponBinding bind(@NonNull View view, @Nullable Object component) {
+    return (DialogOrderCouponBinding)bind(component, view, com.asia.paint.R.layout.dialog_order_coupon);
+  }
+}

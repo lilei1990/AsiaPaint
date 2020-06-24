@@ -1,0 +1,135 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import com.asia.paint.base.widgets.SmartRecyclerView;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class ActivityOrderDetailBinding extends ViewDataBinding {
+  @NonNull
+  public final ImageView ivLocationFlag;
+
+  @NonNull
+  public final SmartRecyclerView rvCheckout;
+
+  @NonNull
+  public final SmartRecyclerView rvGoods;
+
+  @NonNull
+  public final TextView tvCancel;
+
+  @NonNull
+  public final TextView tvComment;
+
+  @NonNull
+  public final TextView tvDelete;
+
+  @NonNull
+  public final TextView tvOrderInfo;
+
+  @NonNull
+  public final TextView tvOrderStatus;
+
+  @NonNull
+  public final TextView tvPay;
+
+  @NonNull
+  public final TextView tvReturnMoney;
+
+  @NonNull
+  public final TextView tvSureReceive;
+
+  @NonNull
+  public final TextView tvUserAddress;
+
+  @NonNull
+  public final TextView tvUserName;
+
+  @NonNull
+  public final TextView tvUserPhone;
+
+  protected ActivityOrderDetailBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      ImageView ivLocationFlag, SmartRecyclerView rvCheckout, SmartRecyclerView rvGoods,
+      TextView tvCancel, TextView tvComment, TextView tvDelete, TextView tvOrderInfo,
+      TextView tvOrderStatus, TextView tvPay, TextView tvReturnMoney, TextView tvSureReceive,
+      TextView tvUserAddress, TextView tvUserName, TextView tvUserPhone) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.ivLocationFlag = ivLocationFlag;
+    this.rvCheckout = rvCheckout;
+    this.rvGoods = rvGoods;
+    this.tvCancel = tvCancel;
+    this.tvComment = tvComment;
+    this.tvDelete = tvDelete;
+    this.tvOrderInfo = tvOrderInfo;
+    this.tvOrderStatus = tvOrderStatus;
+    this.tvPay = tvPay;
+    this.tvReturnMoney = tvReturnMoney;
+    this.tvSureReceive = tvSureReceive;
+    this.tvUserAddress = tvUserAddress;
+    this.tvUserName = tvUserName;
+    this.tvUserPhone = tvUserPhone;
+  }
+
+  @NonNull
+  public static ActivityOrderDetailBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_order_detail, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityOrderDetailBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<ActivityOrderDetailBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_order_detail, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static ActivityOrderDetailBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_order_detail, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityOrderDetailBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<ActivityOrderDetailBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_order_detail, null, false, component);
+  }
+
+  public static ActivityOrderDetailBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static ActivityOrderDetailBinding bind(@NonNull View view, @Nullable Object component) {
+    return (ActivityOrderDetailBinding)bind(component, view, com.asia.paint.R.layout.activity_order_detail);
+  }
+}

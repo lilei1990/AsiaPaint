@@ -1,0 +1,128 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
+import com.asia.paint.base.widgets.CheckBox;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class FragmentCartBinding extends ViewDataBinding {
+  @NonNull
+  public final TextView btnRemove;
+
+  @NonNull
+  public final Button btnTry;
+
+  @NonNull
+  public final CheckBox cbAllCheck;
+
+  @NonNull
+  public final LinearLayout layoutCheckout;
+
+  @NonNull
+  public final LinearLayout layoutEmpty;
+
+  @NonNull
+  public final LinearLayout layoutTotal;
+
+  @NonNull
+  public final RecyclerView rvGoods;
+
+  @NonNull
+  public final TextView tvCheckout;
+
+  @NonNull
+  public final TextView tvGoodsCount;
+
+  @NonNull
+  public final TextView tvModify;
+
+  @NonNull
+  public final TextView tvShopCart;
+
+  @NonNull
+  public final TextView tvTotalPrice;
+
+  protected FragmentCartBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      TextView btnRemove, Button btnTry, CheckBox cbAllCheck, LinearLayout layoutCheckout,
+      LinearLayout layoutEmpty, LinearLayout layoutTotal, RecyclerView rvGoods, TextView tvCheckout,
+      TextView tvGoodsCount, TextView tvModify, TextView tvShopCart, TextView tvTotalPrice) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.btnRemove = btnRemove;
+    this.btnTry = btnTry;
+    this.cbAllCheck = cbAllCheck;
+    this.layoutCheckout = layoutCheckout;
+    this.layoutEmpty = layoutEmpty;
+    this.layoutTotal = layoutTotal;
+    this.rvGoods = rvGoods;
+    this.tvCheckout = tvCheckout;
+    this.tvGoodsCount = tvGoodsCount;
+    this.tvModify = tvModify;
+    this.tvShopCart = tvShopCart;
+    this.tvTotalPrice = tvTotalPrice;
+  }
+
+  @NonNull
+  public static FragmentCartBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.fragment_cart, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static FragmentCartBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<FragmentCartBinding>inflateInternal(inflater, com.asia.paint.R.layout.fragment_cart, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static FragmentCartBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.fragment_cart, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static FragmentCartBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<FragmentCartBinding>inflateInternal(inflater, com.asia.paint.R.layout.fragment_cart, null, false, component);
+  }
+
+  public static FragmentCartBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static FragmentCartBinding bind(@NonNull View view, @Nullable Object component) {
+    return (FragmentCartBinding)bind(component, view, com.asia.paint.R.layout.fragment_cart);
+  }
+}

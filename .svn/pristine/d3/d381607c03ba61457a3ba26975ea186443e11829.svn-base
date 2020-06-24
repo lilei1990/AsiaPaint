@@ -1,0 +1,6 @@
+package com.asia.paint;
+
+import androidx.databinding.BindingBuildInfo;
+
+@BindingBuildInfo
+public class DataBindingInfo {}

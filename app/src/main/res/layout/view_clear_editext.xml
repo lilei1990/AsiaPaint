@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_phone"
+            style="@style/SubTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:inputType="phone"
+            android:digits="1234567890"
+            android:maxLength="11"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="0dp"
+            android:textColorHint="@color/color_999999" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:scaleType="center"
+            android:src="@mipmap/ic_delete"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</layout>

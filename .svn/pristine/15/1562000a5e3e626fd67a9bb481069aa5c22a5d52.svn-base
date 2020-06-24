@@ -1,0 +1,187 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatCheckBox;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import com.asia.paint.base.widgets.CheckBox;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class ActivityReceiptBinding extends ViewDataBinding {
+  @NonNull
+  public final Button btnSure;
+
+  @NonNull
+  public final CheckBox cbCompany;
+
+  @NonNull
+  public final CheckBox cbEReceipt;
+
+  @NonNull
+  public final CheckBox cbPaperReceipt;
+
+  @NonNull
+  public final CheckBox cbPersonal;
+
+  @NonNull
+  public final View dividerCompanyAddress;
+
+  @NonNull
+  public final View dividerCompanyBank;
+
+  @NonNull
+  public final View dividerCompanyBankAccount;
+
+  @NonNull
+  public final View dividerCompanyTel;
+
+  @NonNull
+  public final EditText etCompanyAddress;
+
+  @NonNull
+  public final EditText etCompanyBank;
+
+  @NonNull
+  public final EditText etCompanyBankAccount;
+
+  @NonNull
+  public final EditText etCompanyName;
+
+  @NonNull
+  public final EditText etCompanyNo;
+
+  @NonNull
+  public final EditText etCompanyTel;
+
+  @NonNull
+  public final EditText etEmail;
+
+  @NonNull
+  public final EditText etPhone;
+
+  @NonNull
+  public final LinearLayout layoutCompanyAddress;
+
+  @NonNull
+  public final LinearLayout layoutCompanyBank;
+
+  @NonNull
+  public final LinearLayout layoutCompanyBankAccount;
+
+  @NonNull
+  public final LinearLayout layoutCompanyTel;
+
+  @NonNull
+  public final AppCompatCheckBox scDefault;
+
+  @NonNull
+  public final TextView tvItemTitle;
+
+  @NonNull
+  public final TextView tvReceiptPersonalTips;
+
+  @NonNull
+  public final TextView tvReceiptTitle;
+
+  protected ActivityReceiptBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      Button btnSure, CheckBox cbCompany, CheckBox cbEReceipt, CheckBox cbPaperReceipt,
+      CheckBox cbPersonal, View dividerCompanyAddress, View dividerCompanyBank,
+      View dividerCompanyBankAccount, View dividerCompanyTel, EditText etCompanyAddress,
+      EditText etCompanyBank, EditText etCompanyBankAccount, EditText etCompanyName,
+      EditText etCompanyNo, EditText etCompanyTel, EditText etEmail, EditText etPhone,
+      LinearLayout layoutCompanyAddress, LinearLayout layoutCompanyBank,
+      LinearLayout layoutCompanyBankAccount, LinearLayout layoutCompanyTel,
+      AppCompatCheckBox scDefault, TextView tvItemTitle, TextView tvReceiptPersonalTips,
+      TextView tvReceiptTitle) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.btnSure = btnSure;
+    this.cbCompany = cbCompany;
+    this.cbEReceipt = cbEReceipt;
+    this.cbPaperReceipt = cbPaperReceipt;
+    this.cbPersonal = cbPersonal;
+    this.dividerCompanyAddress = dividerCompanyAddress;
+    this.dividerCompanyBank = dividerCompanyBank;
+    this.dividerCompanyBankAccount = dividerCompanyBankAccount;
+    this.dividerCompanyTel = dividerCompanyTel;
+    this.etCompanyAddress = etCompanyAddress;
+    this.etCompanyBank = etCompanyBank;
+    this.etCompanyBankAccount = etCompanyBankAccount;
+    this.etCompanyName = etCompanyName;
+    this.etCompanyNo = etCompanyNo;
+    this.etCompanyTel = etCompanyTel;
+    this.etEmail = etEmail;
+    this.etPhone = etPhone;
+    this.layoutCompanyAddress = layoutCompanyAddress;
+    this.layoutCompanyBank = layoutCompanyBank;
+    this.layoutCompanyBankAccount = layoutCompanyBankAccount;
+    this.layoutCompanyTel = layoutCompanyTel;
+    this.scDefault = scDefault;
+    this.tvItemTitle = tvItemTitle;
+    this.tvReceiptPersonalTips = tvReceiptPersonalTips;
+    this.tvReceiptTitle = tvReceiptTitle;
+  }
+
+  @NonNull
+  public static ActivityReceiptBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_receipt, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityReceiptBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<ActivityReceiptBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_receipt, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static ActivityReceiptBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.activity_receipt, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static ActivityReceiptBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<ActivityReceiptBinding>inflateInternal(inflater, com.asia.paint.R.layout.activity_receipt, null, false, component);
+  }
+
+  public static ActivityReceiptBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static ActivityReceiptBinding bind(@NonNull View view, @Nullable Object component) {
+    return (ActivityReceiptBinding)bind(component, view, com.asia.paint.R.layout.activity_receipt);
+  }
+}

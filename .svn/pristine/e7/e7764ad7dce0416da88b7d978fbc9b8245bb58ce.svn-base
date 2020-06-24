@@ -1,0 +1,97 @@
+package com.asia.paint.databinding;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
+import java.lang.Deprecated;
+import java.lang.Object;
+
+public abstract class DialogOrderReceiptBinding extends ViewDataBinding {
+  @NonNull
+  public final ImageView ivClose;
+
+  @NonNull
+  public final RecyclerView rvOrderReceipt;
+
+  @NonNull
+  public final TextView tvNewReceipt;
+
+  @NonNull
+  public final TextView tvNot;
+
+  @NonNull
+  public final TextView tvTitle;
+
+  protected DialogOrderReceiptBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      ImageView ivClose, RecyclerView rvOrderReceipt, TextView tvNewReceipt, TextView tvNot,
+      TextView tvTitle) {
+    super(_bindingComponent, _root, _localFieldCount);
+    this.ivClose = ivClose;
+    this.rvOrderReceipt = rvOrderReceipt;
+    this.tvNewReceipt = tvNewReceipt;
+    this.tvNot = tvNot;
+    this.tvTitle = tvTitle;
+  }
+
+  @NonNull
+  public static DialogOrderReceiptBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot) {
+    return inflate(inflater, root, attachToRoot, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.dialog_order_receipt, root, attachToRoot, component)
+   */
+  @NonNull
+  @Deprecated
+  public static DialogOrderReceiptBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup root, boolean attachToRoot, @Nullable Object component) {
+    return ViewDataBinding.<DialogOrderReceiptBinding>inflateInternal(inflater, com.asia.paint.R.layout.dialog_order_receipt, root, attachToRoot, component);
+  }
+
+  @NonNull
+  public static DialogOrderReceiptBinding inflate(@NonNull LayoutInflater inflater) {
+    return inflate(inflater, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.dialog_order_receipt, null, false, component)
+   */
+  @NonNull
+  @Deprecated
+  public static DialogOrderReceiptBinding inflate(@NonNull LayoutInflater inflater,
+      @Nullable Object component) {
+    return ViewDataBinding.<DialogOrderReceiptBinding>inflateInternal(inflater, com.asia.paint.R.layout.dialog_order_receipt, null, false, component);
+  }
+
+  public static DialogOrderReceiptBinding bind(@NonNull View view) {
+    return bind(view, DataBindingUtil.getDefaultComponent());
+  }
+
+  /**
+   * This method receives DataBindingComponent instance as type Object instead of
+   * type DataBindingComponent to avoid causing too many compilation errors if
+   * compilation fails for another reason.
+   * https://issuetracker.google.com/issues/116541301
+   * @Deprecated Use DataBindingUtil.bind(view, component)
+   */
+  @Deprecated
+  public static DialogOrderReceiptBinding bind(@NonNull View view, @Nullable Object component) {
+    return (DialogOrderReceiptBinding)bind(component, view, com.asia.paint.R.layout.dialog_order_receipt);
+  }
+}
