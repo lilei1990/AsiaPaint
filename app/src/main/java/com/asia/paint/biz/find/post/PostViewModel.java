@@ -101,6 +101,26 @@ public class PostViewModel extends BaseViewModel {
 		return mPostRsp;
 	}
 
+	//帖子删除
+	public CallbackDate<Boolean> delPost(int pid) {
+		NetworkFactory.createService(PostService.class)
+				.delPost(pid)
+				.compose(new NetworkObservableTransformer<>())
+				.subscribe(new DefaultNetworkObserver<String>(false) {
+					@Override
+					public void onSubscribe(Disposable d) {
+						addDisposable(d);
+					}
+
+					@Override
+					public void onResponse(String response) {
+						mLikeRsp.setData(true);
+					}
+
+				});
+		return mLikeRsp;
+	}
+
 	public CallbackDate<Boolean> likePost(int pid) {
 		NetworkFactory.createService(PostService.class)
 				.likePost(pid)
@@ -209,7 +229,7 @@ public class PostViewModel extends BaseViewModel {
 		NetworkFactory.createService(PostService.class)
 				.publishPost(content, builder.toString())
 				.compose(new NetworkObservableTransformer<>())
-				.subscribe(new DefaultNetworkObserver<String>() {
+				.subscribe(new DefaultNetworkObserver<String>(true) {
 					@Override
 					public void onSubscribe(Disposable d) {
 						addDisposable(d);

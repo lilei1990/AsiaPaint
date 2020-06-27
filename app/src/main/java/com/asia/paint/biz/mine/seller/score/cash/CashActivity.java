@@ -23,7 +23,7 @@ import com.asia.paint.base.network.bean.CashInfoRsp;
 import com.asia.paint.base.network.bean.TaxRsp;
 import com.asia.paint.base.network.bean.UserInfo;
 import com.asia.paint.base.widgets.CheckBox;
-import com.asia.paint.base.widgets.MessageDialog;
+import com.asia.paint.base.widgets.dialog.MessageDialog;
 import com.asia.paint.biz.AsiaPaintApplication;
 import com.asia.paint.biz.login.LoginViewModel;
 import com.asia.paint.biz.login.SmsCode;

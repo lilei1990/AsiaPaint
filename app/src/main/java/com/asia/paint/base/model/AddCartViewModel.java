@@ -15,7 +15,9 @@ import com.asia.paint.biz.shop.detail.GoodsSpecDialog;
 import com.asia.paint.network.NetworkFactory;
 import com.asia.paint.network.NetworkObservableTransformer;
 import com.asia.paint.utils.callback.CallbackDate;
+import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.PairCallbackDate;
+import com.asia.paint.utils.utils.AppUtils;
 
 import io.reactivex.disposables.Disposable;
 
@@ -26,6 +28,7 @@ import io.reactivex.disposables.Disposable;
 public class AddCartViewModel extends BaseViewModel {
 
 	private CallbackDate<Boolean> mAddCartSuccess = new CallbackDate<>();
+	private CallbackDate<Boolean> mBuySuccess = new CallbackDate<>();
 	private CallbackDate<CartCountRsp> mCartCountSuccess = new CallbackDate<>();
 	private PairCallbackDate<Specs, Integer> mSpecResult = new PairCallbackDate<>();
 
@@ -59,7 +62,12 @@ public class AddCartViewModel extends BaseViewModel {
 				dialog.dismiss();
 				if (spec != null && count > 0) {
 					if (id == 0) {
-						OrderCheckoutActivity.start(context, OrderService.BUY, spec.spec_id, count);
+						directBuy(spec.spec_id, count).setCallback(new OnChangeCallback<Boolean>() {
+							@Override
+							public void onChange(Boolean result) {
+								OrderCheckoutActivity.start(context, OrderService.BUY, spec.spec_id, count);
+							}
+						});
 					} else if (mType == OrderService.GROUP) {
 						OrderCheckoutActivity.start(context, mType, spec.spec_id, count, id);
 					} else if (mType == OrderService.SPIKE) {
@@ -75,6 +83,25 @@ public class AddCartViewModel extends BaseViewModel {
 		});
 		dialog.show(context);
 		return mSpecResult;
+	}
+
+	public CallbackDate<Boolean> directBuy(int spec_id, int count) {
+		NetworkFactory.createService(OrderService.class)
+				.directBuy(spec_id, count)
+				.compose(new NetworkObservableTransformer<>())
+				.subscribe(new DefaultNetworkObserver<String>() {
+					@Override
+					public void onSubscribe(Disposable d) {
+						addDisposable(d);
+					}
+
+					@Override
+					public void onResponse(String response) {
+						mBuySuccess.setData(true);
+					}
+
+				});
+		return mBuySuccess;
 	}
 
 

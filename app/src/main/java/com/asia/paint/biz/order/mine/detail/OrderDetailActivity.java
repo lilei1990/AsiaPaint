@@ -17,7 +17,7 @@ import com.asia.paint.base.network.api.OrderService;
 import com.asia.paint.base.network.bean.OrderCheckout;
 import com.asia.paint.base.network.bean.OrderDetail;
 import com.asia.paint.base.network.bean.OrderReturnDetailRsp;
-import com.asia.paint.base.widgets.MessageDialog;
+import com.asia.paint.base.widgets.dialog.MessageDialog;
 import com.asia.paint.biz.comment.add.AddCommentActivity;
 import com.asia.paint.biz.order.OrderViewModel;
 import com.asia.paint.biz.order.checkout.OrderCheckoutAdapter;

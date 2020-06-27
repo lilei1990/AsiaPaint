@@ -11,7 +11,7 @@ import com.asia.paint.base.network.api.OrderService;
 import com.asia.paint.base.network.bean.OrderDetail;
 import com.asia.paint.base.network.bean.OrderMineRsp;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
-import com.asia.paint.base.widgets.MessageDialog;
+import com.asia.paint.base.widgets.dialog.MessageDialog;
 import com.asia.paint.biz.comment.add.AddCommentActivity;
 import com.asia.paint.biz.order.OrderViewModel;
 import com.asia.paint.biz.order.mine.detail.OrderDetailActivity;

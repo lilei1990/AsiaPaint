@@ -8,7 +8,7 @@ import android.view.View;
 import com.asia.paint.R;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.bean.UserInfo;
-import com.asia.paint.base.widgets.MessageDialog;
+import com.asia.paint.base.widgets.dialog.MessageDialog;
 import com.asia.paint.biz.AsiaPaintApplication;
 import com.asia.paint.biz.mine.settings.about.AboutUsActivity;
 import com.asia.paint.biz.mine.settings.account.index.AccountIndexActivity;

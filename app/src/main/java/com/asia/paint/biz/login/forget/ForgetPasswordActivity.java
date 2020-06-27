@@ -10,7 +10,7 @@ import android.view.View;
 
 import com.asia.paint.R;
 import com.asia.paint.base.container.BaseActivity;
-import com.asia.paint.base.widgets.MessageDialog;
+import com.asia.paint.base.widgets.dialog.MessageDialog;
 import com.asia.paint.biz.login.SmsCode;
 import com.asia.paint.biz.login.reset.ResetPasswordActivity;
 import com.asia.paint.databinding.ActivityForgetPasswordBinding;

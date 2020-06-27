@@ -11,7 +11,6 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.asia.paint.R;
 import com.asia.paint.base.container.BaseFragment;
-import com.asia.paint.biz.find.post.PostFragment;
 import com.asia.paint.databinding.FragmentMineServiceBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
@@ -82,8 +81,8 @@ public class MineServiceFragment extends BaseFragment<FragmentMineServiceBinding
         {
             fragments = new SparseArray<>();
 //            fragments.append(INDEX_SCHEDULE, new ScheduleFragment());
-            fragments.append(INDEX_POST, PostFragment.createInstance(PostFragment.TYPE_MY_POST));
-            fragments.append(INDEX_FOLLOW, PostFragment.createInstance(PostFragment.TYPE_FOLLOW_POST));
+            fragments.append(INDEX_POST, PostMineFragment.createInstance(PostMineFragment.TYPE_MY_POST));
+            fragments.append(INDEX_FOLLOW, PostMineFragment.createInstance(PostMineFragment.TYPE_FOLLOW_POST));
 
         }
 

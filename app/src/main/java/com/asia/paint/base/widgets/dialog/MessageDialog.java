@@ -1,4 +1,4 @@
-package com.asia.paint.base.widgets;
+package com.asia.paint.base.widgets.dialog;
 
 import android.text.TextUtils;
 import android.view.View;

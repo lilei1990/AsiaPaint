@@ -1,6 +1,7 @@
 package com.asia.paint.base.model;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.asia.paint.base.container.BaseViewModel;
 import com.asia.paint.base.network.api.ShopService;

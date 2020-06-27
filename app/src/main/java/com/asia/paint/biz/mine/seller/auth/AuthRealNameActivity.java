@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import com.alibaba.fastjson.JSON;
 import com.asia.paint.R;
 import com.asia.paint.base.container.BaseActivity;
-import com.asia.paint.base.widgets.MessageDialog;
+import com.asia.paint.base.widgets.dialog.MessageDialog;
 import com.asia.paint.base.widgets.selectimage.MatisseActivity;
 import com.asia.paint.biz.find.post.publish.PublishPostAdapter;
 import com.asia.paint.biz.mine.index.MineViewModel;

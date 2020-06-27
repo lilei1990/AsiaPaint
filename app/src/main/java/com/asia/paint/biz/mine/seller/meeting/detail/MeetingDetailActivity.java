@@ -11,7 +11,7 @@ import com.asia.paint.R;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.bean.Meeting;
 import com.asia.paint.base.network.bean.MeetingMember;
-import com.asia.paint.base.widgets.MessageDialog;
+import com.asia.paint.base.widgets.dialog.MessageDialog;
 import com.asia.paint.biz.mine.seller.meeting.MeetingViewModel;
 import com.asia.paint.biz.mine.seller.meeting.member.MeetingMemberActivity;
 import com.asia.paint.databinding.ActivityMeetingDetailBinding;

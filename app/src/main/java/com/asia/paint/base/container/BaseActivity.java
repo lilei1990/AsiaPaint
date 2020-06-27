@@ -1,5 +1,6 @@
 package com.asia.paint.base.container;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
@@ -30,12 +31,13 @@ import androidx.lifecycle.ViewModelProviders;
 public abstract class BaseActivity<T extends ViewDataBinding> extends AppCompatActivity {
 
     protected ActivityBaseTitleBinding mBaseBinding;
-
+    protected Context mContext;
     protected T mBinding;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mContext = this;
         getIntentValue();
         AsiaPaintApplication.addActivity(this);
         //如果为了追求性能，这里需要去掉

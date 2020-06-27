@@ -41,7 +41,7 @@ public class FindFragment extends BaseFragment<FragmentFindBinding> {
 		{
 			data = new SparseArray<>();
 			data.append(0, new Pair<>("我要选色", new ZoneFragment()));
-			data.append(1, new Pair<>("买家秀", PostFragment.createInstance(PostFragment.TYPE_ALL_POST)));
+			data.append(1, new Pair<>("买家秀", new PostFragment()));
 			data.append(2, new Pair<>("我的", new MineServiceFragment()));
 
 		}

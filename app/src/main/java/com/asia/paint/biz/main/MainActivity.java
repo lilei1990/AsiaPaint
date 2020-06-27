@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.asia.paint.R;
 import com.asia.paint.base.container.BaseActivity;
@@ -58,6 +59,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> implements O
 	@Override
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
+		Log.e("TAG_TAG","执行");
 		if (intent != null) {
 			mTabIndex = intent.getIntExtra(KEY_TAB_INDEX, Tab.SHOP.value);
 			setHostTab(mTabIndex);

@@ -33,6 +33,7 @@ public class FlashGoodsAdapter extends BaseGlideAdapter<FlashGoods> {
 		}
 		helper.loadImage(R.id.iv_goods_icon, iconUrl);
 		helper.setText(R.id.tv_goods_name, goods.goods_name);
+		helper.setText(R.id.tv_goods_price, PriceUtils.getPriceTrimZero(goods.price));
 		if (!TextUtils.isEmpty(mCategoryName)) {
 			helper.setText(R.id.tv_shop_hour1, goods.showHour);
 			helper.setText(R.id.tv_shop_minute1, goods.showMinute);
@@ -44,11 +45,11 @@ public class FlashGoodsAdapter extends BaseGlideAdapter<FlashGoods> {
 			} else if (mCategoryName.equals(FlashGoodsFragment.CATEGORY_GROUP)) {
 				helper.setText(R.id.tv_timer_content, "后秒杀拼团");
 				helper.setText(R.id.btn_add_cart, "发起拼团");
+//				helper.setText(R.id.tv_goods_price, PriceUtils.getPriceTrimZero(goods.price));
 			}
 		}
 		String sellCount = String.format("剩余库存 %s", goods.stock);
 		helper.setText(R.id.tv_sell_count, sellCount);
-		helper.setText(R.id.tv_goods_price, PriceUtils.getPriceTrimZero(goods.price));
 		TextView tvMarketPrice = helper.itemView.findViewById(R.id.tv_goods_price_market);
 		tvMarketPrice.setText(PriceUtils.getPriceTrimZero(goods.market_price));
 		tvMarketPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG); //中间加横线

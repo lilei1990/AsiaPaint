@@ -53,12 +53,13 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
+
+
             <ImageView
                 android:id="@+id/img_del"
-                android:visibility="gone"
                 android:background="@mipmap/ic_delete_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="16.5dp"
+                android:layout_height="21dp" />
         </LinearLayout>
 
         <TextView

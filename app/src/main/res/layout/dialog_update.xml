@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_dialog_message"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingEnd="33dp"
+        android:paddingStart="33dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有新版本"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:lineSpacingMultiplier="1.3"
+            android:text="新版本更新"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:lineSpacingMultiplier="1.3"
+            android:text="版本号:1.0.1"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+        <com.asia.paint.base.widgets.HorizontalProgressBarWithNumber
+            android:id="@+id/progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            app:progress_circlein_color="#038bf9"
+            app:progress_circleout_color="#038bf9"
+            app:progress_reached_bar_height="10dp"
+            app:progress_reached_color="#038bf9"
+            app:progress_text_color="#000000"
+            app:progress_text_size="10sp"
+            app:progress_unreached_bar_height="10dp"
+            app:progress_unreached_color="#AAacacac" />
+        <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="28dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:text="取消"
+                android:visibility="gone"
+                android:background="@drawable/bg_btn_dialog_message_cancel"
+                android:stateListAnimator="@null"
+                android:textColor="@color/color_333333"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_sure"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="确认"
+                android:background="@drawable/bg_btn_dialog_message_sure"
+                android:stateListAnimator="@null"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

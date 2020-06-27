@@ -34,6 +34,7 @@ import com.asia.paint.base.network.bean.ShopGoodsDetailRsp;
 import com.asia.paint.base.network.bean.Specs;
 import com.asia.paint.base.network.bean.User;
 import com.asia.paint.base.util.WeiXinUtils;
+import com.asia.paint.base.widgets.FullyLinearLayoutManager;
 import com.asia.paint.biz.mine.seller.store.PinTuanDialog;
 import com.asia.paint.biz.order.checkout.OrderCheckoutActivity;
 import com.asia.paint.biz.order.group.GroupDetailActivity;
@@ -165,8 +166,14 @@ public class GoodsDetailActivity extends BaseActivity<ActivityGoodsDetailBinding
 		mPinTuanAdapter = new PinTuanAdapter();
 		mBinding.rvPintuan.setAdapter(mPinTuanAdapter);
 
-		mBinding.rvComplimentary.setLayoutManager(new LinearLayoutManager(this));
+		mBinding.rvComplimentary.setLayoutManager(new FullyLinearLayoutManager(this));
 		mGiftAdapter = new GiftAdapter();
+//		//解决数据加载不完的问题
+//		mBinding.rvComplimentary.setNestedScrollingEnabled(false);
+//		//当知道Adapter内Item的改变不会影响RecyclerView宽高的时候，可以设置为true让RecyclerView避免重新计算大小
+//		mBinding.rvComplimentary.setHasFixedSize(true);
+//		//解决数据加载完成后, 没有停留在顶部的问题
+//		mBinding.rvComplimentary.setFocusable(false);
 		mBinding.rvComplimentary.setAdapter(mGiftAdapter);
 
 		mBinding.rvPromotionCompose.setLayoutManager(new LinearLayoutManager(this));
@@ -397,7 +404,6 @@ public class GoodsDetailActivity extends BaseActivity<ActivityGoodsDetailBinding
 		mBinding.ivLike.setSelected(goods.isCollect());
 		mBinding.viewBanner.setImages(goodsDetailRsp.result.default_image);
 		mBinding.viewBanner.start();
-		setPrice(goods.price);
 		setOriginPrice(goods.market_price);
 		setScore(String.valueOf(goods.level_1));
 		if (mType != OrderService.GROUP && mType != OrderService.SPIKE) {
@@ -410,6 +416,7 @@ public class GoodsDetailActivity extends BaseActivity<ActivityGoodsDetailBinding
 			if (mType == OrderService.GROUP) {
 				//团购截止日期和几人成团
 				if (goodsDetailRsp._groupbuy != null) {
+					setPrice(goodsDetailRsp._groupbuy.price);
 					mBinding.llGroupEndtimeNumber.setVisibility(View.VISIBLE);
 					mBinding.tvGroupNumber.setText(goodsDetailRsp._groupbuy.number + "人");
 				} else {

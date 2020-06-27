@@ -28,4 +28,21 @@ public class ShopGoodsDetailRsp {
     public Spike _spike;
     public Specs _specs;
     public int goods_number;
+
+    @Override
+    public String toString() {
+        return "ShopGoodsDetailRsp{" +
+                "freight='" + freight + '\'' +
+                ", result=" + result +
+                ", carnum=" + carnum +
+                ", _comment_count=" + _comment_count +
+                ", score=" + score +
+                ", _comment=" + _comment +
+                ", _gift=" + _gift +
+                ", _groupbuy=" + _groupbuy +
+                ", _spike=" + _spike +
+                ", _specs=" + _specs +
+                ", goods_number=" + goods_number +
+                '}';
+    }
 }

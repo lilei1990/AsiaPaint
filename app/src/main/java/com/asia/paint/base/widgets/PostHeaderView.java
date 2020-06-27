@@ -2,9 +2,11 @@ package com.asia.paint.base.widgets;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.PluralsRes;
 
 import com.asia.paint.R;
 import com.asia.paint.base.container.BaseFrameLayout;
@@ -15,6 +17,7 @@ import com.asia.paint.databinding.ViewPostHeaderBinding;
  * @author by chenhong14 on 2019-12-10.
  */
 public class PostHeaderView extends BaseFrameLayout<ViewPostHeaderBinding> {
+
     public PostHeaderView(@NonNull Context context) {
         super(context);
     }
@@ -27,6 +30,7 @@ public class PostHeaderView extends BaseFrameLayout<ViewPostHeaderBinding> {
         super(context, attrs, defStyleAttr);
     }
 
+
     @Override
     protected int getLayoutId() {
         return R.layout.view_post_header;
@@ -34,7 +38,6 @@ public class PostHeaderView extends BaseFrameLayout<ViewPostHeaderBinding> {
 
     @Override
     protected void initView() {
-
     }
 
     public void setAvatar(Object url) {

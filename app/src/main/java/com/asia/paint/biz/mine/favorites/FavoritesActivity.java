@@ -10,7 +10,7 @@ import com.asia.paint.R;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.model.CollectViewModel;
 import com.asia.paint.base.network.bean.FavoritesRsp;
-import com.asia.paint.base.widgets.MessageDialog;
+import com.asia.paint.base.widgets.dialog.MessageDialog;
 import com.asia.paint.biz.shop.detail.GoodsDetailActivity;
 import com.asia.paint.databinding.ActivityFavoritesBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;

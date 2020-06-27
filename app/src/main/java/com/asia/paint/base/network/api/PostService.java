@@ -49,6 +49,10 @@ public interface PostService {
 	Observable<BaseRsp<String>> likePost(@Field("pid") int id);
 
 	@FormUrlEncoded
+	@POST("api/poster/del_poster")
+	Observable<BaseRsp<String>> delPost(@Field("id") int id);
+
+	@FormUrlEncoded
 	@POST("api/poster/care")
 	Observable<BaseRsp<String>> followPost(@Field("pid") int id);
 

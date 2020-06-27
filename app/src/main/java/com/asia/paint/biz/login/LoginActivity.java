@@ -27,7 +27,7 @@ import com.asia.paint.base.network.api.OtherService;
 import com.asia.paint.base.network.bean.LoginRsp;
 import com.asia.paint.base.network.bean.UserInfo;
 import com.asia.paint.base.network.bean.WeiXinInfo;
-import com.asia.paint.base.widgets.MessageDialog;
+import com.asia.paint.base.widgets.dialog.MessageDialog;
 import com.asia.paint.biz.AsiaPaintApplication;
 import com.asia.paint.biz.login.bind.BindPhoneActivity;
 import com.asia.paint.biz.login.forget.ForgetPasswordActivity;

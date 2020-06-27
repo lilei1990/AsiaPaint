@@ -15,6 +15,7 @@ import com.asia.paint.base.network.bean.CartGoods;
 import com.asia.paint.base.network.bean.CartGoodsRsp;
 import com.asia.paint.base.util.CartUtils;
 import com.asia.paint.base.widgets.CheckBox;
+import com.asia.paint.biz.AsiaPaintApplication;
 import com.asia.paint.biz.main.MainActivity;
 import com.asia.paint.biz.order.checkout.OrderCheckoutActivity;
 import com.asia.paint.databinding.FragmentCartBinding;
@@ -25,7 +26,6 @@ import com.lljjcoder.style.citylist.Toast.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class CartFragment extends BaseFragment<FragmentCartBinding> {
 
@@ -151,11 +151,11 @@ public class CartFragment extends BaseFragment<FragmentCartBinding> {
 
 	private void loadCartGoods() {
 		mViewModel.loadCartGoods().setCallback(this::updateCartGoods);
+
 	}
 
 
 	private void updateCartGoods(CartGoodsRsp cartGoodsRsp) {
-
 		boolean isEmpty = cartGoodsRsp == null || cartGoodsRsp.cartGoods == null || cartGoodsRsp.cartGoods.isEmpty();
 		setMode(isEmpty ? Mode.EMPTY : mCurMode == Mode.EMPTY ? Mode.CART : mCurMode);
 		mShopCartAdapter.replaceData(cartGoodsRsp == null ? new ArrayList<>() : cartGoodsRsp.cartGoods);
@@ -163,6 +163,7 @@ public class CartFragment extends BaseFragment<FragmentCartBinding> {
 		mBinding.tvTotalPrice.setText(PriceUtils.getPrice(cartGoodsRsp == null ? "" : cartGoodsRsp.amount));
 		mBinding.tvCheckout.setText(String.format("结算(%s)", cartGoodsRsp == null ? 0 : mShopCartAdapter.getCheckCount()));
 		mBinding.tvGoodsCount.setText(String.format("共%s件商品", cartGoodsRsp == null ? 0 : cartGoodsRsp.quantity));
+		AsiaPaintApplication.queryCartCount();
 	}
 
 	private void setMode(Mode mode) {

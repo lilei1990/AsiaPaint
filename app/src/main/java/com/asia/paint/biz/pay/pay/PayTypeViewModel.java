@@ -16,7 +16,7 @@ import com.asia.paint.android.wxapi.WXPayEntryActivity;
 import com.asia.paint.base.container.BaseViewModel;
 import com.asia.paint.base.network.api.PayService;
 import com.asia.paint.base.network.bean.PayOrderInfo;
-import com.asia.paint.base.widgets.MessageDialog;
+import com.asia.paint.base.widgets.dialog.MessageDialog;
 import com.asia.paint.biz.mine.index.MineViewModel;
 import com.asia.paint.biz.order.checkout.OrderSelectPayTypeDialog;
 import com.asia.paint.biz.pay.PayDialog;

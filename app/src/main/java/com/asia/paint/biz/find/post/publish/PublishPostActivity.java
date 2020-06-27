@@ -14,6 +14,7 @@ import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.api.FileService;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
 import com.asia.paint.base.util.FileUtils;
+import com.asia.paint.base.widgets.dialog.LoadDialog;
 import com.asia.paint.base.widgets.selectimage.MatisseActivity;
 import com.asia.paint.biz.find.post.PostViewModel;
 import com.asia.paint.databinding.ActivityPublishPostBinding;
@@ -31,6 +32,7 @@ public class PublishPostActivity extends BaseTitleActivity<ActivityPublishPostBi
 
 	private PublishPostAdapter mPublishPostAdapter;
 	private PostViewModel mPostViewModel;
+	private LoadDialog loaddialog;
 
 	@Override
 	protected String middleTitle() {
@@ -72,6 +74,11 @@ public class PublishPostActivity extends BaseTitleActivity<ActivityPublishPostBi
 		mPublishPostAdapter.addImg(new ArrayList<>());
 	}
 
+	private void showLoading() {
+		loaddialog=new LoadDialog();
+		loaddialog.show(this);
+	}
+
 	private void publishPost() {
 		String content = mBinding.etContent.getText().toString().trim();
 		List<String> img = mPublishPostAdapter.getImg();
@@ -80,7 +87,7 @@ public class PublishPostActivity extends BaseTitleActivity<ActivityPublishPostBi
 			return;
 		}
 		if (img != null && !img.isEmpty()) {
-
+			showLoading();
 			FileUtils.uploadMultiFile(FileService.POSTER, img).setCallback(new OnChangeCallback<List<String>>() {
 				@Override
 				public void onChange(List<String> result) {
@@ -102,6 +109,8 @@ public class PublishPostActivity extends BaseTitleActivity<ActivityPublishPostBi
 
 	private void publish(String content, List<String> img) {
 		mPostViewModel.publishPost(content, img).setCallback(result -> {
+			if (loaddialog!=null)
+				loaddialog.dismiss();
 			if (result) {
 				//TODO 发布成功，刷新买家秀和我的页面
 				Intent intent = new Intent("android.intent.action.broadcastrefreshweibo");

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
@@ -16,16 +17,18 @@ import com.asia.paint.R;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.bean.Post;
 import com.asia.paint.base.network.bean.PostComment;
+import com.asia.paint.base.network.bean.UserInfo;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
-import com.asia.paint.base.widgets.PostHeaderView;
+import com.asia.paint.base.widgets.PostDetailHeaderView;
 import com.asia.paint.base.widgets.SendMessagePopupWindow;
+import com.asia.paint.base.widgets.dialog.MessageDialog;
 import com.asia.paint.biz.AsiaPaintApplication;
 import com.asia.paint.biz.find.post.PostCommentAdapter;
 import com.asia.paint.biz.find.post.PostViewModel;
+import com.asia.paint.biz.login.forget.ForgetPasswordActivity;
 import com.asia.paint.databinding.ActivityPostDetailBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
-import com.asia.paint.utils.utils.KeyBoardUtils;
 
 /**
  * @author by chenhong14 on 2019-12-10.
@@ -36,11 +39,12 @@ public class PostDetailActivity extends BaseTitleActivity<ActivityPostDetailBind
 	private PostViewModel mPostViewModel;
 	private PostDetailAdapter mPostDetailAdapter;
 	private PostCommentAdapter mPostCommentAdapter;
-	private PostHeaderView mPostHeaderView;
+	private PostDetailHeaderView mPostHeaderView;
 	private View mPostFooterView;
 	private TextView tvPostLike, tvPostComment;
 	private int mPostId;
 	private Post mPost;
+	private UserInfo userInfo;
 
 	public static void start(Context context, int postId) {
 		Intent intent = new Intent(context, PostDetailActivity.class);
@@ -66,11 +70,12 @@ public class PostDetailActivity extends BaseTitleActivity<ActivityPostDetailBind
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		userInfo = AsiaPaintApplication.getUserInfo();
 		mPostViewModel = getViewModel(PostViewModel.class);
 		mBinding.rvPostDetail.setLayoutManager(new LinearLayoutManager(this));
 		mBinding.rvPostDetail.addItemDecoration(new DefaultItemDecoration(0, 0, 0, 8));
 		mPostDetailAdapter = new PostDetailAdapter();
-		mPostHeaderView = new PostHeaderView(this);
+		mPostHeaderView = new PostDetailHeaderView(this);
 		mPostDetailAdapter.addHeaderView(mPostHeaderView);
 		mPostFooterView = LayoutInflater.from(this).inflate(R.layout.layout_post_footer, null);
 		RecyclerView rvPostDetailComment = mPostFooterView.findViewById(R.id.rv_post_comment);
@@ -143,6 +148,26 @@ public class PostDetailActivity extends BaseTitleActivity<ActivityPostDetailBind
 			return;
 		}
 		mPost = post;
+		if (userInfo!=null&&userInfo.id!=0&&userInfo.id==post.user_id)
+			mPostHeaderView.setUserId(true);
+		else
+			mPostHeaderView.setUserId(false);
+		mPostHeaderView.setClickListener(new PostDetailHeaderView.onClicListener() {
+			@Override
+			public void Click() {
+				MessageDialog dialog = new MessageDialog.Builder()
+						.title("删除帖子")
+						.message("确认删除？")
+						.setSureButton("确认", new View.OnClickListener() {
+							@Override
+							public void onClick(View view) {
+								delPosterRequest();
+							}
+						})
+						.build();
+				dialog.show(PostDetailActivity.this);
+			}
+		});
 		if (post.isCare()) {
 			setCancelText();
 		} else {
@@ -170,6 +195,18 @@ public class PostDetailActivity extends BaseTitleActivity<ActivityPostDetailBind
 		mPostHeaderView.setTime(post.add_time);
 		mPostHeaderView.setContent(post.content);
 		mPostDetailAdapter.updateData(post.images);
+	}
+
+	/**
+	 * 删除帖子
+	 */
+	private void delPosterRequest() {
+		mPostViewModel.delPost(mPostId).setCallback(result -> {
+			//TODO 发布成功，刷新买家秀和我的页面
+			Intent intent = new Intent("android.intent.action.broadcastrefreshweibo");
+			sendBroadcast(intent);
+			finish();
+		});
 	}
 
 	private void updateCommentList(PostComment post) {
