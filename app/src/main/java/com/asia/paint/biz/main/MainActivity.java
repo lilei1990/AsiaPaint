@@ -59,7 +59,6 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> implements O
 	@Override
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
-		Log.e("TAG_TAG","执行");
 		if (intent != null) {
 			mTabIndex = intent.getIntExtra(KEY_TAB_INDEX, Tab.SHOP.value);
 			setHostTab(mTabIndex);
