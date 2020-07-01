@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.acker.simplezxing.activity.CaptureActivity;
 import com.asia.paint.R;
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.container.BaseFragment;
@@ -21,6 +23,9 @@ import com.asia.paint.base.network.bean.UserDetail;
 import com.asia.paint.base.util.FileUtils;
 import com.asia.paint.base.util.ImageUtils;
 import com.asia.paint.base.util.WeiXinUtils;
+import com.asia.paint.base.widgets.dialog.MessageDialog;
+import com.asia.paint.biz.login.LoginActivity;
+import com.asia.paint.biz.mine.favorites.FavoritesActivity;
 import com.asia.paint.biz.mine.message.MessageActivity;
 import com.asia.paint.biz.mine.seller.monthly.detail.MonthlyDetailActivity;
 import com.asia.paint.biz.mine.seller.recommend.RecommendCodeActivity;
@@ -121,6 +126,7 @@ public class MineFragment extends BaseFragment<FragmentMineBinding> {
 				updateSellerInfo(result);
 			}
 		});
+
 	}
 
 	private void shareToWeiXin(String content) {
@@ -296,4 +302,7 @@ public class MineFragment extends BaseFragment<FragmentMineBinding> {
 		mBinding.viewBanner.setImages(bannerUrls);
 		mBinding.viewBanner.start();
 	}
+
+
+
 }

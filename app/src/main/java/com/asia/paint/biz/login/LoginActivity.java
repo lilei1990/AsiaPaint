@@ -17,13 +17,18 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.util.Log;
+import android.view.TextureView;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.acker.simplezxing.activity.CaptureActivity;
 import com.asia.paint.R;
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.api.OtherService;
+import com.asia.paint.base.network.bean.CodeBean;
 import com.asia.paint.base.network.bean.LoginRsp;
 import com.asia.paint.base.network.bean.UserInfo;
 import com.asia.paint.base.network.bean.WeiXinInfo;
@@ -32,6 +37,7 @@ import com.asia.paint.biz.AsiaPaintApplication;
 import com.asia.paint.biz.login.bind.BindPhoneActivity;
 import com.asia.paint.biz.login.forget.ForgetPasswordActivity;
 import com.asia.paint.biz.main.MainActivity;
+import com.asia.paint.biz.mine.favorites.FavoritesActivity;
 import com.asia.paint.biz.mine.seller.goals.WebViewActivity;
 import com.asia.paint.databinding.ActivityLoginBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
@@ -41,9 +47,12 @@ import com.asia.paint.utils.utils.CacheUtils;
 import com.asia.paint.utils.utils.SpanText;
 import com.hjq.permissions.OnPermission;
 import com.hjq.permissions.XXPermissions;
+import com.lljjcoder.style.citylist.Toast.ToastUtils;
 import com.tencent.mm.opensdk.modelmsg.SendAuth;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -334,10 +343,38 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding> {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == CaptureActivity.REQ_CODE && resultCode == RESULT_OK && data != null) {
-            mBinding.etReferrerCode.setText(data.getStringExtra(CaptureActivity.EXTRA_SCAN_RESULT));
+            String url=data.getStringExtra(CaptureActivity.EXTRA_SCAN_RESULT);
+            if (TextUtils.isEmpty(url)){
+                ToastUtils.showLongToast(this,"二维码为空，请重新扫描");
+                return;
+            }
+            requestCode(url);
         } else if (requestCode == BindPhoneActivity.REQUEST_BIND_PHONE && resultCode == RESULT_OK) {
             finish();
         }
+    }
+
+    /**
+     * 获取推荐人code
+     */
+    private void requestCode(String url) {
+        mLoginViewModel.requestCode(url);
+        mLoginViewModel.codebean.observe(this, new Observer<CodeBean>() {
+            @Override
+            public void onChanged(CodeBean codeBean) {
+                if (codeBean != null && !TextUtils.isEmpty(codeBean.code))
+                    mBinding.etReferrerCode.setText(codeBean.code);
+                else {
+                    new MessageDialog.Builder()
+                            .title("无效二维码")
+                            .setSureButton("确认",null).build()
+                            .show(LoginActivity.this);
+                }
+            }
+
+
+
+        });
     }
 
     class WeiXinLoginBroadcastReceiver extends BroadcastReceiver {

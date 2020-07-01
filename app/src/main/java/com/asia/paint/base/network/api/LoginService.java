@@ -2,6 +2,7 @@ package com.asia.paint.base.network.api;
 
 
 import com.asia.paint.base.constants.Constants;
+import com.asia.paint.base.network.bean.CodeBean;
 import com.asia.paint.base.network.bean.LoginRsp;
 import com.asia.paint.base.network.bean.UserInfo;
 import com.asia.paint.base.network.core.BaseRsp;
@@ -54,4 +55,9 @@ public interface LoginService {
     @FormUrlEncoded
     @POST("api/sms/deluser")
     Observable<BaseRsp<String>> unsubscribeAccount(@Field("mobile") String mobile, @Field("captcha") String smsCode);
+
+    //获取传递的推荐码
+    @FormUrlEncoded
+    @POST("api/index/qrcode")
+    Observable<BaseRsp<CodeBean>> getCode(@Field("url") String url);
 }

@@ -1,18 +1,24 @@
 package com.asia.paint.biz.login;
 
 import android.util.Log;
+import android.view.View;
 
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.container.BaseViewModel;
 import com.asia.paint.base.network.api.LoginService;
 import com.asia.paint.base.network.api.WeiXinService;
+import com.asia.paint.base.network.bean.CodeBean;
 import com.asia.paint.base.network.bean.LoginRsp;
 import com.asia.paint.base.network.bean.UserInfo;
 import com.asia.paint.base.network.bean.WeiXinInfo;
 import com.asia.paint.base.network.core.DefaultNetworkObserver;
+import com.asia.paint.base.widgets.dialog.MessageDialog;
+import com.asia.paint.biz.mine.favorites.FavoritesActivity;
 import com.asia.paint.network.NetworkFactory;
 import com.asia.paint.network.NetworkObservableTransformer;
 import com.asia.paint.utils.callback.CallbackDate;
+import com.asia.paint.utils.callback.OnNoDoubleClickListener;
+import com.asia.paint.utils.utils.AppUtils;
 
 import androidx.lifecycle.MutableLiveData;
 import io.reactivex.Observer;
@@ -28,6 +34,7 @@ public class LoginViewModel extends BaseViewModel {
     public CallbackDate<UserInfo> mWeiXinLoginRsp = new CallbackDate<>();
     public CallbackDate<Boolean> mBindNewPhone = new CallbackDate<>();
     public CallbackDate<Boolean> mUnsubcribeAccount = new CallbackDate<>();
+    public MutableLiveData<CodeBean> codebean = new MutableLiveData<>();
 
     public void requestSmsCode(String phone) {
         NetworkFactory.createService(LoginService.class)
@@ -222,5 +229,30 @@ public class LoginViewModel extends BaseViewModel {
                     }
                 });
         return mUnsubcribeAccount;
+    }
+
+    //获取推荐人号
+    public void requestCode(String url) {
+        NetworkFactory.createService(LoginService.class)
+                .getCode(url)
+                .compose(new NetworkObservableTransformer<>())
+                .subscribe(new DefaultNetworkObserver<CodeBean>(false) {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                        addDisposable(d);
+                    }
+
+                    @Override
+                    public void onResponse(CodeBean response) {
+                        codebean.setValue(response);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        super.onError(e);
+                        AppUtils.showMessage(e.getMessage());
+                    }
+
+                });
     }
 }

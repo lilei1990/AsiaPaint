@@ -49,6 +49,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> implements O
 	private MainViewModel mViewModel;
 	private CollectViewModel mCollectViewModel;
 	private int mTabIndex = Tab.SHOP.value;
+	public static boolean CHANGESTATUS=false;//是否修改了状态
 
 	public static void start(Context context, int tabIndex) {
 		Intent intent = new Intent(context, MainActivity.class);

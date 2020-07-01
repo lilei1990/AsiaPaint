@@ -50,7 +50,15 @@
                 android:paddingLeft="14dp"
                 android:paddingRight="14dp"
                 android:textColorHint="@color/color_FFFFFF" />
-
+            <ImageView
+                android:id="@+id/iv_scan_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/layout_msg"
+                android:layout_toStartOf="@+id/iv_mine_setting"
+                android:paddingEnd="6dp"
+                android:paddingStart="6dp"
+                android:src="@mipmap/ico_scan_white" />
             <ImageView
                 android:id="@+id/iv_shop_share"
                 android:layout_width="wrap_content"

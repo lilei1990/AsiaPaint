@@ -10,6 +10,7 @@ import com.asia.paint.base.network.bean.PromotionComposeRsp;
 import com.asia.paint.base.network.bean.PromotionGroupPintuan;
 import com.asia.paint.base.network.bean.ShopBannerRsp;
 import com.asia.paint.base.network.bean.ShopGoodsDetailRsp;
+import com.asia.paint.base.network.bean.UpdateStatusBean;
 import com.asia.paint.base.network.core.BaseListRespose;
 import com.asia.paint.base.network.core.BaseRsp;
 import com.asia.paint.network.NetworkUrl;
@@ -110,5 +111,14 @@ public interface ShopService {
 	 */
 	@GET("api/index/exhibit")
 	Observable<BaseRsp<LoginRsp>> loadShopGoodsExhibit();
+
+	/**
+	 * 更新用户状态
+	 *
+	 * @param url 二维码识别的链接
+	 */
+	@FormUrlEncoded
+	@POST("api/index/upstatus")
+	Observable<BaseRsp<UpdateStatusBean>> upStatus(@Field("url") String url);
 
 }
