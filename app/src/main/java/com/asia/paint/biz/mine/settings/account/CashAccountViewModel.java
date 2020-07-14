@@ -34,9 +34,9 @@ public class CashAccountViewModel extends BaseViewModel {
 
 
     public CallbackDate<Boolean> addCashAccount(int type, String account,
-            String name, String bank, String bank_name) {
+            String name, String bank, String bank_name,String idcard,String tel) {
         NetworkFactory.createService(CashService.class)
-                .addCashAccount(type, account, name, bank, bank_name)
+                .addCashAccount(type, account, name, bank, bank_name,idcard,tel)
                 .compose(new NetworkObservableTransformer<>())
                 .subscribe(new DefaultNetworkObserver<String>() {
                     @Override
@@ -54,9 +54,9 @@ public class CashAccountViewModel extends BaseViewModel {
     }
 
     public CallbackDate<Boolean> editCashAccount(int id, int type, String account,
-            String name, String bank, String bank_name) {
+            String name, String bank, String bank_name,String idcard,String tel) {
         NetworkFactory.createService(CashService.class)
-                .editCashAccount(id, type, account, name, bank, bank_name)
+                .editCashAccount(id, type, account, name, bank, bank_name,idcard,tel)
                 .compose(new NetworkObservableTransformer<>())
                 .subscribe(new DefaultNetworkObserver<String>() {
                     @Override

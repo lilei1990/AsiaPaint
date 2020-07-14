@@ -104,6 +104,8 @@ public class BindCashAccountActivity extends BaseTitleActivity<ActivityBindCashA
                 }
                 String bank = getText(mBinding.etBank);
                 String establishBank = getText(mBinding.etEstablishBank);
+                String idcard = getText(mBinding.etIdcard);
+                String tel = getText(mBinding.etTel);
                 if (isBankAccount() && TextUtils.isEmpty(account)) {
                     AppUtils.showMessage("请输入卡号");
                     return;
@@ -121,15 +123,23 @@ public class BindCashAccountActivity extends BaseTitleActivity<ActivityBindCashA
                     AppUtils.showMessage("请输入银行");
                     return;
                 }
+                if (TextUtils.isEmpty(idcard)) {
+                    AppUtils.showMessage("请输入身份证");
+                    return;
+                }
+                if (TextUtils.isEmpty(tel)) {
+                    AppUtils.showMessage("请输入手机号");
+                    return;
+                }
                 if (isEdit()) {
-                    mViewModel.editCashAccount(mCashAccount.id, mType, account, name, bank, establishBank)
+                    mViewModel.editCashAccount(mCashAccount.id, mType, account, name, bank, establishBank,idcard,tel)
                             .setCallback(result -> {
                                 if (result) {
                                     finish();
                                 }
                             });
                 } else {
-                    mViewModel.addCashAccount(mType, account, name, bank, establishBank)
+                    mViewModel.addCashAccount(mType, account, name, bank, establishBank,idcard,tel)
                             .setCallback(result -> {
                                 if (result) {
                                     finish();
@@ -158,15 +168,19 @@ public class BindCashAccountActivity extends BaseTitleActivity<ActivityBindCashA
         mBinding.layoutZhiFuBaoAccount.setVisibility(isZhiFuBaoAccount() ? View.VISIBLE : View.GONE);
         mBinding.layoutBankAccount.setVisibility(isBankAccount() ? View.VISIBLE : View.GONE);
         mBinding.layoutBank.setVisibility(isBankAccount() ? View.VISIBLE : View.GONE);
+        mBinding.layoutIdcard.setVisibility(isBankAccount() ? View.VISIBLE : View.GONE);
         mBinding.layoutEstablishBank.setVisibility(isBankAccount() ? View.VISIBLE : View.GONE);
+        mBinding.layoutTel.setVisibility(isBankAccount() ? View.VISIBLE : View.GONE);
         mBaseBinding.tvTitle.setText(isZhiFuBaoAccount() ? "绑定支付宝收款账号" : "绑定银行卡收款账号");
         mBinding.btnNext.setText(isZhiFuBaoAccount() ? "绑定支付宝" : "绑定银行卡");
         if (mCashAccount != null) {
             mBinding.etAccount.setText(mCashAccount.account);
             mBinding.etBankAccount.setText(mCashAccount.account);
             mBinding.etName.setText(mCashAccount.name);
+            mBinding.etIdcard.setText(mCashAccount.idcard);
             mBinding.etBank.setText(mCashAccount.bank);
             mBinding.etEstablishBank.setText(mCashAccount.bank_name);
+            mBinding.etTel.setText(mCashAccount.tel);
         }
     }
 

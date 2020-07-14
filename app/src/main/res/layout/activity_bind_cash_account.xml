@@ -116,7 +116,43 @@
             android:layout_marginStart="14dp"
             android:layout_marginEnd="14dp"
             android:background="@color/color_DBDBDB" />
-
+        <!--身份证-->
+        <LinearLayout
+            android:id="@+id/layout_idcard"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:background="@color/color_FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            tools:visibility="visible"
+            android:visibility="gone">
+        
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="身份证"
+                android:textColor="@color/color_333333"
+                android:textSize="12sp" />
+        
+            <EditText
+                android:id="@+id/et_idcard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:background="@null"
+                android:hint="请输入身份证信息"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_DBDBDB"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:background="@color/color_DBDBDB" />
         <LinearLayout
             android:id="@+id/layout_bank"
             android:layout_width="match_parent"
@@ -154,7 +190,7 @@
             android:layout_marginEnd="14dp"
             android:background="@color/color_DBDBDB" />
 
-
+<!--身份证-->
         <LinearLayout
             android:id="@+id/layout_establish_bank"
             android:layout_width="match_parent"
@@ -185,7 +221,46 @@
                 android:textColorHint="@color/color_DBDBDB"
                 android:textSize="12sp" />
         </LinearLayout>
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:background="@color/color_DBDBDB" />
+        <!--银行预留手机号-->
+        <LinearLayout
+            android:id="@+id/layout_tel"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:background="@color/color_FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            tools:visibility="visible"
+            android:visibility="gone">
+        
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="银行预留手机号"
+                android:textColor="@color/color_333333"
+                android:textSize="12sp" />
+        
+            <EditText
+                android:id="@+id/et_tel"
+                android:inputType="phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:background="@null"
+                android:hint="请输入银行预留手机号"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_DBDBDB"
+                android:textSize="12sp" />
+        </LinearLayout>
+       
+<!--验证码-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="43dp"
