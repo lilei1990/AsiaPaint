@@ -23,6 +23,8 @@ public class CashAccount implements Parcelable {
     public String bank_name;
     public int user_id;
     public String add_time;
+    public String idcard;
+    public String tel;
 
     public CashAccount() {
 
@@ -37,6 +39,8 @@ public class CashAccount implements Parcelable {
         bank_name = in.readString();
         user_id = in.readInt();
         add_time = in.readString();
+        idcard = in.readString();
+        tel = in.readString();
     }
 
     @Override
@@ -49,6 +53,8 @@ public class CashAccount implements Parcelable {
         dest.writeString(bank_name);
         dest.writeInt(user_id);
         dest.writeString(add_time);
+        dest.writeString(idcard);
+        dest.writeString(tel);
     }
 
     @Override

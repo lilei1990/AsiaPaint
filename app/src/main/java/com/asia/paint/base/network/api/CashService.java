@@ -25,12 +25,12 @@ public interface CashService {
     @FormUrlEncoded
     @POST("api/seller/add_account")
     Observable<BaseRsp<String>> addCashAccount(@Field("type") int type, @Field("account") String account,
-            @Field("name") String name, @Field("bank") String bank, @Field("bank_name") String bank_name);
+            @Field("name") String name, @Field("bank") String bank, @Field("bank_name") String bank_name,@Field("idcard") String idcard,@Field("tel") String tel);
 
     @FormUrlEncoded
     @POST("api/seller/edit_account")
     Observable<BaseRsp<String>> editCashAccount(@Field("id") int id, @Field("type") int type, @Field("account") String account,
-            @Field("name") String name, @Field("bank") String bank, @Field("bank_name") String bank_name);
+            @Field("name") String name, @Field("bank") String bank, @Field("bank_name") String bank_name,@Field("idcard") String idcard,@Field("tel") String tel);
 
     @FormUrlEncoded
     @POST("api/sms/check")

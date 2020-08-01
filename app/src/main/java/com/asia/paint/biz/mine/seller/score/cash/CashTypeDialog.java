@@ -86,12 +86,12 @@ public class CashTypeDialog extends BaseBottomDialogFragment<DialogCashTypeBindi
     private List<RechargeType> getPayType() {
         List<RechargeType> types = new ArrayList<>();
 
-        RechargeType zhiFuBao = new RechargeType();
-        zhiFuBao.name = "支付宝";
-        zhiFuBao.type = CashService.ZHI_FU_BAO;
-        zhiFuBao.pay = RechargeType.Pay.ZHI_FU_BAO;
-        zhiFuBao.iconId = R.mipmap.ic_mine_zhifubao;
-        types.add(zhiFuBao);
+//        RechargeType zhiFuBao = new RechargeType();
+//        zhiFuBao.name = "支付宝";
+//        zhiFuBao.type = CashService.ZHI_FU_BAO;
+//        zhiFuBao.pay = RechargeType.Pay.ZHI_FU_BAO;
+//        zhiFuBao.iconId = R.mipmap.ic_mine_zhifubao;
+//        types.add(zhiFuBao);
 /*        RechargeType weiXin = new RechargeType();
         weiXin.name = "微信支付";
         weiXin.pay = RechargeType.Pay.WEI_XIN;
@@ -99,10 +99,10 @@ public class CashTypeDialog extends BaseBottomDialogFragment<DialogCashTypeBindi
         types.add(weiXin);*/
 
         RechargeType bank = new RechargeType();
-        bank.name = "银行卡快捷支付";
+        bank.name = "银行卡";
         bank.type = CashService.BANK;
         bank.pay = RechargeType.Pay.DEBIT_CARD;
-        bank.description = "由网易支付提供服务";
+//        bank.description = "由网易支付提供服务";
         bank.iconId = R.mipmap.ic_mine_bank;
         types.add(bank);
         return types;
