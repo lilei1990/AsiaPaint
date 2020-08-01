@@ -27,7 +27,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
  * Created by Administrator on 2020/6/27.
  */
 
-public class PostMineFragment extends BaseFragment<FragmentPostmineBinding>implements OnChangeCallback<PostRsp> {
+public class PostMineFragment extends BaseFragment<FragmentPostmineBinding> implements OnChangeCallback<PostRsp> {
 
     public static final int TYPE_MY_POST = 2;
     public static final int TYPE_FOLLOW_POST = 3;

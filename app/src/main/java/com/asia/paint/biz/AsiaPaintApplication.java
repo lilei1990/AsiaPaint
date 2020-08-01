@@ -49,7 +49,7 @@ public class AsiaPaintApplication extends Application {
     public void onCreate() {
         super.onCreate();
         MultiDex.install(this);
-        CrashReport.initCrashReport(getApplicationContext(), "f5355f3f82", false);
+        CrashReport.initCrashReport(getApplicationContext(), "ee468f0002", false);
         if (BuildConfig.DEBUG) {
             CrashReport.setUserSceneTag(this, 136721);
         }

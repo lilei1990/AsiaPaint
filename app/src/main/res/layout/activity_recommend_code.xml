@@ -5,12 +5,18 @@
     <data>
 
     </data>
-
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
-        android:background="@mipmap/ic_bg_recommend"
         android:orientation="vertical"
         android:weightSum="5">
 
@@ -77,4 +83,5 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
+</FrameLayout>
 </layout>

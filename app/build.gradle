@@ -67,4 +67,5 @@ dependencies {
     implementation files('libs/jsoup-1.13.1.jar')
     implementation 'com.android.support:multidex:1.0.3'
 
+
 }
