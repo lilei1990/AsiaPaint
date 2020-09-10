@@ -6,9 +6,9 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityFeedbackBinding;
 import com.asia.paint.base.container.BaseActivity;
-import com.asia.paint.databinding.ActivityFeedbackBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.KeyBoardUtils;

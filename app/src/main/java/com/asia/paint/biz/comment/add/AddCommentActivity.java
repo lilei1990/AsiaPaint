@@ -5,14 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityAddCommentBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.api.FileService;
 import com.asia.paint.base.network.bean.OrderDetail;
 import com.asia.paint.base.util.FileUtils;
 import com.asia.paint.base.util.ImageUtils;
 import com.asia.paint.biz.comment.CommentViewModel;
-import com.asia.paint.databinding.ActivityAddCommentBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 import java.util.List;

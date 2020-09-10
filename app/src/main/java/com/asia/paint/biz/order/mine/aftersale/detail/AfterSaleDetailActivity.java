@@ -6,13 +6,13 @@ import android.os.Bundle;
 import android.util.SparseArray;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityAfterSaleDetailBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.bean.ReturnDetail;
 import com.asia.paint.base.util.ImageUtils;
 import com.asia.paint.biz.order.mine.aftersale.AfterSaleViewModel;
 import com.asia.paint.biz.order.mine.aftersale.apply.SelectAfterSaleTypeActivity;
-import com.asia.paint.databinding.ActivityAfterSaleDetailBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 import androidx.annotation.Nullable;

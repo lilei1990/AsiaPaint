@@ -8,11 +8,11 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityGetPayPwdCodeBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.biz.AsiaPaintApplication;
 import com.asia.paint.biz.pay.pay.GetPayPwdCodeViewModel;
-import com.asia.paint.databinding.ActivityGetPayPwdCodeBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.smarttop.library.utils.LogUtil;
 

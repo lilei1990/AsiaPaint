@@ -9,13 +9,13 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityAboutUsBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.api.OtherService;
 import com.asia.paint.base.widgets.dialog.UpdateDialog;
-import com.asia.paint.biz.mine.seller.goals.WebViewActivity;
+import com.asia.paint.biz.mine.seller.goals.WebActivity;
 import com.asia.paint.biz.update.UpdateViewModle;
-import com.asia.paint.databinding.ActivityAboutUsBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
@@ -49,7 +49,7 @@ public class AboutUsActivity extends BaseActivity<ActivityAboutUsBinding> {
         mBinding.itemAboutAsia.setOnClickListener(new OnNoDoubleClickListener() {
             @Override
             public void onNoDoubleClick(View view) {
-                WebViewActivity.start(AboutUsActivity.this, OtherService.ABOUT_ASIA);
+                WebActivity.start(AboutUsActivity.this, OtherService.ABOUT_ASIA);
             }
         });
         mBinding.itemCheckUpdate.setTitle("检测更新");

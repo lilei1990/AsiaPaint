@@ -16,7 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityApplyAfterSaleBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.api.FileService;
 import com.asia.paint.base.network.bean.OrderDetail;
@@ -27,7 +28,6 @@ import com.asia.paint.base.widgets.CountView;
 import com.asia.paint.base.widgets.selectimage.MatisseActivity;
 import com.asia.paint.biz.find.post.publish.PublishPostAdapter;
 import com.asia.paint.biz.order.mine.aftersale.AfterSaleViewModel;
-import com.asia.paint.databinding.ActivityApplyAfterSaleBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.DigitUtils;

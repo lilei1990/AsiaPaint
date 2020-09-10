@@ -10,12 +10,12 @@ import android.webkit.WebViewClient;
 
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityTrainDetailBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.bean.TrainDetail;
 import com.asia.paint.base.util.ImageUtils;
 import com.asia.paint.biz.mine.seller.train.TrainViewModel;
-import com.asia.paint.databinding.ActivityTrainDetailBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 import com.bumptech.glide.Glide;

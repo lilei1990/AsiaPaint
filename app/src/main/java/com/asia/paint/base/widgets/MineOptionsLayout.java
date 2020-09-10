@@ -8,13 +8,13 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewMineOptionsBinding;
 import com.asia.paint.base.container.BaseFrameLayout;
 import com.asia.paint.biz.mine.coupon.CouponActivity;
 import com.asia.paint.biz.mine.favorites.FavoritesActivity;
 import com.asia.paint.biz.mine.money.MoneyActivity;
 import com.asia.paint.biz.mine.seller.score.ScoreActivity;
-import com.asia.paint.databinding.ViewMineOptionsBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 /**

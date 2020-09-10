@@ -6,7 +6,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.text.TextUtils;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.container.BaseListFragment;
 import com.asia.paint.base.container.BaseViewModel;
 import com.asia.paint.base.network.api.OrderService;

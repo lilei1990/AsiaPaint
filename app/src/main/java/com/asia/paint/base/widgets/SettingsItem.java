@@ -3,9 +3,9 @@ package com.asia.paint.base.widgets;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewSettingsItemBinding;
 import com.asia.paint.base.container.BaseFrameLayout;
-import com.asia.paint.databinding.ViewSettingsItemBinding;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

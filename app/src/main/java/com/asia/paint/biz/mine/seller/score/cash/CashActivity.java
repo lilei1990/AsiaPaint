@@ -14,7 +14,8 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityCashBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.api.CashService;
 import com.asia.paint.base.network.api.OtherService;
@@ -27,12 +28,11 @@ import com.asia.paint.base.widgets.dialog.MessageDialog;
 import com.asia.paint.biz.AsiaPaintApplication;
 import com.asia.paint.biz.login.LoginViewModel;
 import com.asia.paint.biz.login.SmsCode;
-import com.asia.paint.biz.mine.seller.goals.WebViewActivity;
+import com.asia.paint.biz.mine.seller.goals.WebActivity;
 import com.asia.paint.biz.mine.settings.account.BindCashAccountActivity;
 import com.asia.paint.biz.mine.settings.account.CashAccountViewModel;
 import com.asia.paint.biz.pay.CashPayDialog;
 import com.asia.paint.biz.pay.password.SetPayPwdActivity;
-import com.asia.paint.databinding.ActivityCashBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
@@ -265,7 +265,7 @@ public class CashActivity extends BaseTitleActivity<ActivityCashBinding> {
                 .setSpan(new ClickableSpan() {
                     @Override
                     public void onClick(@NonNull View widget) {
-                        WebViewActivity.start(CashActivity.this, OtherService.CASH_ITEMS);
+                        WebActivity.start(CashActivity.this, OtherService.CASH_ITEMS);
                     }
 
                     @Override

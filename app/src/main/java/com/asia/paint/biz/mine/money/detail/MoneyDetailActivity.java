@@ -2,10 +2,10 @@ package com.asia.paint.biz.mine.money.detail;
 
 import android.os.Bundle;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityMoneyDetailBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.biz.mine.index.MineViewModel;
-import com.asia.paint.databinding.ActivityMoneyDetailBinding;
 
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;

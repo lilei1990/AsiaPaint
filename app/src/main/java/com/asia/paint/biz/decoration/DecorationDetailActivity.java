@@ -6,9 +6,9 @@ import android.webkit.WebViewClient;
 
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityDecorationDetailBinding;
 import com.asia.paint.base.container.BaseActivity;
-import com.asia.paint.databinding.ActivityDecorationDetailBinding;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

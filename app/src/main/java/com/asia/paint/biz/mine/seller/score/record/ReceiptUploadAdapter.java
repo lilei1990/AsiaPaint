@@ -1,6 +1,6 @@
 package com.asia.paint.biz.mine.seller.score.record;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.recyclerview.BaseGlideAdapter;
 import com.asia.paint.base.recyclerview.GlideViewHolder;
 

@@ -2,9 +2,9 @@ package com.asia.paint.base.widgets.dialog;
 
 import android.widget.LinearLayout;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.container.BaseDialogFragment;
-import com.asia.paint.databinding.DialogLoadBinding;
+import com.asia.paint.android.databinding.DialogLoadBinding;
 import com.asia.paint.utils.utils.AppUtils;
 
 /**

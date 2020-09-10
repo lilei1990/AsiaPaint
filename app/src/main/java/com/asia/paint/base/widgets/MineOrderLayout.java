@@ -7,11 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewMineOrderBinding;
 import com.asia.paint.base.network.api.OrderService;
 import com.asia.paint.biz.order.mine.aftersale.order.OrderAfterSaleActivity;
 import com.asia.paint.biz.order.mine.OrderMineActivity;
-import com.asia.paint.databinding.ViewMineOrderBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 import androidx.annotation.NonNull;

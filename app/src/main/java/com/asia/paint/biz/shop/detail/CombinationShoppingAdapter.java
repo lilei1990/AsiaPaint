@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.network.bean.PromotionComposeRsp;
 import com.asia.paint.base.recyclerview.BaseGlideAdapter;
 import com.asia.paint.base.recyclerview.GlideViewHolder;

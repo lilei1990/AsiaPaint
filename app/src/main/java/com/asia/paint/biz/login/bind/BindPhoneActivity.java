@@ -11,7 +11,8 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityBindPhoneBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.bean.LoginRsp;
 import com.asia.paint.base.network.bean.UserInfo;
@@ -20,7 +21,6 @@ import com.asia.paint.biz.AsiaPaintApplication;
 import com.asia.paint.biz.login.LoginViewModel;
 import com.asia.paint.biz.login.SmsCode;
 import com.asia.paint.biz.main.MainActivity;
-import com.asia.paint.databinding.ActivityBindPhoneBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.CacheUtils;

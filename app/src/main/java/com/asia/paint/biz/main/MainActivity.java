@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityMainBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.model.CollectViewModel;
 import com.asia.paint.base.network.bean.Goods;
@@ -20,7 +21,6 @@ import com.asia.paint.biz.find.FindFragment;
 import com.asia.paint.biz.mine.index.MineFragment;
 import com.asia.paint.biz.mine.seller.store.ClipBoardDialog;
 import com.asia.paint.biz.shop.index.ShopFragment;
-import com.asia.paint.databinding.ActivityMainBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.CommonUtil;

@@ -6,9 +6,10 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.DialogServiceScheduleBinding;
 import com.asia.paint.base.container.BaseBottomDialogFragment;
-import com.asia.paint.databinding.DialogServiceScheduleBinding;
+import com.asia.paint.android.databinding.DialogServiceScheduleBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.DateUtils;

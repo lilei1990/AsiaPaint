@@ -1,12 +1,12 @@
 package com.asia.paint.biz.find.mine.schedule;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentScheduleBinding;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.base.network.api.ServiceService;
 import com.asia.paint.base.network.bean.ScheduleService;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
 import com.asia.paint.biz.find.service.ServiceViewModel;
-import com.asia.paint.databinding.FragmentScheduleBinding;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 

@@ -8,10 +8,8 @@ import android.util.SparseArray;
 import android.view.View;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityOrderDetailBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.api.OrderService;
 import com.asia.paint.base.network.bean.OrderCheckout;
@@ -24,11 +22,13 @@ import com.asia.paint.biz.order.checkout.OrderCheckoutAdapter;
 import com.asia.paint.biz.order.mine.OrderMineGoodsAdapter;
 import com.asia.paint.biz.order.mine.aftersale.apply.SelectAfterSaleTypeActivity;
 import com.asia.paint.biz.pay.pay.PayTypeViewModel;
-import com.asia.paint.databinding.ActivityOrderDetailBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 /**
  * @author by chenhong14 on 2019-12-09.

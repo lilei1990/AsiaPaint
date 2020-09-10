@@ -4,9 +4,9 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.container.BaseDialogFragment;
-import com.asia.paint.databinding.DialogMessageBinding;
+import com.asia.paint.android.databinding.DialogMessageBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 

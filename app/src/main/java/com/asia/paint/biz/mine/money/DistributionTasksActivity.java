@@ -8,12 +8,12 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityDistributionTasksBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.api.OrderService;
 import com.asia.paint.base.network.bean.ApplyTaskRsp;
 import com.asia.paint.biz.order.checkout.OrderCheckoutActivity;
-import com.asia.paint.databinding.ActivityDistributionTasksBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 /**

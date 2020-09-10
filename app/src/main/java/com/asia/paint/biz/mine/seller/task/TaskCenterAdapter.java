@@ -2,7 +2,7 @@ package com.asia.paint.biz.mine.seller.task;
 
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.network.api.TaskService;
 import com.asia.paint.base.network.bean.Task;
 import com.asia.paint.base.recyclerview.BaseGlideAdapter;

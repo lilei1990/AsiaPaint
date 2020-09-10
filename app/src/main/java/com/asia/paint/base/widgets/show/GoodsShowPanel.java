@@ -6,9 +6,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewGoodsShowPanelBinding;
 import com.asia.paint.base.container.BaseFrameLayout;
-import com.asia.paint.databinding.ViewGoodsShowPanelBinding;
 import com.asia.paint.utils.utils.AppUtils;
 
 import java.util.ArrayList;

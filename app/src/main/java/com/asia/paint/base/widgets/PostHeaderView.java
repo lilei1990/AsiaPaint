@@ -8,10 +8,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.PluralsRes;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewPostHeaderBinding;
 import com.asia.paint.base.container.BaseFrameLayout;
 import com.asia.paint.base.util.ImageUtils;
-import com.asia.paint.databinding.ViewPostHeaderBinding;
 
 /**
  * @author by chenhong14 on 2019-12-10.

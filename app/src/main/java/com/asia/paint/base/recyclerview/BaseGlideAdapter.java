@@ -6,7 +6,7 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 
 import java.util.ArrayList;

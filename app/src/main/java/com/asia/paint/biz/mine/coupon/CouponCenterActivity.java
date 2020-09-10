@@ -3,10 +3,10 @@ package com.asia.paint.biz.mine.coupon;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityCouponCenterBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.api.CouponService;
-import com.asia.paint.databinding.ActivityCouponCenterBinding;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentTransaction;

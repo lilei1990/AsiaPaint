@@ -2,9 +2,9 @@ package com.asia.paint.biz.order.mine.aftersale.apply;
 
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.DialogAfterSaleReasonBinding;
 import com.asia.paint.base.container.BaseBottomDialogFragment;
-import com.asia.paint.databinding.DialogAfterSaleReasonBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 

@@ -2,7 +2,7 @@ package com.asia.paint.biz.mine.service;
 
 import android.text.TextUtils;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.network.bean.CustomerMessage;
 import com.asia.paint.base.network.bean.UserInfo;
 import com.asia.paint.base.recyclerview.BaseGlideMultiAdapter;

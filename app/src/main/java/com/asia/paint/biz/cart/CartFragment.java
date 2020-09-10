@@ -8,7 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentCartBinding;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.base.network.api.OrderService;
 import com.asia.paint.base.network.bean.CartGoods;
@@ -18,7 +19,6 @@ import com.asia.paint.base.widgets.CheckBox;
 import com.asia.paint.biz.AsiaPaintApplication;
 import com.asia.paint.biz.main.MainActivity;
 import com.asia.paint.biz.order.checkout.OrderCheckoutActivity;
-import com.asia.paint.databinding.FragmentCartBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.PriceUtils;

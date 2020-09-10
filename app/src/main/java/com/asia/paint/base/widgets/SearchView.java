@@ -5,9 +5,9 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewSearchBinding;
 import com.asia.paint.base.container.BaseFrameLayout;
-import com.asia.paint.databinding.ViewSearchBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 
 import androidx.annotation.NonNull;

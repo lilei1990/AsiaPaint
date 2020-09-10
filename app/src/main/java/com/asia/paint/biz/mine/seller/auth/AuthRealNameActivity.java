@@ -15,14 +15,14 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.alibaba.fastjson.JSON;
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityAuthRealNameBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.widgets.dialog.MessageDialog;
 import com.asia.paint.base.widgets.selectimage.MatisseActivity;
 import com.asia.paint.biz.find.post.publish.PublishPostAdapter;
 import com.asia.paint.biz.mine.index.MineViewModel;
 import com.asia.paint.biz.mine.money.DistributionTasksActivity;
-import com.asia.paint.databinding.ActivityAuthRealNameBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.CacheUtils;

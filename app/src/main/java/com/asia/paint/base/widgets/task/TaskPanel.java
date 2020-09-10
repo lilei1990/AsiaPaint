@@ -5,11 +5,11 @@ import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewTaskPanelBinding;
 import com.asia.paint.base.container.BaseFrameLayout;
 import com.asia.paint.base.network.bean.Task;
 import com.asia.paint.biz.mine.seller.task.TaskCenterActivity;
-import com.asia.paint.databinding.ViewTaskPanelBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 import java.util.List;

@@ -6,7 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
 
-import com.asia.paint.BuildConfig;
+import com.asia.paint.android.BuildConfig;
 import com.asia.paint.base.model.AddCartViewModel;
 import com.asia.paint.base.network.bean.UserInfo;
 import com.asia.paint.base.network.core.NetworkInit;
@@ -15,6 +15,7 @@ import com.asia.paint.biz.login.LoginActivity;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.CacheUtils;
+import com.chinapay.mobilepayment.utils.Utils;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.tencent.bugly.crashreport.CrashReport;
@@ -54,6 +55,11 @@ public class AsiaPaintApplication extends Application {
             CrashReport.setUserSceneTag(this, 136721);
         }
         NetworkInit.init();
+        initYinlian();
+    }
+
+    private void initYinlian() {
+        Utils.setPackageName(getPackageName());
     }
 
     private static List<Activity> mActivities = new ArrayList<>();

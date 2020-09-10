@@ -3,7 +3,8 @@ package com.asia.paint.biz.mine.seller.meeting;
 import android.os.Bundle;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentMeetingBinding;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.base.network.api.MeetingService;
 import com.asia.paint.base.network.bean.Meeting;
@@ -13,7 +14,6 @@ import com.asia.paint.base.recyclerview.DefaultItemDecoration;
 import com.asia.paint.biz.mine.seller.meeting.detail.MeetingDetailActivity;
 import com.asia.paint.biz.mine.seller.meeting.hold.HoldMeetingActivity;
 import com.asia.paint.biz.mine.seller.meeting.member.MeetingMemberActivity;
-import com.asia.paint.databinding.FragmentMeetingBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;

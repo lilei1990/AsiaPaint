@@ -9,8 +9,8 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 
-import com.asia.paint.R;
-import com.asia.paint.databinding.ViewItemLayoutBinding;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewItemLayoutBinding;
 
 /**
  * @author by chenhong14 on 2019-11-07.

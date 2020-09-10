@@ -2,10 +2,10 @@ package com.asia.paint.biz.mine.seller.score.detail;
 
 import android.os.Bundle;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityScoreDetailBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.biz.mine.seller.score.ScoreViewModel;
-import com.asia.paint.databinding.ActivityScoreDetailBinding;
 
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;

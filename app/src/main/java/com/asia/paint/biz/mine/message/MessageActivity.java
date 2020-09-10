@@ -2,10 +2,10 @@ package com.asia.paint.biz.mine.message;
 
 import android.os.Bundle;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityMessageBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.bean.MessageRsp;
-import com.asia.paint.databinding.ActivityMessageBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 
 import androidx.annotation.Nullable;

@@ -1,10 +1,9 @@
 package com.asia.paint.base.container;
 
-import com.asia.paint.R;
-import com.asia.paint.base.model.ShopGoodsViewModel;
+import com.asia.paint.android.R;
 import com.asia.paint.base.recyclerview.BaseGlideAdapter;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
-import com.asia.paint.databinding.FragmentBaseBinding;
+import com.asia.paint.android.databinding.FragmentBaseBinding;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 

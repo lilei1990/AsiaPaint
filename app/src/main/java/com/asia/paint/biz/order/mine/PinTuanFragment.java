@@ -4,13 +4,13 @@ import android.os.Bundle;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentPintuanBinding;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.base.network.bean.MyPinTuan;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
 import com.asia.paint.biz.order.group.GroupDetailActivity;
 import com.asia.paint.biz.order.mine.detail.OrderDetailActivity;
-import com.asia.paint.databinding.FragmentPintuanBinding;
 
 /**
  * 拼团Fragment

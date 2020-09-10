@@ -2,7 +2,7 @@ package com.asia.paint.base.widgets.selectimage;
 
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.recyclerview.BaseGlideMultiAdapter;
 import com.asia.paint.base.recyclerview.GlideViewHolder;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;

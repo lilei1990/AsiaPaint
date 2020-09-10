@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.util.Pair;
 import android.util.SparseArray;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityStaffBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
-import com.asia.paint.databinding.ActivityStaffBinding;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

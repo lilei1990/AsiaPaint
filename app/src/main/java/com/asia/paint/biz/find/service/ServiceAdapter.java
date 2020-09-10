@@ -1,7 +1,7 @@
 package com.asia.paint.biz.find.service;
 
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.network.bean.Service;
 import com.asia.paint.base.recyclerview.BaseGlideAdapter;
 import com.asia.paint.base.recyclerview.GlideViewHolder;

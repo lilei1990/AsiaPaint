@@ -1,11 +1,11 @@
 package com.asia.paint.biz.order.checkout;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.DialogOrderCouponBinding;
 import com.asia.paint.base.container.BaseBottomDialogFragment;
 import com.asia.paint.base.network.bean.Coupon;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
 import com.asia.paint.biz.mine.coupon.CouponAdapter;
-import com.asia.paint.databinding.DialogOrderCouponBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.utils.AppUtils;
 

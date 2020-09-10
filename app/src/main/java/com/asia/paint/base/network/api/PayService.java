@@ -2,6 +2,7 @@ package com.asia.paint.base.network.api;
 
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.network.bean.PayOrderInfo;
+import com.asia.paint.base.network.bean.YinlianBean;
 import com.asia.paint.base.network.core.BaseRsp;
 import com.asia.paint.network.NetworkUrl;
 
@@ -49,4 +50,11 @@ public interface PayService {
     @POST("api/pay/orderinfo")
     Observable<BaseRsp<String>> queryZhiFuBaoOrderInfo(@Field("order_id") int order_id, @Field("type") int type);
 
+
+    /**
+     * 银联获取订单
+     */
+    @FormUrlEncoded
+    @POST("api/pay/orderinfo")
+    Observable<BaseRsp<YinlianBean>> queryYinlianOrderInfo(@Field("order_id") int order_id, @Field("type") int type);
 }

@@ -6,13 +6,13 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityMoneyBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.bean.MineDataRsp;
 import com.asia.paint.biz.mine.index.MineViewModel;
 import com.asia.paint.biz.mine.money.detail.MoneyDetailActivity;
 import com.asia.paint.biz.mine.money.recharge.RechargeActivity;
-import com.asia.paint.databinding.ActivityMoneyBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 

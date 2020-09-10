@@ -4,11 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityCustomerHistoryServiceBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.biz.mine.service.CustomerServiceAdapter;
 import com.asia.paint.biz.mine.service.CustomerServiceViewModel;
-import com.asia.paint.databinding.ActivityCustomerHistoryServiceBinding;
 
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;

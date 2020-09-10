@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityMeetingMemberBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.bean.MeetingMember;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
 import com.asia.paint.biz.mine.seller.meeting.MeetingViewModel;
-import com.asia.paint.databinding.ActivityMeetingMemberBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 import java.util.ArrayList;

@@ -5,12 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityAddressBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.bean.Address;
 import com.asia.paint.base.network.bean.AddressRsp;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
-import com.asia.paint.databinding.ActivityAddressBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 import androidx.annotation.Nullable;

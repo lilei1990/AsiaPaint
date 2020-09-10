@@ -11,7 +11,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.acker.simplezxing.activity.CaptureActivity;
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentMineBinding;
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.base.image.GlideImageLoader;
@@ -34,7 +35,6 @@ import com.asia.paint.biz.mine.settings.SettingsActivity;
 import com.asia.paint.biz.mine.user.EditUserActivity;
 import com.asia.paint.biz.order.mine.MyPinTuanActivity;
 import com.asia.paint.biz.shop.detail.GoodsDetailActivity;
-import com.asia.paint.databinding.FragmentMineBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;

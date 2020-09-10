@@ -5,7 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.banner.loader.ImageLoaderInterface;
 import com.asia.paint.base.recyclerview.BaseGlideAdapter;
 import com.asia.paint.base.recyclerview.GlideViewHolder;

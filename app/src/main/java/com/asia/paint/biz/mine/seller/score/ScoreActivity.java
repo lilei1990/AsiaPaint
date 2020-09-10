@@ -6,15 +6,15 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityScoreBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.api.OtherService;
-import com.asia.paint.biz.mine.seller.goals.WebViewActivity;
+import com.asia.paint.biz.mine.seller.goals.WebActivity;
 import com.asia.paint.biz.mine.seller.score.cash.CashActivity;
 import com.asia.paint.biz.mine.seller.score.cash.CashTypeDialog;
 import com.asia.paint.biz.mine.seller.score.detail.ScoreDetailActivity;
 import com.asia.paint.biz.mine.seller.score.record.ScoreRecordActivity;
-import com.asia.paint.databinding.ActivityScoreBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 
@@ -82,14 +82,14 @@ public class ScoreActivity extends BaseTitleActivity<ActivityScoreBinding> {
         mBinding.tvScoreTips.setOnClickListener(new OnNoDoubleClickListener() {
             @Override
             public void onNoDoubleClick(View view) {
-                WebViewActivity.start(ScoreActivity.this, OtherService.SCORE_RULE);
+                WebActivity.start(ScoreActivity.this, OtherService.SCORE_RULE);
             }
         });
 
         mBinding.tvTaxTips.setOnClickListener(new OnNoDoubleClickListener() {
             @Override
             public void onNoDoubleClick(View view) {
-                WebViewActivity.start(ScoreActivity.this, OtherService.TAX_RULE);
+                WebActivity.start(ScoreActivity.this, OtherService.TAX_RULE);
             }
         });
     }

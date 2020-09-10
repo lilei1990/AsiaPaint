@@ -2,9 +2,9 @@ package com.asia.paint.biz.mine.seller.meeting.hold;
 
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.DialogHoldMeetingBinding;
 import com.asia.paint.base.container.BaseDialogFragment;
-import com.asia.paint.databinding.DialogHoldMeetingBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 

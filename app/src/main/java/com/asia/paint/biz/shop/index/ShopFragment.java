@@ -18,7 +18,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.acker.simplezxing.activity.CaptureActivity;
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentShopBinding;
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.base.image.GlideImageLoader;
@@ -39,7 +40,6 @@ import com.asia.paint.biz.pay.password.SetPayPwdActivity;
 import com.asia.paint.biz.shop.detail.GoodsDetailActivity;
 import com.asia.paint.biz.shop.flash.FlashGoodsFragment;
 import com.asia.paint.biz.shop.goods.GoodsFragment;
-import com.asia.paint.databinding.FragmentShopBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.CacheUtils;

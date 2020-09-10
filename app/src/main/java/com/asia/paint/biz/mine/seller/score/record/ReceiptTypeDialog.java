@@ -2,11 +2,11 @@ package com.asia.paint.biz.mine.seller.score.record;
 
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.DialogReceiptTypeBinding;
 import com.asia.paint.base.container.BaseBottomDialogFragment;
 import com.asia.paint.base.network.api.ReceiptService;
 import com.asia.paint.base.widgets.CheckBox;
-import com.asia.paint.databinding.DialogReceiptTypeBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 

@@ -7,19 +7,15 @@ import android.text.TextUtils;
 import android.webkit.WebSettings;
 import android.webkit.WebViewClient;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityWebBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.model.OtherViewModel;
 import com.asia.paint.base.network.bean.RichTextRsp;
-import com.asia.paint.databinding.ActivityWebViewBinding;
 
 import androidx.annotation.Nullable;
 
-/**
- * @author by chenhong14 on 2020-01-02.
- */
-public class WebViewActivity extends BaseTitleActivity<ActivityWebViewBinding> {
-
+public class WebActivity extends BaseTitleActivity<ActivityWebBinding> {
     private static final String KEY_TITLE = "KEY_TITLE";
 
     private String mTitle;
@@ -30,7 +26,7 @@ public class WebViewActivity extends BaseTitleActivity<ActivityWebViewBinding> {
     }
 
     public static void start(Context context, String title) {
-        Intent intent = new Intent(context, WebViewActivity.class);
+        Intent intent = new Intent(context, WebActivity.class);
         intent.putExtra(KEY_TITLE, title);
         context.startActivity(intent);
     }
@@ -42,7 +38,7 @@ public class WebViewActivity extends BaseTitleActivity<ActivityWebViewBinding> {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_web_view;
+        return R.layout.activity_web;
     }
 
     @Override

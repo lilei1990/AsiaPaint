@@ -10,9 +10,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.asia.paint.R;
-import com.asia.paint.databinding.ViewHostTabBinding;
-import com.asia.paint.databinding.ViewTabHostBinding;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewHostTabBinding;
+import com.asia.paint.android.databinding.ViewTabHostBinding;
 
 import java.util.List;
 

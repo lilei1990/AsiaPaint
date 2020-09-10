@@ -9,10 +9,10 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewMagicImageBinding;
 import com.asia.paint.base.container.BaseFrameLayout;
 import com.asia.paint.biz.other.PhotoActivity;
-import com.asia.paint.databinding.ViewMagicImageBinding;
 import com.asia.paint.utils.utils.AppUtils;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;

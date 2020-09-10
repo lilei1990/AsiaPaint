@@ -7,7 +7,8 @@ import android.text.InputFilter;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityBindCashAccountBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.api.CashService;
 import com.asia.paint.base.network.bean.CashAccount;
@@ -15,7 +16,6 @@ import com.asia.paint.base.network.bean.UserInfo;
 import com.asia.paint.biz.AsiaPaintApplication;
 import com.asia.paint.biz.login.LoginViewModel;
 import com.asia.paint.biz.login.SmsCode;
-import com.asia.paint.databinding.ActivityBindCashAccountBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 

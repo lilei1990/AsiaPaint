@@ -9,7 +9,7 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.ProgressBar;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 
 
 /**

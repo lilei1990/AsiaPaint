@@ -6,12 +6,12 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityMonthlyBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.bean.Monthly;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
 import com.asia.paint.biz.mine.seller.monthly.detail.MonthlyDetailActivity;
-import com.asia.paint.databinding.ActivityMonthlyBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 /**

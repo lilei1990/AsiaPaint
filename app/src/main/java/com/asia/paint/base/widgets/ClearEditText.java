@@ -9,8 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.asia.paint.R;
-import com.asia.paint.databinding.ViewClearEditextBinding;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewClearEditextBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 

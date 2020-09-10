@@ -8,7 +8,8 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityCustomerServiceBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.api.FileService;
 import com.asia.paint.base.network.bean.CustomerMessage;
@@ -17,7 +18,6 @@ import com.asia.paint.base.network.bean.TextMessageRsp;
 import com.asia.paint.base.util.FileUtils;
 import com.asia.paint.base.widgets.selectimage.MatisseActivity;
 import com.asia.paint.biz.mine.service.history.CustomerServiceHistoryActivity;
-import com.asia.paint.databinding.ActivityCustomerServiceBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;

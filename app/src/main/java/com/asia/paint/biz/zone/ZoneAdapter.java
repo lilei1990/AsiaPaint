@@ -2,7 +2,7 @@ package com.asia.paint.biz.zone;
 
 import android.text.TextUtils;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.banner.Banner;
 import com.asia.paint.banner.BannerConfig;
 import com.asia.paint.base.image.GlideImageLoader;

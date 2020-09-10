@@ -4,12 +4,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.DialogCashTypeBinding;
 import com.asia.paint.base.container.BaseBottomDialogFragment;
 import com.asia.paint.base.network.api.CashService;
 import com.asia.paint.biz.mine.money.recharge.RechargeType;
 import com.asia.paint.biz.mine.money.recharge.RechargeTypeAdapter;
-import com.asia.paint.databinding.DialogCashTypeBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;

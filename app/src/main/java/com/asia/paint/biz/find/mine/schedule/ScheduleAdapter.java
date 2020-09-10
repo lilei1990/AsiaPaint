@@ -2,7 +2,7 @@ package com.asia.paint.biz.find.mine.schedule;
 
 import android.util.SparseIntArray;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.network.api.ServiceService;
 import com.asia.paint.base.network.bean.ScheduleService;
 import com.asia.paint.base.network.bean.Service;

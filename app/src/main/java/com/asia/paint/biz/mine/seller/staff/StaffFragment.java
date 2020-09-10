@@ -3,13 +3,13 @@ package com.asia.paint.biz.mine.seller.staff;
 import android.os.Bundle;
 import android.text.TextUtils;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentStaffBinding;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.base.network.bean.Staff;
 import com.asia.paint.base.util.CharacterParser;
 import com.asia.paint.base.util.PinYinUtils;
 import com.asia.paint.biz.mine.seller.staff.detail.StaffDetailActivity;
-import com.asia.paint.databinding.FragmentStaffBinding;
 
 import java.util.ArrayList;
 import java.util.Collections;

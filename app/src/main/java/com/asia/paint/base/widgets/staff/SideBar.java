@@ -12,7 +12,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.utils.utils.AppUtils;
 
 
