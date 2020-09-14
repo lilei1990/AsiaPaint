@@ -1,8 +1,11 @@
 package com.asia.paint.biz.mine.settings.about;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,12 +15,19 @@ import androidx.annotation.Nullable;
 import com.asia.paint.R;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.api.OtherService;
+import com.asia.paint.base.network.bean.UpdateRsp;
 import com.asia.paint.base.widgets.dialog.UpdateDialog;
 import com.asia.paint.biz.mine.seller.goals.WebViewActivity;
 import com.asia.paint.biz.update.UpdateViewModle;
 import com.asia.paint.databinding.ActivityAboutUsBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
+import com.asia.paint.utils.utils.AppUtils;
+import com.hjq.permissions.OnPermission;
+import com.hjq.permissions.Permission;
+import com.hjq.permissions.XXPermissions;
+
+import java.util.List;
 
 /**
  * @author by chenhong14 on 2019-11-23.
@@ -57,20 +67,32 @@ public class AboutUsActivity extends BaseActivity<ActivityAboutUsBinding> {
             @Override
             public void onNoDoubleClick(View view) {
                 updateViewmodle.update().setCallback(result -> {
-                    if (result != null) {
-                        if (result.sn > getVersionCode(mContext)) {//如果服务器版本号大于当前版本号，则更新
-                            UpdateDialog dialog = UpdateDialog.createInstance(result);
-                            dialog.show(mContext);
-                           dialog.setChangeCallback(new OnChangeCallback<String>() {
-                               @Override
-                               public void onChange(String result) {
-                               }
-                           });
-                        }
-                    }
+                    showUpdate(result);
                 });
             }
         });
+    }
+
+    private void showUpdate( UpdateRsp result) {
+        XXPermissions.with(this)
+                .permission(Permission.Group.STORAGE)
+                .request(new OnPermission() {
+                    @SuppressLint("MissingPermission")
+                    @Override
+                    public void hasPermission(List<String> granted, boolean isAll) {
+                        if (result != null) {
+                            if (result.sn > getVersionCode(mContext)) {//如果服务器版本号大于当前版本号，则更新
+                                UpdateDialog dialog = UpdateDialog.createInstance(result);
+                                dialog.show(mContext);
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void noPermission(List<String> denied, boolean quick) {
+                        AppUtils.showMessage("不开启定位，无法获取预约服务");
+                    }
+                });
     }
 
     /**
