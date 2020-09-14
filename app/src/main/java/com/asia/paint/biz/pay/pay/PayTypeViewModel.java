@@ -10,12 +10,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.alipay.sdk.app.PayTask;
 import com.asia.paint.android.wxapi.WXPayEntryActivity;
 import com.asia.paint.base.container.BaseViewModel;
 import com.asia.paint.base.network.api.PayService;
 import com.asia.paint.base.network.bean.PayOrderInfo;
+import com.asia.paint.base.network.bean.YinlianBean;
 import com.asia.paint.base.widgets.dialog.MessageDialog;
 import com.asia.paint.biz.mine.index.MineViewModel;
 import com.asia.paint.biz.order.checkout.OrderSelectPayTypeDialog;
@@ -25,9 +27,13 @@ import com.asia.paint.biz.pay.password.SetPayPwdActivity;
 import com.asia.paint.network.NetworkObservableTransformer;
 import com.asia.paint.utils.callback.CallbackDate;
 import com.asia.paint.utils.utils.AppUtils;
+import com.chinapay.mobilepayment.activity.MainActivity;
 import com.tencent.mm.opensdk.modelpay.PayReq;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.Map;
 
@@ -97,6 +103,7 @@ public class PayTypeViewModel extends BaseViewModel {
                         break;
                     case DEBIT_CARD:
                         payViaDebitCard();
+                        mPayTypeDialog.dismiss();
                         break;
                 }
             }
@@ -116,7 +123,6 @@ public class PayTypeViewModel extends BaseViewModel {
      * 余额支付
      */
     private void payViaBalance() {
-
         if (mHasPayPWd) {
             showPayPwdDialog();
         } else {
@@ -180,6 +186,37 @@ public class PayTypeViewModel extends BaseViewModel {
 
     private void payViaDebitCard() {
 
+        mPayViewModel.queryYinlianOrderInfo(mOrderId).setCallback(this::startYinlianPay);
+    }
+
+    private void startYinlianPay(YinlianBean orderInfo) {
+
+            JSONObject jsonObject = null;
+            try {
+                jsonObject = new JSONObject();
+                jsonObject.put("MerId",orderInfo.MerId);
+                jsonObject.put("MerOrderNo",orderInfo.MerOrderNo);
+                jsonObject.put("OrderAmt",orderInfo.OrderAmt+"");
+                jsonObject.put("TranDate",orderInfo.TranDate);
+                jsonObject.put("TranTime",orderInfo.TranTime);
+                jsonObject.put("BusiType",orderInfo.BusiType);
+                jsonObject.put("Version",orderInfo.Version);
+                jsonObject.put("CurryNo",orderInfo.CurryNo);
+                jsonObject.put("AccessType",orderInfo.AccessType);
+                jsonObject.put("AcqCode",orderInfo.AcqCode);
+                jsonObject.put("MerPageUrl",orderInfo.MerPageUrl);
+                jsonObject.put("MerBgUrl",orderInfo.MerBgUrl);
+                jsonObject.put("MerResv",orderInfo.MerResv);
+                jsonObject.put("Signature",orderInfo.Signature);
+                Intent intent = new Intent(mContext, MainActivity.class);//第二步. 设置Intent指向MainActivity.class
+                intent.putExtra("orderInfo", jsonObject.toString());
+                intent.putExtra("mode", "00");//mode 03测试 00生产
+                // orderInfo为Json字符串。
+                mContext.startActivity(intent);
+            } catch (JSONException e) {
+                e.printStackTrace();
+                Log.e("TAG","异常原因="+e.toString());
+            }
     }
 
     private void showPayPwdDialog() {

@@ -4,9 +4,9 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.container.BaseFrameLayout;
-import com.asia.paint.databinding.ViewCheckBoxBinding;
+import com.asia.paint.android.databinding.ViewCheckBoxBinding;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

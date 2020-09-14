@@ -2,7 +2,7 @@ package com.asia.paint.biz.shop.goods;
 
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.network.bean.Goods;
 import com.asia.paint.base.network.bean.GoodsRsp;
 import com.asia.paint.base.recyclerview.BaseGlideAdapter;

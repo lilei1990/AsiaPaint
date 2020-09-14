@@ -2,9 +2,9 @@ package com.asia.paint.biz.shop;
 
 import android.os.Bundle;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityTestBinding;
 import com.asia.paint.base.container.BaseActivity;
-import com.asia.paint.databinding.ActivityTestBinding;
 
 import androidx.annotation.Nullable;
 

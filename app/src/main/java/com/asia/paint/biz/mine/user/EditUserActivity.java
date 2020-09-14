@@ -4,7 +4,8 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityEditUserBinding;
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.api.FileService;
@@ -14,7 +15,6 @@ import com.asia.paint.base.util.ImageUtils;
 import com.asia.paint.base.widgets.CheckBox;
 import com.asia.paint.base.widgets.selectimage.MatisseActivity;
 import com.asia.paint.biz.mine.index.MineViewModel;
-import com.asia.paint.databinding.ActivityEditUserBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.DateUtils;

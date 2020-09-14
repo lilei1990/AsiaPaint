@@ -3,6 +3,7 @@ package com.asia.paint.biz.mine.money.recharge;
 import com.asia.paint.base.container.BaseViewModel;
 import com.asia.paint.base.network.api.MoneyService;
 import com.asia.paint.base.network.bean.PayOrderInfo;
+import com.asia.paint.base.network.bean.YinlianBean;
 import com.asia.paint.base.network.core.DefaultNetworkObserver;
 import com.asia.paint.network.NetworkFactory;
 import com.asia.paint.network.NetworkObservableTransformer;
@@ -18,6 +19,7 @@ public class RechargeViewModel extends BaseViewModel {
 
     private CallbackDate<PayOrderInfo> mWeiXinRsp = new CallbackDate<>();
     private CallbackDate<String> mZhiFuBaoRsp = new CallbackDate<>();
+    private CallbackDate<YinlianBean> yinRsp = new CallbackDate<>();
 
     public CallbackDate<PayOrderInfo> rechargeWeiXin(String money) {
         NetworkFactory.createService(MoneyService.class)
@@ -60,5 +62,29 @@ public class RechargeViewModel extends BaseViewModel {
                     }
                 });
         return mZhiFuBaoRsp;
+    }
+
+    public CallbackDate<YinlianBean> rechargeByYinlian(String money) {
+        NetworkFactory.createService(MoneyService.class)
+                .rechargeByYinlian(MoneyService.PAY_BANK, money)
+                .compose(new NetworkObservableTransformer<>())
+                .subscribe(new DefaultNetworkObserver<YinlianBean>(false) {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                        addDisposable(d);
+                    }
+
+                    @Override
+                    public void onResponse(YinlianBean response) {
+                        yinRsp.setData(response);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        super.onError(e);
+                        AppUtils.showMessage(e.getMessage());
+                    }
+                });
+        return yinRsp;
     }
 }

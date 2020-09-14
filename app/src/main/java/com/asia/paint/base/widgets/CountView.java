@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.biz.cart.CartViewModel;
 
 import java.util.concurrent.atomic.AtomicInteger;

@@ -13,7 +13,8 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityOrderCheckoutBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.api.OrderService;
 import com.asia.paint.base.network.api.ReceiptService;
@@ -31,7 +32,6 @@ import com.asia.paint.biz.mine.settings.address.AddressActivity;
 import com.asia.paint.biz.order.OrderViewModel;
 import com.asia.paint.biz.order.group.GroupMemberAdapter;
 import com.asia.paint.biz.pay.pay.PayTypeViewModel;
-import com.asia.paint.databinding.ActivityOrderCheckoutBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.CommonUtil;

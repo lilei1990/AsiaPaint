@@ -4,13 +4,13 @@ import android.os.Bundle;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentTrainBinding;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.base.network.bean.Train;
 import com.asia.paint.base.network.bean.TrainCategory;
 import com.asia.paint.base.network.bean.TrainRsp;
 import com.asia.paint.biz.mine.seller.train.detail.TrainDetailActivity;
-import com.asia.paint.databinding.FragmentTrainBinding;
 
 /**
  * @author by chenhong14 on 2019-12-12.

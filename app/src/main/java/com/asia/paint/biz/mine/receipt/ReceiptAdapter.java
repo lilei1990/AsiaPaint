@@ -2,7 +2,7 @@ package com.asia.paint.biz.mine.receipt;
 
 import android.content.Context;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.network.bean.Receipt;
 import com.asia.paint.base.recyclerview.BaseGlideAdapter;
 import com.asia.paint.base.recyclerview.GlideViewHolder;
@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 public class ReceiptAdapter extends BaseGlideAdapter<Receipt> {
 
     public ReceiptAdapter(Context context) {
-        super(context,R.layout.item_receipt);
+        super(context, R.layout.item_receipt);
     }
 
     @Override

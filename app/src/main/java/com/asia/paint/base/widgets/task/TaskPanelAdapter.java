@@ -2,7 +2,7 @@ package com.asia.paint.base.widgets.task;
 
 import android.content.Context;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.network.bean.Task;
 import com.asia.paint.base.recyclerview.BaseGlideAdapter;
 import com.asia.paint.base.recyclerview.GlideViewHolder;

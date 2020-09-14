@@ -3,7 +3,7 @@ package com.asia.paint.biz.mine.seller.score.record;
 import android.graphics.Paint;
 import android.widget.TextView;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.network.bean.CashRecord;
 import com.asia.paint.base.recyclerview.BaseGlideAdapter;
 import com.asia.paint.base.recyclerview.GlideViewHolder;

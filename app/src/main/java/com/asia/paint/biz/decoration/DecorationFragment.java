@@ -5,9 +5,9 @@ import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentDecorationBinding;
 import com.asia.paint.base.container.BaseFragment;
-import com.asia.paint.databinding.FragmentDecorationBinding;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 
 import cn.qqtheme.framework.util.LogUtils;

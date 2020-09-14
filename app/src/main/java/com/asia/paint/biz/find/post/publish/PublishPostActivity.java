@@ -9,7 +9,8 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityPublishPostBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.api.FileService;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
@@ -17,7 +18,6 @@ import com.asia.paint.base.util.FileUtils;
 import com.asia.paint.base.widgets.dialog.LoadDialog;
 import com.asia.paint.base.widgets.selectimage.MatisseActivity;
 import com.asia.paint.biz.find.post.PostViewModel;
-import com.asia.paint.databinding.ActivityPublishPostBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;

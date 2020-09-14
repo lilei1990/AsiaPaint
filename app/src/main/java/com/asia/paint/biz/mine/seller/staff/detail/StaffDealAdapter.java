@@ -3,7 +3,7 @@ package com.asia.paint.biz.mine.seller.staff.detail;
 import android.util.SparseArray;
 import android.widget.TextView;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.network.api.OrderService;
 import com.asia.paint.base.network.bean.OrderDetail;
 import com.asia.paint.base.network.bean.StaffDeal;

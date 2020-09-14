@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.utils.utils.AppUtils;
 import com.tencent.mm.opensdk.modelbase.BaseReq;

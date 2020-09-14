@@ -5,10 +5,10 @@ import android.util.Pair;
 import android.util.SparseArray;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityTaskCenterBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.api.TaskService;
-import com.asia.paint.databinding.ActivityTaskCenterBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 

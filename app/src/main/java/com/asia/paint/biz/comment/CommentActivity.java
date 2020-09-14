@@ -5,12 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityCommentBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.api.CommentService;
 import com.asia.paint.base.network.bean.CommentRsp;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
-import com.asia.paint.databinding.ActivityCommentBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.DigitUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;

@@ -8,10 +8,10 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewSellerResultBinding;
 import com.asia.paint.base.container.BaseFrameLayout;
 import com.asia.paint.biz.mine.seller.goals.SellerGoalsActivity;
-import com.asia.paint.databinding.ViewSellerResultBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 /**

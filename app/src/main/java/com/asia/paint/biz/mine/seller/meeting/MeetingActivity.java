@@ -12,14 +12,14 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityMeetingBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.api.MeetingService;
 import com.asia.paint.base.network.bean.MeetingMember;
 import com.asia.paint.biz.mine.seller.meeting.detail.MeetingDetailActivity;
 import com.asia.paint.biz.mine.seller.meeting.hold.HoldMeetingActivity;
 import com.asia.paint.biz.mine.seller.meeting.member.MeetingMemberActivity;
-import com.asia.paint.databinding.ActivityMeetingBinding;
 
 import java.util.List;
 

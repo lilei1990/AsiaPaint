@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="env_name">
+          <item>本机环境</item>
+          <item>开发环境</item>
+          <item>准生产内网环境</item>
+          <item>准生产外网环境</item>
+          <item>生产环境</item>
+    </string-array>
+    <string-array name="mer_no">
+        <item>000000000000001</item>
+        <item>601211608180001</item>
+        <item>489901607086664</item>
+        <item>000001608060886</item>
+        <item>531101708217723</item>
+        <item>000020150520002</item>
+    </string-array>
+</resources>

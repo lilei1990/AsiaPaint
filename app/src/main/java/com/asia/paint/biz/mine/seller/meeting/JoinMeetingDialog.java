@@ -3,9 +3,9 @@ package com.asia.paint.biz.mine.seller.meeting;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.DialogJoinMeetingBinding;
 import com.asia.paint.base.container.BaseDialogFragment;
-import com.asia.paint.databinding.DialogJoinMeetingBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;

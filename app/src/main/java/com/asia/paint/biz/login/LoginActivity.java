@@ -17,14 +17,10 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
-import android.util.Log;
-import android.view.TextureView;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.acker.simplezxing.activity.CaptureActivity;
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.api.OtherService;
@@ -37,9 +33,8 @@ import com.asia.paint.biz.AsiaPaintApplication;
 import com.asia.paint.biz.login.bind.BindPhoneActivity;
 import com.asia.paint.biz.login.forget.ForgetPasswordActivity;
 import com.asia.paint.biz.main.MainActivity;
-import com.asia.paint.biz.mine.favorites.FavoritesActivity;
-import com.asia.paint.biz.mine.seller.goals.WebViewActivity;
-import com.asia.paint.databinding.ActivityLoginBinding;
+import com.asia.paint.android.databinding.ActivityLoginBinding;
+import com.asia.paint.biz.mine.seller.goals.WebActivity;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
@@ -51,8 +46,6 @@ import com.lljjcoder.style.citylist.Toast.ToastUtils;
 import com.tencent.mm.opensdk.modelmsg.SendAuth;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -305,7 +298,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding> {
                 .setSpan(new ClickableSpan() {
                     @Override
                     public void onClick(@NonNull View widget) {
-                        WebViewActivity.start(LoginActivity.this, OtherService.USER_ITEMS);
+                        WebActivity.start(LoginActivity.this, OtherService.USER_ITEMS);
                     }
 
                     @Override

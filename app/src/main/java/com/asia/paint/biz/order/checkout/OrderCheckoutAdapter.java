@@ -3,7 +3,7 @@ package com.asia.paint.biz.order.checkout;
 import android.graphics.Color;
 import android.text.TextUtils;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.network.bean.OrderCheckout;
 import com.asia.paint.base.recyclerview.BaseGlideAdapter;
 import com.asia.paint.base.recyclerview.GlideViewHolder;

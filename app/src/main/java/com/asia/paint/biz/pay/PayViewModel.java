@@ -1,10 +1,13 @@
 package com.asia.paint.biz.pay;
 
+import android.util.Log;
+
 import com.asia.paint.base.container.BaseViewModel;
 import com.asia.paint.base.network.api.PayService;
 import com.asia.paint.base.network.api.UserService;
 import com.asia.paint.base.network.bean.MineDataRsp;
 import com.asia.paint.base.network.bean.PayOrderInfo;
+import com.asia.paint.base.network.bean.YinlianBean;
 import com.asia.paint.base.network.core.DefaultNetworkObserver;
 import com.asia.paint.network.NetworkFactory;
 import com.asia.paint.network.NetworkObservableTransformer;
@@ -24,6 +27,7 @@ public class PayViewModel extends BaseViewModel {
     private CallbackDate<MineDataRsp> mMineDataResult = new CallbackDate<>();
     private CallbackDate<PayOrderInfo> mPayOrderInfoRsp = new CallbackDate<>();
     private CallbackDate<String> mZhiFubaoOrderInfoRsp = new CallbackDate<>();
+    private CallbackDate<YinlianBean> yinlianRsp = new CallbackDate<>();
 
     public CallbackDate<Boolean> payViaBalance(int order_id, String payword) {
         NetworkFactory.createService(PayService.class)
@@ -136,6 +140,8 @@ public class PayViewModel extends BaseViewModel {
         return mPayOrderInfoRsp;
     }
 
+
+
     public CallbackDate<String> queryZhiFuBaoOrderInfo(int orderId) {
         int type = PayService.PAY_ZHI_FU_BAO;
         NetworkFactory.createService(PayService.class)
@@ -159,5 +165,31 @@ public class PayViewModel extends BaseViewModel {
                     }
                 });
         return mZhiFubaoOrderInfoRsp;
+    }
+
+    public CallbackDate<YinlianBean> queryYinlianOrderInfo(int orderId) {
+        int type = PayService.PAY_BANK;
+        NetworkFactory.createService(PayService.class)
+                .queryYinlianOrderInfo(orderId,type)
+                .compose(new NetworkObservableTransformer<>())
+                .subscribe(new DefaultNetworkObserver<YinlianBean>(false) {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                        addDisposable(d);
+                    }
+
+                    @Override
+                    public void onResponse(YinlianBean response) {
+                        yinlianRsp.setData(response);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        super.onError(e);
+                        yinlianRsp.setData(null);
+                        AppUtils.showMessage(e.getMessage());
+                    }
+                });
+        return yinlianRsp;
     }
 }

@@ -10,10 +10,10 @@ import android.os.Message;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.DialogUpdateBinding;
 import com.asia.paint.base.container.BaseDialogFragment;
 import com.asia.paint.base.network.bean.UpdateRsp;
-import com.asia.paint.databinding.DialogUpdateBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.utils.AppUtils;
 

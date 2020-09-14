@@ -11,9 +11,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.biz.AsiaPaintApplication;
-import com.asia.paint.databinding.ActivityBaseTitleBinding;
+import com.asia.paint.android.databinding.ActivityBaseTitleBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.KeyBoardUtils;
 

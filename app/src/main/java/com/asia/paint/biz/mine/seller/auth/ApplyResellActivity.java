@@ -6,12 +6,13 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityApplyResellBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.api.OtherService;
-import com.asia.paint.biz.mine.seller.goals.WebViewActivity;
-import com.asia.paint.databinding.ActivityApplyResellBinding;
+import com.asia.paint.biz.mine.seller.goals.WebActivity;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
+import com.chinapay.mobilepayment.activity.WebViewActivity;
 import com.lljjcoder.style.citylist.Toast.ToastUtils;
 
 /**
@@ -64,7 +65,7 @@ public class ApplyResellActivity extends BaseActivity<ActivityApplyResellBinding
 		mBinding.tvSellRule.setOnClickListener(new OnNoDoubleClickListener() {
 			@Override
 			public void onNoDoubleClick(View view) {
-				WebViewActivity.start(ApplyResellActivity.this, OtherService.SELL_RULE);
+				WebActivity.start(ApplyResellActivity.this, OtherService.SELL_RULE);
 			}
 		});
 	}

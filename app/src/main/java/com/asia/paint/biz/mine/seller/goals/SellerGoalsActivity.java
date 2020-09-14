@@ -6,12 +6,12 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivitySellerGoalsBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.api.OtherService;
 import com.asia.paint.base.network.bean.StaffSaleDataRsp;
 import com.asia.paint.biz.mine.seller.staff.StaffViewModel;
-import com.asia.paint.databinding.ActivitySellerGoalsBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.DateUtils;
@@ -44,7 +44,7 @@ public class SellerGoalsActivity extends BaseActivity<ActivitySellerGoalsBinding
 		mBinding.tvSellRule.setOnClickListener(new OnNoDoubleClickListener() {
 			@Override
 			public void onNoDoubleClick(View view) {
-				WebViewActivity.start(SellerGoalsActivity.this, OtherService.SELL_RULE);
+				WebActivity.start(SellerGoalsActivity.this, OtherService.SELL_RULE);
 			}
 		});
 		String time = DateUtils.timeToString(System.currentTimeMillis(), DateUtils.DATE_PATTERN_1);

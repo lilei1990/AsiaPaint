@@ -5,11 +5,11 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.DialogOrderSelectPayTypeBinding;
 import com.asia.paint.base.container.BaseBottomDialogFragment;
 import com.asia.paint.biz.mine.money.recharge.RechargeType;
 import com.asia.paint.biz.mine.money.recharge.RechargeTypeAdapter;
-import com.asia.paint.databinding.DialogOrderSelectPayTypeBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
@@ -118,12 +118,12 @@ public class OrderSelectPayTypeDialog extends BaseBottomDialogFragment<DialogOrd
         weiXin.iconId = R.mipmap.ic_mine_weixin;
         types.add(weiXin);
 
- /*       RechargeType bank = new RechargeType();
+        RechargeType bank = new RechargeType();
         bank.name = "银行卡快捷支付";
         bank.pay = RechargeType.Pay.DEBIT_CARD;
         bank.description = "由网易支付提供服务";
         bank.iconId = R.mipmap.ic_mine_bank;
-        types.add(bank);*/
+        types.add(bank);
         return types;
     }
 

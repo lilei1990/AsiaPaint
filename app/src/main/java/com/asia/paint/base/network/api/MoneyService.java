@@ -2,6 +2,7 @@ package com.asia.paint.base.network.api;
 
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.network.bean.PayOrderInfo;
+import com.asia.paint.base.network.bean.YinlianBean;
 import com.asia.paint.base.network.core.BaseRsp;
 import com.asia.paint.network.NetworkUrl;
 
@@ -27,5 +28,9 @@ public interface MoneyService {
     @FormUrlEncoded
     @POST("api/money/add_money")
     Observable<BaseRsp<String>> rechargeByZhiFuBao(@Field("type") int type, @Field("money") String money);
+
+    @FormUrlEncoded
+    @POST("api/money/add_money")
+    Observable<BaseRsp<YinlianBean>> rechargeByYinlian(@Field("type") int type, @Field("money") String money);
 
 }

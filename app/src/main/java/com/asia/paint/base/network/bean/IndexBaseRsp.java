@@ -6,6 +6,7 @@ public class IndexBaseRsp {
 	public String pintuan;
 	public String conpose;
 	public String smz;
+	public String tj_bg;
 
 	@Override
 	public String toString() {
@@ -14,6 +15,7 @@ public class IndexBaseRsp {
 				", pintuan='" + pintuan + '\'' +
 				", conpose='" + conpose + '\'' +
 				", smz='" + smz + '\'' +
+				", tj_bg='" + tj_bg + '\'' +
 				'}';
 	}
 }

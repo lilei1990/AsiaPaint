@@ -1,5 +1,6 @@
 package com.asia.paint.biz.shop.index;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -17,7 +18,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.acker.simplezxing.activity.CaptureActivity;
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentShopBinding;
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.base.image.GlideImageLoader;
@@ -30,6 +32,7 @@ import com.asia.paint.base.network.bean.ShopGoodsDetailRsp;
 import com.asia.paint.base.network.bean.UpdateStatusBean;
 import com.asia.paint.base.util.WeiXinUtils;
 import com.asia.paint.base.widgets.dialog.MessageDialog;
+import com.asia.paint.biz.login.LoginActivity;
 import com.asia.paint.biz.main.MainActivity;
 import com.asia.paint.biz.mine.seller.score.cash.CashActivity;
 import com.asia.paint.biz.order.checkout.OrderCheckoutActivity;
@@ -37,12 +40,13 @@ import com.asia.paint.biz.pay.password.SetPayPwdActivity;
 import com.asia.paint.biz.shop.detail.GoodsDetailActivity;
 import com.asia.paint.biz.shop.flash.FlashGoodsFragment;
 import com.asia.paint.biz.shop.goods.GoodsFragment;
-import com.asia.paint.databinding.FragmentShopBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.CacheUtils;
 import com.bumptech.glide.Glide;
 import com.google.android.material.tabs.TabLayout;
+import com.hjq.permissions.OnPermission;
+import com.hjq.permissions.XXPermissions;
 import com.lljjcoder.style.citylist.Toast.ToastUtils;
 import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
@@ -103,7 +107,19 @@ public class ShopFragment extends BaseFragment<FragmentShopBinding> {
         mBinding.ivScanCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivityForResult(new Intent(getActivity(), CaptureActivity.class), CaptureActivity.REQ_CODE);
+                XXPermissions.with(getActivity())
+                        .permission(Manifest.permission.CAMERA)
+                        .request(new OnPermission() {
+                            @Override
+                            public void hasPermission(List<String> granted, boolean isAll) {
+                                startActivityForResult(new Intent(getActivity(), CaptureActivity.class), CaptureActivity.REQ_CODE);
+                            }
+
+                            @Override
+                            public void noPermission(List<String> denied, boolean quick) {
+                                AppUtils.showMessage("没有开启相机权限，无法使用扫码功能");
+                            }
+                        });
             }
         });
         //监听

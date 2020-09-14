@@ -16,7 +16,7 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.PopupWindow;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.utils.utils.KeyBoardUtils;
 
 

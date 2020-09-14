@@ -7,12 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewGoodsShowBinding;
 import com.asia.paint.banner.listener.OnBannerListener;
 import com.asia.paint.base.image.GoodsLoader;
 import com.asia.paint.base.recyclerview.BaseGlideAdapter;
 import com.asia.paint.base.recyclerview.GlideViewHolder;
-import com.asia.paint.databinding.ViewGoodsShowBinding;
 import com.asia.paint.utils.utils.AppUtils;
 
 import java.util.ArrayList;

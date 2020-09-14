@@ -6,11 +6,11 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.DialogPintuanBinding;
 import com.asia.paint.base.container.BaseDialogFragment;
 import com.asia.paint.base.network.bean.PromotionGroupPintuan;
 import com.asia.paint.biz.shop.detail.PinTuanAdapter;
-import com.asia.paint.databinding.DialogPintuanBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;

@@ -2,7 +2,7 @@ package com.asia.paint.base.util;
 
 import android.widget.ImageView;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.utils.utils.AppUtils;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;

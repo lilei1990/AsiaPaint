@@ -9,11 +9,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityOrderMineBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.bean.ShopBannerRsp;
 import com.asia.paint.biz.shop.flash.FlashGoodsFragment;
-import com.asia.paint.databinding.ActivityOrderMineBinding;
 
 /**
  * 专区拼团/秒杀专区团购

@@ -13,7 +13,8 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityPostDetailBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.bean.Post;
 import com.asia.paint.base.network.bean.PostComment;
@@ -26,7 +27,6 @@ import com.asia.paint.biz.AsiaPaintApplication;
 import com.asia.paint.biz.find.post.PostCommentAdapter;
 import com.asia.paint.biz.find.post.PostViewModel;
 import com.asia.paint.biz.login.forget.ForgetPasswordActivity;
-import com.asia.paint.databinding.ActivityPostDetailBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 

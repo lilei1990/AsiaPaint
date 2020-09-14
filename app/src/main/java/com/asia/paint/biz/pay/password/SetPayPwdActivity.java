@@ -9,10 +9,10 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivitySetPwdBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.biz.pay.PayViewModel;
-import com.asia.paint.databinding.ActivitySetPwdBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 /**

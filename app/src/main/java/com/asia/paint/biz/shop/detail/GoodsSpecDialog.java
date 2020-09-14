@@ -6,12 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.container.BaseBottomDialogFragment;
 import com.asia.paint.base.network.bean.Specs;
 import com.asia.paint.base.widgets.flowlayout.FlowLayout;
 import com.asia.paint.base.widgets.flowlayout.TagAdapter;
-import com.asia.paint.databinding.DialogGoodsSpecBinding;
+import com.asia.paint.android.databinding.DialogGoodsSpecBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.PriceUtils;

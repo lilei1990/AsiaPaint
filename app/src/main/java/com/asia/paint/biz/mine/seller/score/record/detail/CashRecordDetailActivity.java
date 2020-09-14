@@ -2,9 +2,9 @@ package com.asia.paint.biz.mine.seller.score.record.detail;
 
 import android.os.Bundle;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityCashRecordDetailBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
-import com.asia.paint.databinding.ActivityCashRecordDetailBinding;
 
 import androidx.annotation.Nullable;
 

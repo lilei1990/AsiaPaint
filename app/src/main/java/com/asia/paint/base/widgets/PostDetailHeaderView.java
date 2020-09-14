@@ -4,11 +4,10 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewPostdetailHeaderBinding;
 import com.asia.paint.base.container.BaseFrameLayout;
 import com.asia.paint.base.util.ImageUtils;
-import com.asia.paint.databinding.ViewPostHeaderBinding;
-import com.asia.paint.databinding.ViewPostdetailHeaderBinding;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

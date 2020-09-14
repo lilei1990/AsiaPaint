@@ -6,16 +6,18 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityRecommendCodeBinding;
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.bean.UserDetail;
 import com.asia.paint.biz.mine.index.MineViewModel;
-import com.asia.paint.databinding.ActivityRecommendCodeBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
+import com.asia.paint.utils.utils.CacheUtils;
 import com.asia.paint.utils.utils.CopyUtils;
 import com.asia.paint.utils.utils.QRCode;
+import com.bumptech.glide.Glide;
 
 /**
  * @author by chenhong14 on 2019-12-12.
@@ -49,6 +51,11 @@ public class RecommendCodeActivity extends BaseTitleActivity<ActivityRecommendCo
 			}
 		});
 		mMineViewModel.loadSellerInfoDetail().setCallback(this::updateUserInfo);
+		//app图片
+		mMineViewModel.loadIndexBase().setCallback(result -> {
+			Glide.with(this).load(result.tj_bg).into(mBinding.imgBack);
+			CacheUtils.put(CacheUtils.KEY_SMZ, result.smz);
+		});
 	}
 
 	private void updateUserInfo(UserDetail user) {

@@ -10,7 +10,7 @@ android {
     signingConfigs {
         release {
             storeFile file('../asia.jks')
-            storePassword 'asia123'
+            storePassword 'aisa123'
             keyAlias "asia"
             keyPassword 'aisa123'
         }
@@ -42,7 +42,16 @@ android {
     dataBinding {
         enabled = true
     }
-
+    android {
+        repositories {
+            flatDir {
+                dirs 'libs'
+            }
+        }
+        sourceSets {
+            main { jniLibs.srcDirs = ['Libs'] }
+        }
+    }
 }
 
 dependencies {
@@ -66,5 +75,7 @@ dependencies {
     implementation 'com.alibaba:fastjson:1.2.17'
     implementation files('libs/jsoup-1.13.1.jar')
     implementation 'com.android.support:multidex:1.0.3'
-
+    implementation files('libs/UPPayPluginExPro.jar')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.1'
 }

@@ -2,10 +2,10 @@ package com.asia.paint.biz.mine.seller.train;
 
 import android.os.Bundle;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityTrainBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.bean.TrainCategory;
-import com.asia.paint.databinding.ActivityTrainBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 
 import java.util.ArrayList;

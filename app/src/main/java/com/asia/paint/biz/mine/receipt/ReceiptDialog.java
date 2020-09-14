@@ -9,14 +9,14 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import io.reactivex.disposables.Disposable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.DialogOrderReceiptBinding;
 import com.asia.paint.base.container.BaseBottomDialogFragment;
 import com.asia.paint.base.network.api.ReceiptService;
 import com.asia.paint.base.network.bean.Receipt;
 import com.asia.paint.base.network.bean.ReceiptRsp;
 import com.asia.paint.base.network.core.DefaultNetworkObserver;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
-import com.asia.paint.databinding.DialogOrderReceiptBinding;
 import com.asia.paint.network.NetworkFactory;
 import com.asia.paint.network.NetworkObservableTransformer;
 import com.asia.paint.utils.callback.CallbackDate;

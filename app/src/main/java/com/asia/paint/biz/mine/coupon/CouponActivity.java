@@ -4,10 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityCouponBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.api.CouponService;
-import com.asia.paint.databinding.ActivityCouponBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 

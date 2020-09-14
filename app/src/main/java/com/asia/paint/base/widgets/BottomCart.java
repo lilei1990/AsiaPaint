@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.model.AddCartViewModel;
 import com.asia.paint.base.network.api.OrderService;
 import com.asia.paint.base.network.bean.Goods;
@@ -21,7 +21,7 @@ import com.asia.paint.biz.main.MainActivity;
 import com.asia.paint.biz.mine.service.CustomerServiceActivity;
 import com.asia.paint.biz.order.checkout.OrderCheckoutActivity;
 import com.asia.paint.biz.shop.detail.GoodsSpecDialog;
-import com.asia.paint.databinding.ViewBottomCartBinding;
+import com.asia.paint.android.databinding.ViewBottomCartBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.smarttop.library.utils.LogUtil;

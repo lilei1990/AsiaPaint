@@ -7,10 +7,10 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.DialogStoreCodeBinding;
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.container.BaseDialogFragment;
-import com.asia.paint.databinding.DialogStoreCodeBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;

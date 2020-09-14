@@ -8,14 +8,14 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewSellerOptionsBinding;
 import com.asia.paint.base.container.BaseFrameLayout;
 import com.asia.paint.biz.mine.seller.auth.ApplyResellActivity;
 import com.asia.paint.biz.mine.seller.meeting.MeetingActivity;
 import com.asia.paint.biz.mine.seller.monthly.MonthlyActivity;
 import com.asia.paint.biz.mine.seller.staff.StaffActivity;
 import com.asia.paint.biz.mine.seller.train.TrainActivity;
-import com.asia.paint.databinding.ViewSellerOptionsBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 /**

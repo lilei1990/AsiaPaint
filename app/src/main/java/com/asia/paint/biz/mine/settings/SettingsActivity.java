@@ -5,7 +5,8 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivitySettingsBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.bean.UserInfo;
 import com.asia.paint.base.widgets.dialog.MessageDialog;
@@ -18,7 +19,6 @@ import com.asia.paint.biz.mine.settings.feedback.FeedbackActivity;
 import com.asia.paint.biz.mine.settings.password.NewPwdActivity;
 import com.asia.paint.biz.mine.settings.unsubscribe.UnsubscribeAccountActivity;
 import com.asia.paint.biz.pay.password.SetPayPwdActivity;
-import com.asia.paint.databinding.ActivitySettingsBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.CleanDataUtils;

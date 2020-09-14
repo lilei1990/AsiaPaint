@@ -8,7 +8,8 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentGoodsBinding;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.base.model.CollectViewModel;
 import com.asia.paint.base.network.bean.Goods;
@@ -17,7 +18,6 @@ import com.asia.paint.base.recyclerview.DefaultItemDecoration;
 import com.asia.paint.biz.main.MainActivity;
 import com.asia.paint.biz.main.MainViewModel;
 import com.asia.paint.biz.shop.detail.GoodsDetailActivity;
-import com.asia.paint.databinding.FragmentGoodsBinding;
 
 import java.util.ArrayList;
 

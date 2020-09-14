@@ -5,10 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentPostmineBinding;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.base.network.bean.Post;
 import com.asia.paint.base.network.bean.PostRsp;
@@ -16,10 +15,7 @@ import com.asia.paint.base.recyclerview.DefaultItemDecoration;
 import com.asia.paint.biz.find.post.PostAdapter;
 import com.asia.paint.biz.find.post.PostViewModel;
 import com.asia.paint.biz.find.post.detail.PostDetailActivity;
-import com.asia.paint.biz.find.post.publish.PublishPostActivity;
-import com.asia.paint.databinding.FragmentPostmineBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
-import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -27,7 +23,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
  * Created by Administrator on 2020/6/27.
  */
 
-public class PostMineFragment extends BaseFragment<FragmentPostmineBinding>implements OnChangeCallback<PostRsp> {
+public class PostMineFragment extends BaseFragment<FragmentPostmineBinding> implements OnChangeCallback<PostRsp> {
 
     public static final int TYPE_MY_POST = 2;
     public static final int TYPE_FOLLOW_POST = 3;

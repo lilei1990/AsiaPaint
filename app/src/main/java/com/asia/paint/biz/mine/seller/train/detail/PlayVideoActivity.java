@@ -11,9 +11,9 @@ import android.widget.MediaController;
 
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityPlayVideoBinding;
 import com.asia.paint.base.container.BaseActivity;
-import com.asia.paint.databinding.ActivityPlayVideoBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 /**

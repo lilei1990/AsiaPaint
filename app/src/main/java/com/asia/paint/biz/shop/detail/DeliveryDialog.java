@@ -3,9 +3,9 @@ package com.asia.paint.biz.shop.detail;
 import android.text.Html;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.DialogDeliverBinding;
 import com.asia.paint.base.container.BaseBottomDialogFragment;
-import com.asia.paint.databinding.DialogDeliverBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 /**

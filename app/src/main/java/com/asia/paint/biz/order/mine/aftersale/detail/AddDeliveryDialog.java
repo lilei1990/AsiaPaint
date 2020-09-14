@@ -3,9 +3,9 @@ package com.asia.paint.biz.order.mine.aftersale.detail;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.DialogAddDelveryBinding;
 import com.asia.paint.base.container.BaseDialogFragment;
-import com.asia.paint.databinding.DialogAddDelveryBinding;
 import com.asia.paint.utils.callback.OnChangePairCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;

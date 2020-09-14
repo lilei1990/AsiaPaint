@@ -5,7 +5,8 @@ import android.content.Context;
 import android.view.Gravity;
 import android.view.Window;
 
-import com.asia.paint.R;
+
+import com.asia.paint.android.R;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.ViewDataBinding;

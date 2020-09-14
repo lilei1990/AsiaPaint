@@ -8,9 +8,9 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityPhotoBinding;
 import com.asia.paint.base.container.BaseActivity;
-import com.asia.paint.databinding.ActivityPhotoBinding;
 import com.bumptech.glide.Glide;
 
 /**

@@ -3,14 +3,14 @@ package com.asia.paint.biz.mine.settings.account.index;
 import android.os.Bundle;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityAccountIndexBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.api.CashService;
 import com.asia.paint.base.network.bean.CashAccount;
 import com.asia.paint.base.network.bean.CashAccountRsp;
 import com.asia.paint.biz.mine.settings.account.BindCashAccountActivity;
 import com.asia.paint.biz.mine.settings.account.CashAccountViewModel;
-import com.asia.paint.databinding.ActivityAccountIndexBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 import java.util.List;

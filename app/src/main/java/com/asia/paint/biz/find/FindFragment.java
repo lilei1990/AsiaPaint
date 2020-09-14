@@ -9,12 +9,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentFindBinding;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.biz.find.mine.MineServiceFragment;
 import com.asia.paint.biz.find.post.PostFragment;
 import com.asia.paint.biz.zone.ZoneFragment;
-import com.asia.paint.databinding.FragmentFindBinding;
 
 /**
  * @author by chenhong14 on 2019-11-16.

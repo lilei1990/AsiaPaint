@@ -2,11 +2,11 @@ package com.asia.paint.biz.mine.seller.task;
 
 import android.os.Bundle;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentTaskCenterBinding;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.base.network.bean.TaskRsp;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
-import com.asia.paint.databinding.FragmentTaskCenterBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 
 import androidx.recyclerview.widget.LinearLayoutManager;

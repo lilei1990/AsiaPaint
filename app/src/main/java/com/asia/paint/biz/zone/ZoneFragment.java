@@ -1,8 +1,8 @@
 package com.asia.paint.biz.zone;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentZoneBinding;
 import com.asia.paint.base.container.BaseFragment;
-import com.asia.paint.databinding.FragmentZoneBinding;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 

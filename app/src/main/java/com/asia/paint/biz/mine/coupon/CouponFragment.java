@@ -4,14 +4,14 @@ import android.os.Bundle;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentCouponBinding;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.base.network.api.CouponService;
 import com.asia.paint.base.network.bean.Coupon;
 import com.asia.paint.base.network.bean.CouponRsp;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
 import com.asia.paint.biz.main.MainActivity;
-import com.asia.paint.databinding.FragmentCouponBinding;
 
 /**
  * @author by chenhong14 on 2019-11-12.

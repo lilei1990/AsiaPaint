@@ -5,7 +5,8 @@ import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentOrderBinding;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.base.network.api.OrderService;
 import com.asia.paint.base.network.bean.OrderDetail;
@@ -16,7 +17,6 @@ import com.asia.paint.biz.comment.add.AddCommentActivity;
 import com.asia.paint.biz.order.OrderViewModel;
 import com.asia.paint.biz.order.mine.detail.OrderDetailActivity;
 import com.asia.paint.biz.pay.pay.PayTypeViewModel;
-import com.asia.paint.databinding.FragmentOrderBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 import java.util.ArrayList;

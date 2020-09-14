@@ -2,11 +2,11 @@ package com.asia.paint.base.widgets.show;
 
 import android.os.Bundle;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentGoodsShowBinding;
 import com.asia.paint.base.container.BaseFragment;
 import com.asia.paint.base.network.bean.Goods;
 import com.asia.paint.biz.shop.detail.GoodsDetailActivity;
-import com.asia.paint.databinding.FragmentGoodsShowBinding;
 
 import androidx.recyclerview.widget.GridLayoutManager;
 

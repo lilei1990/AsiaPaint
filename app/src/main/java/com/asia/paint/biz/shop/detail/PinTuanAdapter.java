@@ -2,7 +2,7 @@ package com.asia.paint.biz.shop.detail;
 
 import androidx.annotation.NonNull;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.network.bean.PromotionGroupPintuan;
 import com.asia.paint.base.recyclerview.BaseGlideAdapter;
 import com.asia.paint.base.recyclerview.GlideViewHolder;

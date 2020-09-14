@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityStaffDetailBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.api.StaffService;
 import com.asia.paint.base.network.bean.StaffInfoRsp;
@@ -15,7 +16,6 @@ import com.asia.paint.base.network.bean.User;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
 import com.asia.paint.base.util.ImageUtils;
 import com.asia.paint.biz.mine.seller.staff.StaffViewModel;
-import com.asia.paint.databinding.ActivityStaffDetailBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.DateUtils;

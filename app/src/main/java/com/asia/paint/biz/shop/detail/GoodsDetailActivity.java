@@ -18,7 +18,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityGoodsDetailBinding;
 import com.asia.paint.banner.BannerConfig;
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.container.BaseActivity;
@@ -38,7 +39,6 @@ import com.asia.paint.base.widgets.FullyLinearLayoutManager;
 import com.asia.paint.biz.mine.seller.store.PinTuanDialog;
 import com.asia.paint.biz.order.checkout.OrderCheckoutActivity;
 import com.asia.paint.biz.order.group.GroupDetailActivity;
-import com.asia.paint.databinding.ActivityGoodsDetailBinding;
 import com.asia.paint.network.NetworkObservableTransformer;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;

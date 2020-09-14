@@ -9,9 +9,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.FragmentMineServiceBinding;
 import com.asia.paint.base.container.BaseFragment;
-import com.asia.paint.databinding.FragmentMineServiceBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 
 /**

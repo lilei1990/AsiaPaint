@@ -3,10 +3,10 @@ package com.asia.paint.base.widgets.selectimage;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ViewSelectImageBinding;
 import com.asia.paint.base.container.BaseFrameLayout;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
-import com.asia.paint.databinding.ViewSelectImageBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 
 import java.util.ArrayList;

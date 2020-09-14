@@ -3,9 +3,11 @@ package com.asia.paint.biz.mine.index;
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.container.BaseViewModel;
 import com.asia.paint.base.network.api.SellerService;
+import com.asia.paint.base.network.api.ShopService;
 import com.asia.paint.base.network.api.UserService;
 import com.asia.paint.base.network.bean.ArticleDataRsp;
 import com.asia.paint.base.network.bean.GetUserPost;
+import com.asia.paint.base.network.bean.IndexBaseRsp;
 import com.asia.paint.base.network.bean.MineDataRsp;
 import com.asia.paint.base.network.bean.RechargeDetailRsp;
 import com.asia.paint.base.network.bean.SellerInfoRsp;
@@ -36,6 +38,7 @@ public class MineViewModel extends BaseViewModel {
 	private CallbackDate<Boolean> mApplySellerRsp = new CallbackDate<>();
 	private CallbackDate<Boolean> mEditUserRsp = new CallbackDate<>();
 	private CallbackDate<RechargeDetailRsp> mMoneyRsp = new CallbackDate<>();
+	private CallbackDate<IndexBaseRsp> mIndexBaseRsp = new CallbackDate<>();
 
 	public CallbackDateList<GetUserPost> loadGetuserpost() {
 		NetworkFactory.createService(UserService.class)
@@ -235,5 +238,29 @@ public class MineViewModel extends BaseViewModel {
 					}
 				});
 		return mApplySellerRsp;
+	}
+
+	public CallbackDate<IndexBaseRsp> loadIndexBase() {
+		NetworkFactory.createService(ShopService.class)
+				.loadIndexBase()
+				.compose(new NetworkObservableTransformer<>())
+				.subscribe(new DefaultNetworkObserver<IndexBaseRsp>(false) {
+					@Override
+					public void onSubscribe(Disposable d) {
+						addDisposable(d);
+					}
+
+					@Override
+					public void onResponse(IndexBaseRsp response) {
+						mIndexBaseRsp.setData(response);
+					}
+
+					@Override
+					public void onError(Throwable e) {
+						super.onError(e);
+						AppUtils.showMessage(e.getMessage());
+					}
+				});
+		return mIndexBaseRsp;
 	}
 }

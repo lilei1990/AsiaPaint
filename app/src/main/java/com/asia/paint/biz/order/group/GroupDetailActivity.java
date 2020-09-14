@@ -14,7 +14,8 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityGroupDetailBinding;
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.api.OrderService;
@@ -23,11 +24,10 @@ import com.asia.paint.base.network.bean.PinTuanDetail;
 import com.asia.paint.base.network.bean.ShopGoodsDetailRsp;
 import com.asia.paint.base.util.ImageUtils;
 import com.asia.paint.base.util.WeiXinUtils;
-import com.asia.paint.biz.mine.seller.goals.WebViewActivity;
+import com.asia.paint.biz.mine.seller.goals.WebActivity;
 import com.asia.paint.biz.order.mine.detail.OrderDetailActivity;
 import com.asia.paint.biz.shop.detail.GoodsSpecDialog;
 import com.asia.paint.biz.shop.index.ShopViewModel;
-import com.asia.paint.databinding.ActivityGroupDetailBinding;
 import com.asia.paint.network.NetworkObservableTransformer;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
@@ -111,7 +111,7 @@ public class GroupDetailActivity extends BaseActivity<ActivityGroupDetailBinding
 		mBinding.tvGroupDetailRulesTitle.setOnClickListener(new OnNoDoubleClickListener() {
 			@Override
 			public void onNoDoubleClick(View view) {
-				WebViewActivity.start(GroupDetailActivity.this, OtherService.PINTUAN_RULE);
+				WebActivity.start(GroupDetailActivity.this, OtherService.PINTUAN_RULE);
 			}
 		});
 		mBinding.btnGroupDetail.setOnClickListener(new OnNoDoubleClickListener() {

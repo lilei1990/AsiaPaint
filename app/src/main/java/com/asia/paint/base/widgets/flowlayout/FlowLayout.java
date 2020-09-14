@@ -7,7 +7,8 @@ import android.util.LayoutDirection;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.asia.paint.R;
+
+import com.asia.paint.android.R;
 
 import java.util.ArrayList;
 import java.util.Collections;

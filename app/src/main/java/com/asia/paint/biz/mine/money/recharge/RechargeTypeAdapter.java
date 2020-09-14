@@ -2,7 +2,7 @@ package com.asia.paint.biz.mine.money.recharge;
 
 import android.text.TextUtils;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
 import com.asia.paint.base.recyclerview.BaseGlideAdapter;
 import com.asia.paint.base.recyclerview.GlideViewHolder;
 import com.asia.paint.base.widgets.CheckBox;

@@ -2,13 +2,13 @@ package com.asia.paint.biz.order.mine.aftersale.order;
 
 import android.os.Bundle;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityAfterSaleBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.bean.AfterSaleGoods;
 import com.asia.paint.base.recyclerview.DefaultItemDecoration;
 import com.asia.paint.biz.order.mine.aftersale.AfterSaleViewModel;
 import com.asia.paint.biz.order.mine.aftersale.detail.AfterSaleDetailActivity;
-import com.asia.paint.databinding.ActivityAfterSaleBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 
 import androidx.annotation.Nullable;

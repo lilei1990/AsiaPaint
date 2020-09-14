@@ -5,12 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivitySelectAfterSaleTypeBinding;
 import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.bean.OrderDetail;
 import com.asia.paint.base.util.ImageUtils;
 import com.asia.paint.biz.mine.service.CustomerServiceActivity;
-import com.asia.paint.databinding.ActivitySelectAfterSaleTypeBinding;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 

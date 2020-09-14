@@ -12,10 +12,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.asia.paint.R;
+import com.asia.paint.android.R;
+import com.asia.paint.android.databinding.ActivityMyPintuanBinding;
 import com.asia.paint.base.container.BaseActivity;
 import com.asia.paint.base.network.api.OrderService;
-import com.asia.paint.databinding.ActivityMyPintuanBinding;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;
