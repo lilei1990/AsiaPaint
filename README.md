@@ -1,10 +1,10 @@
--开发语言：android原生开发，java
+开发语言：android原生开发，java
 
-####开发工具：安卓stuido
+#### 开发工具：安卓stuido
 
-####目录结构说明：
+#### 目录结构说明：
 
-####App模块：页面，逻辑处理模块
+#### App模块：页面，逻辑处理模块
         Wxapi：微信支付
         Base：放置基础类
         Constants：常量
