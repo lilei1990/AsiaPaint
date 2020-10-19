@@ -34,5 +34,18 @@ App模块：页面，逻辑处理模块
     二维码工具类-QrCodeUtil，缓存工具类-CacheUtils，键盘工具类-KeyBoardUtils
 #### build.gradle：
 #### 项目基础配置
+#### 账号信息
+        //打包
+        release {
+            storeFile file('../asia.jks')
+            storePassword 'aisa123'
+            keyAlias "asia"
+            keyPassword 'aisa123'
+        }
+        //应用商店,华为,
+        //微信支付,分享,登录
+        //支付宝支付
+        //银联支付
+        
 
 
