@@ -1,4 +1,4 @@
-开发语言：android原生开发，java
+#### 开发语言：android原生开发，java
 
 #### 开发工具：安卓stuido
 
@@ -31,7 +31,7 @@
     Lib_ui模块：ui模块
     Lib_utils模块：常用工具模块，放置各种工具类，
     二维码工具类-QrCodeUtil，缓存工具类-CacheUtils，键盘工具类-KeyBoardUtils
-####build.gradle：
-####项目基础配置
+#### build.gradle：
+#### 项目基础配置
 
 
