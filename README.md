@@ -1,39 +1,34 @@
-# 亚士漆
+####开发语言：android原生开发，java
+####开发工具：安卓stuido
+####目录结构说明：
+####App模块：页面，逻辑处理模块
+        Wxapi：微信支付
+        Base：放置基础类
+        Constants：常量
+            Image：文件加载
+            Network：接口请求
+            Widgets：自定义控件
+        Biz：逻辑页面层
+            Cart：购物车
+            Comment：评论
+            Decoration：装饰
+            Find：我要选色
+            Login：登录
+            Main：首页
+            Mine：我的
+            Order：订单
+            Other：其他
+            Pay：支付
+            Shop：商城
+            Splash：启动页
+            Update：更新
+    Lib_banner模块：滚动栏，用于图片滚动着展示
+    Lib_network模块：网络模块，用于网络请求
+    Lib_pay模块：各种支付接口，用于支付调用
+    Lib_ui模块：ui模块
+    Lib_utils模块：常用工具模块，放置各种工具类，
+    二维码工具类-QrCodeUtil，缓存工具类-CacheUtils，键盘工具类-KeyBoardUtils
+####build.gradle：
+####项目基础配置
 
-#### 介绍
-{**以下是码云平台说明，您可以替换此简介**
-码云是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
 
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 码云特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
