@@ -1,4 +1,4 @@
-####开发语言：android原生开发，java
+-开发语言：android原生开发，java
 
 ####开发工具：安卓stuido
 
