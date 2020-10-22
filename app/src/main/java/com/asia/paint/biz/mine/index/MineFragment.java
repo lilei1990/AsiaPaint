@@ -21,6 +21,7 @@ import com.asia.paint.base.network.bean.Banner;
 import com.asia.paint.base.network.bean.MineDataRsp;
 import com.asia.paint.base.network.bean.SellerInfoRsp;
 import com.asia.paint.base.network.bean.UserDetail;
+import com.asia.paint.base.network.data.VipGoodTask;
 import com.asia.paint.base.util.FileUtils;
 import com.asia.paint.base.util.ImageUtils;
 import com.asia.paint.base.util.WeiXinUtils;
@@ -34,6 +35,7 @@ import com.asia.paint.biz.mine.seller.store.MyStoreCodeDialog;
 import com.asia.paint.biz.mine.settings.SettingsActivity;
 import com.asia.paint.biz.mine.user.EditUserActivity;
 import com.asia.paint.biz.mine.vip.ApplyForVipActivity;
+import com.asia.paint.biz.mine.vip.VipGoodActivity;
 import com.asia.paint.biz.order.mine.MyPinTuanActivity;
 import com.asia.paint.biz.shop.detail.GoodsDetailActivity;
 import com.asia.paint.utils.callback.OnChangeCallback;
@@ -127,6 +129,13 @@ public class MineFragment extends BaseFragment<FragmentMineBinding> {
 				startActivity(new Intent(mContext, ApplyForVipActivity.class));
 			}
 		});
+		//VIP商品购物入口
+		mBinding.cvMineVipGoodBuy.setOnClickListener(new OnNoDoubleClickListener() {
+			@Override
+			public void onNoDoubleClick(View view) {
+				startActivity(new Intent(mContext, VipGoodActivity.class));
+			}
+		});
 		setAvatar(null);
 		mMineViewModel.loadSellerInfo().setCallback(new OnChangeCallback<SellerInfoRsp>() {
 			@Override
@@ -214,7 +223,7 @@ public class MineFragment extends BaseFragment<FragmentMineBinding> {
 		mBinding.viewOptions.setCouponCount(mineDataRsp.coupun);
 		mBinding.viewOptions.setRestMoney(mineDataRsp.money);
 		mBinding.viewOptions.setMineLikeCount(mineDataRsp.collect);
-		setSeller(mineDataRsp.user != null && mineDataRsp.user.isSeller());
+		setSeller(mineDataRsp.user != null && mineDataRsp.user.isSeller(),mineDataRsp.user != null && mineDataRsp.user.isVip());
 	}
 
 	private void setAvatar(UserDetail user) {
@@ -242,12 +251,31 @@ public class MineFragment extends BaseFragment<FragmentMineBinding> {
 
 	}
 
-	private void setSeller(boolean seller) {
+	/**
+	 * 是否显示分销人VIp
+	 * @param seller
+	 */
+	private void setSeller(boolean seller,boolean isVip) {
 		if (seller) {
+
+
+			//1：Vip    0：非Vip
+			if (isVip) {//如果是vip关闭分销商通道,显示vip物品通道
+				mBinding.cvMineVip.setVisibility(View.GONE);
+				mBinding.cvMineVipGoodBuy.setVisibility(View.VISIBLE);
+			} else {
+				//不是vip关闭vip物品通道
+				mBinding.cvMineVip.setVisibility(View.VISIBLE);
+				mBinding.cvMineVipGoodBuy.setVisibility(View.GONE);
+			}
+
 			mBinding.layoutTop.setBackground(null);
 			mBinding.tvMineMyStoreCode.setVisibility(View.VISIBLE);
 			mBinding.cvMineRecommend.setVisibility(View.VISIBLE);
 		} else {
+			//如果不是分销商显示vip升级通道
+			mBinding.cvMineVip.setVisibility(View.GONE);
+			mBinding.cvMineVipGoodBuy.setVisibility(View.GONE);
 			mBinding.layoutTop.setBackgroundResource(R.drawable.bg_common_gradient);
 			mBinding.tvMineMyStoreCode.setVisibility(View.GONE);
 			mBinding.cvMineRecommend.setVisibility(View.GONE);
@@ -259,9 +287,17 @@ public class MineFragment extends BaseFragment<FragmentMineBinding> {
 		mBinding.viewSellerOptions.setIsSeller(seller);
 		mBinding.viewSellerResult.setVisibility(seller ? View.VISIBLE : View.GONE);
 		mBinding.viewOptions.isSeller(seller);
+
 	}
 
+	/**
+	 * 是否显示vip入口
+	 * @param isVip
+	 */
+	private void setVip(boolean isVip) {
 
+
+	}
 	public void updateSellerInfo(SellerInfoRsp sellerInfoRsp) {
 		if (sellerInfoRsp == null) {
 			return;

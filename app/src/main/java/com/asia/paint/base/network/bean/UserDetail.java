@@ -55,11 +55,17 @@ public class UserDetail {
     public int is_seller;
     public String ysh;
     public String code;
+    //1：Vip    0：非Vip
+    public int is_vip;
 
     public boolean isSeller() {
         return is_seller > 0;
     }
 
+    public boolean isVip() {
+        return is_vip == 1;
+
+    }
     public boolean isMale() {
         return sex == 1;
     }
