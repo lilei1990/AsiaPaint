@@ -16,4 +16,6 @@ public class CreateOrderRsp {
     public String order_sn;
     public String order_amount;
     public int freight;
+    //是否支持余额支付
+    public int show_ye;
 }

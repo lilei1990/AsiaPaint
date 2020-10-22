@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 apply from: "${project.rootDir}/android.gradle"
+
 
 android {
 
@@ -39,9 +43,7 @@ android {
         }
     }
 
-    dataBinding {
-        enabled = true
-    }
+
     android {
         repositories {
             flatDir {
@@ -56,6 +58,9 @@ android {
 
 dependencies {
     implementation project(path: ':lib-utils')
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation project(path: ':lib-network')
     implementation project(path: ':lib-ui')
     implementation project(path: ':lib-banner')

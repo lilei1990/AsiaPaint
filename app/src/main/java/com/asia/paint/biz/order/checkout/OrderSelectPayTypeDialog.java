@@ -31,8 +31,9 @@ public class OrderSelectPayTypeDialog extends BaseBottomDialogFragment<DialogOrd
     private RechargeTypeAdapter mRechargeTypeAdapter;
     private OnChangeCallback<RechargeType> mPayCallback;
     private String mMoney;
+    //账户余额
     private String mAsiaMoney;
-
+    private int mShow_ye = 1;
     public static OrderSelectPayTypeDialog createInstance(String money, String asiaMoney) {
         OrderSelectPayTypeDialog fragment = new OrderSelectPayTypeDialog();
         Bundle bundle = new Bundle();
@@ -102,11 +103,13 @@ public class OrderSelectPayTypeDialog extends BaseBottomDialogFragment<DialogOrd
         if (TextUtils.isEmpty(mAsiaMoney)) {
             mAsiaMoney = "0.0";
         }
-        asia.name = "账户余额:" + PriceUtils.getPrice(mAsiaMoney);
-        asia.pay = RechargeType.Pay.BALANCE;
-        asia.iconId = R.mipmap.ic_asia_pay;
-        types.add(asia);
-
+        //为0不支持余额支付
+        if (mShow_ye!=0) {
+            asia.name = "账户余额:" + PriceUtils.getPrice(mAsiaMoney);
+            asia.pay = RechargeType.Pay.BALANCE;
+            asia.iconId = R.mipmap.ic_asia_pay;
+            types.add(asia);
+        }
         RechargeType zhiFuBao = new RechargeType();
         zhiFuBao.name = "支付宝";
         zhiFuBao.pay = RechargeType.Pay.ZHI_FU_BAO;
@@ -125,6 +128,10 @@ public class OrderSelectPayTypeDialog extends BaseBottomDialogFragment<DialogOrd
         bank.iconId = R.mipmap.ic_mine_bank;
         types.add(bank);
         return types;
+    }
+
+    public void setShow_ye(int show_ye) {
+        mShow_ye = show_ye;
     }
 
     public void setPayCallback(OnChangeCallback<RechargeType> payCallback) {

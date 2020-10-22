@@ -38,6 +38,7 @@ import org.json.JSONObject;
 import java.util.Map;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import io.reactivex.Observable;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.disposables.Disposable;
@@ -51,9 +52,31 @@ public class PayTypeViewModel extends BaseViewModel {
     private String mAsiaMoney;
     private String mPayMoney;
     private int mOrderId;
+    //是否支持余额支付
+    private int mShow_ye;
     private Context mContext;
     private boolean mHasPayPWd;
     private OrderSelectPayTypeDialog mPayTypeDialog;
+
+    /**
+     * @param context
+     * @param orderId
+     * @param payMoney
+     * @param show_ye  0 隐藏余额支付 1显示
+     */
+    public PayTypeViewModel(Context context, int orderId, String payMoney, int show_ye) {
+        mContext = context;
+        mOrderId = orderId;
+        mPayMoney = payMoney;
+        mShow_ye = show_ye;
+        mPayResult = new CallbackDate<>();
+        mPayViewModel = new PayViewModel();
+        LocalBroadcastManager localBroadcastManager = LocalBroadcastManager.getInstance(mContext);
+        IntentFilter filter = new IntentFilter(ACTION_SET_PAY_PWD);
+        localBroadcastManager.registerReceiver(new SetPayPwdBroadcastReceiver(), filter);
+        IntentFilter weiXinPay = new IntentFilter(ACTION_WEI_XIN_PAY);
+        localBroadcastManager.registerReceiver(new WeiXinPayBroadcastReceiver(), weiXinPay);
+    }
 
     public PayTypeViewModel(Context context, int orderId, String payMoney) {
         mContext = context;
@@ -85,6 +108,7 @@ public class PayTypeViewModel extends BaseViewModel {
     private void showPayTypeDialog() {
 
         mPayTypeDialog = OrderSelectPayTypeDialog.createInstance(mPayMoney, mAsiaMoney);
+        mPayTypeDialog.setShow_ye(mShow_ye);
         mPayTypeDialog.setPayCallback(type -> {
             if (type == null) {
                 mPayResult.setData(false);
@@ -191,32 +215,32 @@ public class PayTypeViewModel extends BaseViewModel {
 
     private void startYinlianPay(YinlianBean orderInfo) {
 
-            JSONObject jsonObject = null;
-            try {
-                jsonObject = new JSONObject();
-                jsonObject.put("MerId",orderInfo.MerId);
-                jsonObject.put("MerOrderNo",orderInfo.MerOrderNo);
-                jsonObject.put("OrderAmt",orderInfo.OrderAmt+"");
-                jsonObject.put("TranDate",orderInfo.TranDate);
-                jsonObject.put("TranTime",orderInfo.TranTime);
-                jsonObject.put("BusiType",orderInfo.BusiType);
-                jsonObject.put("Version",orderInfo.Version);
-                jsonObject.put("CurryNo",orderInfo.CurryNo);
-                jsonObject.put("AccessType",orderInfo.AccessType);
-                jsonObject.put("AcqCode",orderInfo.AcqCode);
-                jsonObject.put("MerPageUrl",orderInfo.MerPageUrl);
-                jsonObject.put("MerBgUrl",orderInfo.MerBgUrl);
-                jsonObject.put("MerResv",orderInfo.MerResv);
-                jsonObject.put("Signature",orderInfo.Signature);
-                Intent intent = new Intent(mContext, MainActivity.class);//第二步. 设置Intent指向MainActivity.class
-                intent.putExtra("orderInfo", jsonObject.toString());
-                intent.putExtra("mode", "00");//mode 03测试 00生产
-                // orderInfo为Json字符串。
-                mContext.startActivity(intent);
-            } catch (JSONException e) {
-                e.printStackTrace();
-                Log.e("TAG","异常原因="+e.toString());
-            }
+        JSONObject jsonObject = null;
+        try {
+            jsonObject = new JSONObject();
+            jsonObject.put("MerId", orderInfo.MerId);
+            jsonObject.put("MerOrderNo", orderInfo.MerOrderNo);
+            jsonObject.put("OrderAmt", orderInfo.OrderAmt + "");
+            jsonObject.put("TranDate", orderInfo.TranDate);
+            jsonObject.put("TranTime", orderInfo.TranTime);
+            jsonObject.put("BusiType", orderInfo.BusiType);
+            jsonObject.put("Version", orderInfo.Version);
+            jsonObject.put("CurryNo", orderInfo.CurryNo);
+            jsonObject.put("AccessType", orderInfo.AccessType);
+            jsonObject.put("AcqCode", orderInfo.AcqCode);
+            jsonObject.put("MerPageUrl", orderInfo.MerPageUrl);
+            jsonObject.put("MerBgUrl", orderInfo.MerBgUrl);
+            jsonObject.put("MerResv", orderInfo.MerResv);
+            jsonObject.put("Signature", orderInfo.Signature);
+            Intent intent = new Intent(mContext, MainActivity.class);//第二步. 设置Intent指向MainActivity.class
+            intent.putExtra("orderInfo", jsonObject.toString());
+            intent.putExtra("mode", "00");//mode 03测试 00生产
+            // orderInfo为Json字符串。
+            mContext.startActivity(intent);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.e("TAG", "异常原因=" + e.toString());
+        }
     }
 
     private void showPayPwdDialog() {

@@ -223,7 +223,7 @@
                         android:src="@mipmap/ic_next" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-         
+
             <com.asia.paint.base.widgets.MineOptionsLayout
                 android:id="@+id/view_options"
                 android:layout_width="match_parent"
@@ -252,7 +252,40 @@
                     android:scaleType="centerCrop"
                     tools:src="@mipmap/ic_mine_invate" />
             </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_mine_vip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="14dp"
+                android:background="@color/color_FFFFFF"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="0dp">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="申请成为VIP"
+                        android:textColor="@color/color_333333"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="14dp"
+                        android:src="@mipmap/ic_next" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
             <com.asia.paint.base.widgets.task.SellerOptions
                 android:id="@+id/view_seller_options"
                 android:layout_width="match_parent"

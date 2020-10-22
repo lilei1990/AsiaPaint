@@ -23,7 +23,7 @@ import retrofit2.http.POST;
 @NetworkUrl(Constants.URL)
 public interface OrderService {
 	/**
-	 * 【0:购物车,1:组合购,2:团购,3:秒杀,4:分销任务,5:直接购买】,其他的后续约束
+	 * 【0:购物车,1:组合购,2:团购,3:秒杀,4:分销任务,5:直接购买,6:Vip任务】,其他的后续约束
 	 */
 	int CART = 0;
 	int PROMOTION = 1;
@@ -31,6 +31,7 @@ public interface OrderService {
 	int SPIKE = 3;
 	int APPLY_TASK = 4;
 	int BUY = 5;
+	int APPLY_VIP_TASK = 6;
 
 	/**
 	 * 查询下单信息

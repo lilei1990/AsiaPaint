@@ -33,6 +33,7 @@ import com.asia.paint.biz.mine.seller.recommend.RecommendCodeActivity;
 import com.asia.paint.biz.mine.seller.store.MyStoreCodeDialog;
 import com.asia.paint.biz.mine.settings.SettingsActivity;
 import com.asia.paint.biz.mine.user.EditUserActivity;
+import com.asia.paint.biz.mine.vip.ApplyForVipActivity;
 import com.asia.paint.biz.order.mine.MyPinTuanActivity;
 import com.asia.paint.biz.shop.detail.GoodsDetailActivity;
 import com.asia.paint.utils.callback.OnChangeCallback;
@@ -117,6 +118,13 @@ public class MineFragment extends BaseFragment<FragmentMineBinding> {
 			@Override
 			public void onNoDoubleClick(View view) {
 				startActivity(new Intent(mContext, RecommendCodeActivity.class));
+			}
+		});
+		//邀请他人注册Vip
+		mBinding.cvMineVip.setOnClickListener(new OnNoDoubleClickListener() {
+			@Override
+			public void onNoDoubleClick(View view) {
+				startActivity(new Intent(mContext, ApplyForVipActivity.class));
 			}
 		});
 		setAvatar(null);

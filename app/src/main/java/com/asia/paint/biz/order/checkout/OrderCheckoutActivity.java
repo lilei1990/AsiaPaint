@@ -148,6 +148,7 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
                 AddressActivity.start(OrderCheckoutActivity.this, AddressActivity.REQUEST_CODE_ORDER);
             }
         });
+        //发票
         setReceipt();
 
         mBinding.rvGroupMember.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
@@ -217,6 +218,10 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
             //分销任务
             mOrderViewModel.promotionBuy(mType, mSpec).setCallback(result ->
                     mOrderViewModel.queryOrderInfo(mType, null).setCallback(this::updateOrderInfo));
+        } else if (mType == OrderService.APPLY_VIP_TASK) {
+            //Vip任务
+            mOrderViewModel.promotionBuy(mType, mSpec).setCallback(result ->
+                    mOrderViewModel.queryOrderInfo(mType, null).setCallback(this::updateOrderInfo));
         } else {
             mOrderViewModel.queryOrderInfo(mType, null).setCallback(this::updateOrderInfo);
         }
@@ -269,7 +274,9 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
         mBinding.tvReceipt.setText(spanText.toSpan());
     }
 
-
+    /**
+     * 发票
+     */
     private void setReceipt() {
         mBinding.layoutReceipt.setOnClickListener(new OnNoDoubleClickListener() {
             @Override
@@ -306,11 +313,14 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
         receiptDialog.show(OrderCheckoutActivity.this);
     }
 
+    /**
+     * 弹出支付窗口
+     */
     private void startPay() {
         if (mCreateOrderRsp != null) {
             String money = mBinding.tvCheckoutPrice.getText().toString();
             mPayTypeViewModel = new PayTypeViewModel(OrderCheckoutActivity.this, mCreateOrderRsp.order_id,
-                    money);
+                    money,mCreateOrderRsp.show_ye);
             mPayTypeViewModel.startPay().setCallback(result -> {
                 mPayTypeViewModel = null;
                 finish();
