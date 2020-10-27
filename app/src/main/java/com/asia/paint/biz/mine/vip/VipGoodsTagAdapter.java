@@ -33,7 +33,7 @@ public class VipGoodsTagAdapter extends BaseGlideAdapter<String> {
     }
 
     private void updatePriceTag(TextView view, int position) {
-        //TODO 暂时不显示价格旁边的图标
+        //// 暂时不显示价格旁边的图标
 //        if (isPriceTag(position)) {
 //            Drawable flag = mContext.getDrawable(R.mipmap.ic_price_normal);
 //            if (mSort == VipGoodsViewModel.Sort.DESC) {

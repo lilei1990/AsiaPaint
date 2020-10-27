@@ -2,6 +2,7 @@ package com.asia.paint.biz.order;
 
 import com.asia.paint.base.container.BaseViewModel;
 import com.asia.paint.base.network.api.OrderService;
+import com.asia.paint.base.network.api.VipService;
 import com.asia.paint.base.network.bean.CreateOrderRsp;
 import com.asia.paint.base.network.bean.OrderCommentRsp;
 import com.asia.paint.base.network.bean.OrderInfoRsp;
@@ -53,6 +54,29 @@ public class OrderViewModel extends BaseViewModel {
 		return mOrderInfo;
 	}
 
+	public CallbackDate<OrderInfoRsp> queryVipOrderInfo(int type, Integer addressId, String good_specs) {
+		NetworkFactory.createService(VipService.class)
+				.queryVipOrderInfo(type, addressId,good_specs)
+				.compose(new NetworkObservableTransformer<>())
+				.subscribe(new DefaultNetworkObserver<OrderInfoRsp>(false) {
+					@Override
+					public void onSubscribe(Disposable d) {
+						addDisposable(d);
+					}
+
+					@Override
+					public void onResponse(OrderInfoRsp response) {
+						mOrderInfo.setData(response);
+					}
+
+					@Override
+					public void onError(Throwable e) {
+						super.onError(e);
+						AppUtils.showMessage(e.getMessage());
+					}
+				});
+		return mOrderInfo;
+	}
 	public CallbackDate<CreateOrderRsp> createOrder(int flow_type, int address_id,
 													int bonus_id, String description, int score, int receiptId) {
 		NetworkFactory.createService(OrderService.class)

@@ -44,7 +44,7 @@ class VipGoodActivity : BaseTitleActivity<ActivityVipGoodBinding>(), OnChangeCal
 
         //去结算
         mBinding.tvCheckout.setOnClickListener { v ->
-            OrderCheckoutActivity.start(mContext, OrderService.CART)
+            OrderCheckoutActivity.start(mContext, OrderService.VIP_CART)
         }
         //购物车
         val cartView = LayoutInflater.from(mContext).inflate(R.layout.dialog_vip_goods_cart, mBinding.bottomsheet, false)
@@ -55,10 +55,10 @@ class VipGoodActivity : BaseTitleActivity<ActivityVipGoodBinding>(), OnChangeCal
         rvCartList.setAdapter(mVipGoodsAdapter)
         val specView = LayoutInflater.from(mContext).inflate(R.layout.dialog_vip_goods_spec, mBinding.bottomsheet, false)
         mBinding.tvGoCart.setOnClickListener { v ->
+            TODO("二次点击关闭的功能有待开发")
             //弹出View  bottomSheet即是要弹出的view
             mBinding.bottomsheet.showWithSheetView(cartView);
-//            //代码隐藏view (点击弹出view以外的地方可以隐藏弹出的view，向下滑动也可以）
-//            mBinding.bottomsheet.dismissSheet();
+
         }
         //关闭弹窗
         cartView.iv_close.setOnClickListener { v ->

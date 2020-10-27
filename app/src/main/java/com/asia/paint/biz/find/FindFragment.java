@@ -30,7 +30,7 @@ public class FindFragment extends BaseFragment<FragmentFindBinding> {
 	protected void initView() {
 		mBinding.viewPager.setAdapter(new FindPagerAdapter(getChildFragmentManager()));
 		mBinding.tabLayout.setupWithViewPager(mBinding.viewPager);
-       /* //TODO fixme
+       /* //
         CrashReport.testJavaCrash();*/
 	}
 

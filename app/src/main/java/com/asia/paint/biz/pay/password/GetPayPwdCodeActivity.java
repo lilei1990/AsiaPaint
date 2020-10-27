@@ -60,7 +60,7 @@ public class GetPayPwdCodeActivity extends BaseActivity<ActivityGetPayPwdCodeBin
 		mBinding.tvSure.setOnClickListener(new OnNoDoubleClickListener() {
 			@Override
 			public void onNoDoubleClick(View view) {
-				//TODO 修改支付密码
+				// 修改支付密码
 				LogUtil.e("code", mBinding.viewCode.getPassword());
 				LogUtil.e("newPassword", newPassword);
 				mGetPayPwdCodeViewModel.resetPayPwd(mBinding.viewCode.getPassword(), newPassword).setCallback(result -> {

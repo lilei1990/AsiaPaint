@@ -53,7 +53,7 @@ public class BaseViewModel extends ViewModel {
 			}
 		} else {
 //			adapter.loadMoreFail();
-			//TODO 如果后台返回数据结构不对，会导致问题，所以改成如下代码
+			// 如果后台返回数据结构不对，会导致问题，所以改成如下代码
 			if (mCurPage == 1)
 				adapter.replaceData(new ArrayList<>());
 			adapter.loadMoreEnd();
@@ -78,7 +78,7 @@ public class BaseViewModel extends ViewModel {
 			}
 		} else {
 //			adapter.loadMoreFail();
-			//TODO 如果后台返回数据结构不对，会导致问题，所以改成如下代码
+			// 如果后台返回数据结构不对，会导致问题，所以改成如下代码
 			if (mCurPage == 1)
 				adapter.replaceData(new ArrayList<>());
 			adapter.loadMoreEnd();
@@ -108,7 +108,7 @@ public class BaseViewModel extends ViewModel {
 			}
 		} else {
 //			adapter.loadMoreFail();
-			//TODO 如果后台返回数据结构不对，会导致问题，所以改成如下代码
+			// 如果后台返回数据结构不对，会导致问题，所以改成如下代码
 			if (mCurPage == 1)
 				adapter.replaceData(new ArrayList<>());
 			adapter.loadMoreEnd();

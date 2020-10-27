@@ -202,7 +202,7 @@ public class PostDetailActivity extends BaseTitleActivity<ActivityPostDetailBind
 	 */
 	private void delPosterRequest() {
 		mPostViewModel.delPost(mPostId).setCallback(result -> {
-			//TODO 发布成功，刷新买家秀和我的页面
+			// 发布成功，刷新买家秀和我的页面
 			Intent intent = new Intent("android.intent.action.broadcastrefreshweibo");
 			sendBroadcast(intent);
 			finish();

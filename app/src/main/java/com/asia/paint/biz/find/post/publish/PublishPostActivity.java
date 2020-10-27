@@ -112,7 +112,7 @@ public class PublishPostActivity extends BaseTitleActivity<ActivityPublishPostBi
 			if (loaddialog!=null)
 				loaddialog.dismiss();
 			if (result) {
-				//TODO 发布成功，刷新买家秀和我的页面
+				// 发布成功，刷新买家秀和我的页面
 				Intent intent = new Intent("android.intent.action.broadcastrefreshweibo");
 				sendBroadcast(intent);
 				finish();

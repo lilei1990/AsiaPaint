@@ -223,6 +223,10 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
             //Vip任务
             mOrderViewModel.promotionBuy(mType, mSpec).setCallback(result ->
                     mOrderViewModel.queryOrderInfo(mType, null).setCallback(this::updateOrderInfo));
+        } else if (mType == OrderService.VIP_CART) {
+            // TODO: 2020/10/27 都是写死的数据,要改成动态获取的
+            //Vip购物车
+            mOrderViewModel.queryVipOrderInfo(6, null,"[{\"goods_id\":226,\"spec_id\":1339,\"quantity\":6},{\"goods_id\":225,\"spec_id\":1340,\"quantity\":2}]").setCallback(this::updateOrderInfo);
         } else {
             mOrderViewModel.queryOrderInfo(mType, null).setCallback(this::updateOrderInfo);
         }

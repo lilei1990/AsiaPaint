@@ -32,6 +32,7 @@ public interface OrderService {
 	int APPLY_TASK = 4;
 	int BUY = 5;
 	int APPLY_VIP_TASK = 6;
+	int VIP_CART = 7;
 
 	/**
 	 * 查询下单信息

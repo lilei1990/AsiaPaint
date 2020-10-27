@@ -36,7 +36,7 @@ public class PromotionGroupPintuan implements Serializable {
 	public String avatar;
 	public String nickname;
 
-	//TODO 列表中展示的倒计时(非服务器返回字段)
+	// 列表中展示的倒计时(非服务器返回字段)
 	public String showHour;
 	public String showMinute;
 	public String showSecond;

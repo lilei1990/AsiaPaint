@@ -53,9 +53,9 @@ public class SetPayPwdActivity extends BaseActivity<ActivitySetPwdBinding> {
 		mBinding.tvSure.setOnClickListener(new OnNoDoubleClickListener() {
 			@Override
 			public void onNoDoubleClick(View view) {
-				//TODO 无需再做两次密码判断，直接使用第一次输入的密码
+				//无需再做两次密码判断，直接使用第一次输入的密码
 //                if (checkPwd()) {
-//                    //TODO 修改支付密码
+//                    // 修改支付密码
 //                    mPayViewModel.resetPayPwd("", mBinding.viewSurePwd.getPassword()).setCallback(result -> {
 //                        if (result) {
 //                            finish();
@@ -82,7 +82,7 @@ public class SetPayPwdActivity extends BaseActivity<ActivitySetPwdBinding> {
 //                mBinding.tvSure.setVisibility(View.VISIBLE);
 //                mBinding.tvSure.setEnabled(false);
 
-				//TODO 不用输入两次密码，第一次输入密码即执行操作
+				// 不用输入两次密码，第一次输入密码即执行操作
 				mBinding.tvSure.setVisibility(View.VISIBLE);
 				mBinding.tvSure.setEnabled(true);
 			}
