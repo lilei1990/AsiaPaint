@@ -32,6 +32,8 @@ public interface ShopService {
 	Observable<BaseRsp<GoodsRsp>> loadShopGoods(@Field("p") int page, @Field("order") String order, @Field("sort") String sort,
 												@Field("keyword") String keyword, @Field("cate_id") Integer cate_id, @Field("ids") Integer ids, @Field("pagesize") Integer pagesize);
 
+
+
 	@POST("api/index/index")
 	Observable<BaseRsp<ShopBannerRsp>> loadBanner();
 

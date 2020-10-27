@@ -1,9 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.asia.paint.biz.mine.vip.VipGoodActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F8F8F8">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_layout">
+
+            <View
+                android:id="@+id/view_point1"
+                android:layout_width="20dp"
+                android:layout_height="1dp"
+                android:background="@color/color_2F54CC" />
+
+            <View
+                android:id="@+id/view_point2"
+                android:layout_width="20dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/color_999999" />
+
+            <View
+                android:id="@+id/view_point3"
+                android:layout_width="20dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/color_999999" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_checkout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_go_cart"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="购物车"
+                    android:textColor="@color/color_666666"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    app:drawableTopCompat="@mipmap/ic_cart_normal" />
+
+                <TextView
+                    android:id="@+id/tv_red_dot"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/bg_red_dot"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="9sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_checkout"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_F41021"
+                android:gravity="center"
+                android:text="去结算"
+                android:textColor="@color/color_F6F6F6"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.flipboard.bottomsheet.BottomSheetLayout
+            android:id="@+id/bottomsheet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/layout_checkout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+            </androidx.viewpager.widget.ViewPager>
+        </com.flipboard.bottomsheet.BottomSheetLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabBackground="@drawable/bg_tab_goods_selector"
+            app:tabIndicator="@null"
+            app:tabMinWidth="0dp"
+            app:tabMode="scrollable"
+            app:tabPaddingEnd="11dp"
+            app:tabPaddingStart="11dp"
+            app:tabRippleColor="@color/color_transparent"
+            app:tabSelectedTextColor="@color/color_FFFFFF"
+            app:tabTextColor="@color/color_333333" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+    </data>
+</layout>

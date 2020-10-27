@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_FFFFFF">
+
+        <ImageView
+            android:id="@+id/iv_goods_icon"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+            android:scaleType="center"
+            android:src="@mipmap/ic_default" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:padding="14dp"
+            android:src="@mipmap/ic_close" />
+
+        <LinearLayout
+            android:id="@+id/layout_count"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_below="@+id/view_spec_tag"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="14dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="数量"
+                android:textColor="@color/color_333333"
+                android:textSize="12sp" />
+
+            <com.asia.paint.base.widgets.CountView
+                android:id="@+id/view_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/layout_count"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_add_cart"
+                android:layout_width="260dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:background="@drawable/bg_btn_goods_cart"
+                android:text="加入购物车"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_goods_spec_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_goods_icon"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="16dp"
+            android:text="规格名称"
+            android:textColor="@color/color_999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/iv_goods_icon"
+            android:textColor="@color/color_F41021"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_goods_spec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_goods_price"
+            android:layout_alignStart="@+id/tv_goods_price"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/color_999999"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:background="@color/color_DBDBDB" />
+
+        <com.asia.paint.base.widgets.flowlayout.TagFlowLayout
+            android:id="@+id/view_spec_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_goods_spec_tips"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp" />
+
+    </RelativeLayout>
+
+    <data>
+
+    </data>
+</layout>

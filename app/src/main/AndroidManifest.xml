@@ -34,7 +34,6 @@
               </activity>
         -->
         <activity android:name="com.asia.paint.biz.mine.vip.ApplyForVipActivity" />
-        <activity android:name="com.asia.paint.biz.mine.vip.OrderActivity" />
         <activity android:name="com.asia.paint.biz.login.LoginActivity" />
         <activity android:name="com.asia.paint.biz.login.forget.ForgetPasswordActivity" />
         <activity android:name="com.asia.paint.biz.login.reset.ResetPasswordActivity" />

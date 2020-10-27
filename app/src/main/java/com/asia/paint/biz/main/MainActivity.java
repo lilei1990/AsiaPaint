@@ -75,6 +75,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> implements O
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		//添加购物车监听
 		AsiaPaintApplication.addCartCountCallback(this);
 		mViewModel = getViewModel(MainViewModel.class);
 		mCollectViewModel = getViewModel(CollectViewModel.class);

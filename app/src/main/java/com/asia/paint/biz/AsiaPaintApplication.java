@@ -6,11 +6,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
 
+import androidx.multidex.MultiDex;
+
 import com.asia.paint.android.BuildConfig;
 import com.asia.paint.base.model.AddCartViewModel;
 import com.asia.paint.base.network.bean.UserInfo;
 import com.asia.paint.base.network.core.NetworkInit;
-import com.asia.paint.base.network.core.interceptor.ParamsInterceptor;
 import com.asia.paint.biz.login.LoginActivity;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.utils.AppUtils;
@@ -23,8 +24,6 @@ import com.tencent.bugly.crashreport.CrashReport;
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.multidex.MultiDex;
-
 /**
  * @author by chenhong14 on 2019-11-04.
  */
@@ -34,6 +33,7 @@ public class AsiaPaintApplication extends Application {
 
     private static AddCartViewModel mAddCartViewModel;
     private static List<OnChangeCallback<Integer>> mCartCountCallback;
+    public static AsiaPaintApplication mAsiaPaintApplication;
 
     static {
         mCartCountCallback = new ArrayList<>();
@@ -43,6 +43,7 @@ public class AsiaPaintApplication extends Application {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
+        mAsiaPaintApplication = this;
         AppUtils.init(base);
     }
 
@@ -117,6 +118,11 @@ public class AsiaPaintApplication extends Application {
         mAddCartViewModel.queryCartCount();
     }
 
+    /**
+     * 购物车角标更新的回调
+     *
+     * @param callback 回调方法
+     */
     public static void addCartCountCallback(OnChangeCallback<Integer> callback) {
         if (callback != null) {
             mCartCountCallback.add(callback);
@@ -126,6 +132,8 @@ public class AsiaPaintApplication extends Application {
     public static void removeCartCountCallback(OnChangeCallback<Integer> callback) {
         mCartCountCallback.remove(callback);
     }
+
+
 
     public static void finishAllActivity() {
         for (Activity activity : mActivities) {
@@ -144,4 +152,5 @@ public class AsiaPaintApplication extends Application {
             e.printStackTrace();
         }
     }
+
 }

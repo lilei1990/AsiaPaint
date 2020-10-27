@@ -142,6 +142,7 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
         super.onCreate(savedInstanceState);
         mReceiptViewModel = getViewModel(ReceiptViewModel.class);
         mOrderViewModel = getViewModel(OrderViewModel.class);
+        //地址选择
         mBinding.layoutAddress.setOnClickListener(new OnNoDoubleClickListener() {
             @Override
             public void onNoDoubleClick(View view) {
@@ -150,11 +151,11 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
         });
         //发票
         setReceipt();
-
+        //提交订单评团成员列表
         mBinding.rvGroupMember.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         mGroupMemberAdapter = new GroupMemberAdapter();
         mBinding.rvGroupMember.setAdapter(mGroupMemberAdapter);
-
+        //提交订单物品列表
         mBinding.rvOrderGoods.setLayoutManager(new LinearLayoutManager(this));
         mOrderCartAdapter = new OrderCartAdapter();
         mBinding.rvOrderGoods.setAdapter(mOrderCartAdapter);
