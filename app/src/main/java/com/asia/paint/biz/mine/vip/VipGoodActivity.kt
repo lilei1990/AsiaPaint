@@ -1,7 +1,7 @@
 package com.asia.paint.biz.mine.vip
 
-import android.graphics.Rect
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.lifecycle.Observer
@@ -16,6 +16,7 @@ import com.asia.paint.base.network.core.DefaultNetworkObserverList
 import com.asia.paint.base.network.data.VipCategory
 import com.asia.paint.base.recyclerview.DefaultItemDecoration
 import com.asia.paint.biz.mine.vip.adapter.VipCartGoodsAdapter
+import com.asia.paint.biz.mine.vip.data.CartList
 import com.asia.paint.biz.order.checkout.OrderCheckoutActivity
 import com.asia.paint.network.NetworkFactory
 import com.asia.paint.network.NetworkObservableTransformer
@@ -37,7 +38,7 @@ class VipGoodActivity : BaseTitleActivity<ActivityVipGoodBinding>(), OnChangeCal
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = getViewModel(VipGoodViewModel::class.java)
-
+        Log.e("viewModel1", "打印viewModel地址:: "+viewModel.toString())
         mGoodsPagerAdapter = VipGoodsPagerAdapter(supportFragmentManager)
         mBinding.viewPager.setAdapter(mGoodsPagerAdapter)
         mBinding.tabLayout.setupWithViewPager(mBinding.viewPager)

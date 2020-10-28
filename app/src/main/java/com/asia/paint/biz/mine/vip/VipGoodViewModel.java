@@ -10,11 +10,10 @@ import com.asia.paint.base.network.bean.Goods;
 import com.asia.paint.base.network.bean.Specs;
 import com.asia.paint.base.network.core.DefaultNetworkObserver;
 import com.asia.paint.biz.mine.vip.Dialog.VipGoodsSpecDialog;
-import com.asia.paint.biz.order.checkout.OrderCheckoutActivity;
+import com.asia.paint.biz.mine.vip.data.CartList;
 import com.asia.paint.network.NetworkFactory;
 import com.asia.paint.network.NetworkObservableTransformer;
 import com.asia.paint.utils.callback.CallbackDate;
-import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.PairCallbackDate;
 
 import java.util.ArrayList;
@@ -71,20 +70,6 @@ public class VipGoodViewModel extends BaseViewModel {
             @Override
             public void onBuy(Specs spec, int count) {
                 dialog.dismiss();
-                if (spec != null && count > 0) {
-                    if (id == 0) {
-                        directBuy(spec.spec_id, count).setCallback(new OnChangeCallback<Boolean>() {
-                            @Override
-                            public void onChange(Boolean result) {
-                                OrderCheckoutActivity.start(context, OrderService.BUY, spec.spec_id, count);
-                            }
-                        });
-                    } else if (mType == OrderService.GROUP) {
-                        OrderCheckoutActivity.start(context, mType, spec.spec_id, count, id);
-                    } else if (mType == OrderService.SPIKE) {
-                        OrderCheckoutActivity.start(context, mType, spec.spec_id, count, id);
-                    }
-                }
             }
 
             @Override

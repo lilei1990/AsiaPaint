@@ -85,5 +85,8 @@ dependencies {
     implementation files('libs/UPPayPluginExPro.jar')
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:2.0.1'
+    //底部弹出抽拉框
     implementation 'com.flipboard:bottomsheet-core:1.5.1'
+//    //工具类大全
+//    implementation "com.blankj:utilcodex:1.29.0"
 }

@@ -1,5 +1,6 @@
 package com.asia.paint.biz.order.checkout;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,9 +11,14 @@ import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.alibaba.fastjson.JSON;
 import com.asia.paint.android.R;
 import com.asia.paint.android.databinding.ActivityOrderCheckoutBinding;
 import com.asia.paint.base.container.BaseActivity;
@@ -25,10 +31,16 @@ import com.asia.paint.base.network.bean.OrderCheckout;
 import com.asia.paint.base.network.bean.OrderInfoRsp;
 import com.asia.paint.base.network.bean.OrderScore;
 import com.asia.paint.base.network.bean.Receipt;
+import com.asia.paint.base.util.ActivityStack;
 import com.asia.paint.base.widgets.CheckBox;
+import com.asia.paint.biz.AsiaPaintApplication;
 import com.asia.paint.biz.mine.receipt.ReceiptDialog;
 import com.asia.paint.biz.mine.receipt.ReceiptViewModel;
 import com.asia.paint.biz.mine.settings.address.AddressActivity;
+import com.asia.paint.biz.mine.vip.VipGoodActivity;
+import com.asia.paint.biz.mine.vip.VipGoodViewModel;
+import com.asia.paint.biz.mine.vip.data.CartList;
+import com.asia.paint.biz.mine.vip.data.VipGoodSpec;
 import com.asia.paint.biz.order.OrderViewModel;
 import com.asia.paint.biz.order.group.GroupMemberAdapter;
 import com.asia.paint.biz.pay.pay.PayTypeViewModel;
@@ -38,7 +50,10 @@ import com.asia.paint.utils.utils.CommonUtil;
 import com.asia.paint.utils.utils.DigitUtils;
 import com.asia.paint.utils.utils.PriceUtils;
 import com.asia.paint.utils.utils.SpanText;
+import com.google.gson.Gson;
 import com.smarttop.library.utils.LogUtil;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,6 +100,8 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
     public static void start(Context context, int type) {
         start(context, type, null, null);
     }
+
+
 
     public static void start(Context context, int type, Integer spec, Integer count) {
         Intent intent = new Intent(context, OrderCheckoutActivity.class);
@@ -142,6 +159,7 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
         super.onCreate(savedInstanceState);
         mReceiptViewModel = getViewModel(ReceiptViewModel.class);
         mOrderViewModel = getViewModel(OrderViewModel.class);
+
         //地址选择
         mBinding.layoutAddress.setOnClickListener(new OnNoDoubleClickListener() {
             @Override
@@ -178,22 +196,43 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
                     return;
                 }
                 int couponId = mCoupon != null ? mCoupon.bonus_id : 0;
-                //不开发票
-                if (mReceiptId == 0) {
-                    mOrderViewModel.createOrder(mType, mAddress.address_id, couponId,
-                            mBinding.etCustomerMsg.getText().toString(), usedScore())
-                            .setCallback(result -> {
-                                mCreateOrderRsp = result;
-                                startPay();
-                            });
-                } else {//开发票
-                    mOrderViewModel.createOrder(mType, mAddress.address_id, couponId,
-                            mBinding.etCustomerMsg.getText().toString(), usedScore(), usedReceipt())
-                            .setCallback(result -> {
-                                mCreateOrderRsp = result;
-                                startPay();
-                            });
+                String sVipGoodSpecs = JSON.toJSON(getVipGoodSpecs()).toString();
+                if (mType == OrderService.VIP_CART) {
+                    //不开发票
+                    if (mReceiptId == 0) {
+                        mOrderViewModel.createVipOrder(6, mAddress.address_id, couponId,
+                                mBinding.etCustomerMsg.getText().toString(), usedScore(),sVipGoodSpecs)
+                                .setCallback(result -> {
+                                    mCreateOrderRsp = result;
+                                    startPay();
+                                });
+                    } else {//开发票
+                        mOrderViewModel.createVipOrder(6, mAddress.address_id, couponId,
+                                mBinding.etCustomerMsg.getText().toString(), usedScore(), usedReceipt(),sVipGoodSpecs)
+                                .setCallback(result -> {
+                                    mCreateOrderRsp = result;
+                                    startPay();
+                                });
+                    }
+                }else {
+                    //不开发票
+                    if (mReceiptId == 0) {
+                        mOrderViewModel.createOrder(mType, mAddress.address_id, couponId,
+                                mBinding.etCustomerMsg.getText().toString(), usedScore())
+                                .setCallback(result -> {
+                                    mCreateOrderRsp = result;
+                                    startPay();
+                                });
+                    } else {//开发票
+                        mOrderViewModel.createOrder(mType, mAddress.address_id, couponId,
+                                mBinding.etCustomerMsg.getText().toString(), usedScore(), usedReceipt())
+                                .setCallback(result -> {
+                                    mCreateOrderRsp = result;
+                                    startPay();
+                                });
+                    }
                 }
+
 
             }
         });
@@ -224,13 +263,28 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
             mOrderViewModel.promotionBuy(mType, mSpec).setCallback(result ->
                     mOrderViewModel.queryOrderInfo(mType, null).setCallback(this::updateOrderInfo));
         } else if (mType == OrderService.VIP_CART) {
-            // TODO: 2020/10/27 都是写死的数据,要改成动态获取的
             //Vip购物车
-            mOrderViewModel.queryVipOrderInfo(6, null,"[{\"goods_id\":226,\"spec_id\":1339,\"quantity\":6},{\"goods_id\":225,\"spec_id\":1340,\"quantity\":2}]").setCallback(this::updateOrderInfo);
+            mOrderViewModel.queryVipOrderInfo(6, null, JSON.toJSON(getVipGoodSpecs()).toString()).setCallback(this::updateOrderInfo);
         } else {
             mOrderViewModel.queryOrderInfo(mType, null).setCallback(this::updateOrderInfo);
         }
         loadReceipt(1);
+    }
+
+    /**
+     * 拿到vip购物车的数据
+     * @return
+     */
+    private ArrayList<VipGoodSpec> getVipGoodSpecs() {
+        VipGoodActivity activity = ActivityStack.getInstance().getActivity(VipGoodActivity.class);
+        VipGoodViewModel vipGoodViewModel = ViewModelProviders.of(activity).get(VipGoodViewModel.class);
+        ArrayList<CartList> vipCart = vipGoodViewModel.getVipCart().getValue();
+        ArrayList<VipGoodSpec> vipGoodSpecs = new ArrayList<>();
+        for (CartList cartList : vipCart) {
+            VipGoodSpec vipGoodSpec = new VipGoodSpec(cartList.spec.goods_id,cartList.count,cartList.spec.spec_id);
+            vipGoodSpecs.add(vipGoodSpec);
+        }
+        return vipGoodSpecs;
     }
 
     private void loadReceipt(int page) {
@@ -325,7 +379,7 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
         if (mCreateOrderRsp != null) {
             String money = mBinding.tvCheckoutPrice.getText().toString();
             mPayTypeViewModel = new PayTypeViewModel(OrderCheckoutActivity.this, mCreateOrderRsp.order_id,
-                    money,mCreateOrderRsp.show_ye);
+                    money, mCreateOrderRsp.show_ye);
             mPayTypeViewModel.startPay().setCallback(result -> {
                 mPayTypeViewModel = null;
                 finish();

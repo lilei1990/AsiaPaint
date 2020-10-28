@@ -7,7 +7,7 @@ import com.asia.paint.base.recyclerview.BaseGlideAdapter
 import com.asia.paint.base.recyclerview.GlideViewHolder
 import com.asia.paint.base.widgets.CountView
 import com.asia.paint.biz.cart.CartFragment
-import com.asia.paint.biz.mine.vip.CartList
+import com.asia.paint.biz.mine.vip.data.CartList
 import com.asia.paint.utils.utils.PriceUtils
 
 /**

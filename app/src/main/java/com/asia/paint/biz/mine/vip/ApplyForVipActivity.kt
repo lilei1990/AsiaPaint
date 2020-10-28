@@ -18,6 +18,9 @@ import com.asia.paint.utils.utils.PriceUtils
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_apply_for_vip.*
 
+/**
+ * vip任务购买界面
+ */
 class ApplyForVipActivity : BaseTitleActivity<ActivityApplyForVipBinding>() {
 
     lateinit var mDistributionTaskCouponsAdapter:VipTaskCouponsAdapter

@@ -12,6 +12,7 @@ import com.asia.paint.android.BuildConfig;
 import com.asia.paint.base.model.AddCartViewModel;
 import com.asia.paint.base.network.bean.UserInfo;
 import com.asia.paint.base.network.core.NetworkInit;
+import com.asia.paint.base.util.ActivityStack;
 import com.asia.paint.biz.login.LoginActivity;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.utils.AppUtils;
@@ -66,11 +67,13 @@ public class AsiaPaintApplication extends Application {
     private static List<Activity> mActivities = new ArrayList<>();
 
     public static void addActivity(Activity activity) {
-        mActivities.add(activity);
+        ActivityStack.getInstance().pushActivity(activity);
     }
-
+    public static void finishAllActivity() {
+        ActivityStack.getInstance().clearAllActivity();
+    }
     public static void removeActivity(Activity activity) {
-        mActivities.remove(activity);
+        ActivityStack.getInstance().popActivity(activity);
     }
 
 
@@ -135,11 +138,7 @@ public class AsiaPaintApplication extends Application {
 
 
 
-    public static void finishAllActivity() {
-        for (Activity activity : mActivities) {
-            activity.finish();
-        }
-    }
+
 
     public static void exitToLogin() {
         try {

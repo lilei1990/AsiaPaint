@@ -2,6 +2,7 @@ package com.asia.paint.base.network.api;
 
 import com.asia.paint.base.constants.Constants;
 import com.asia.paint.base.network.bean.BaseListRsp;
+import com.asia.paint.base.network.bean.CreateOrderRsp;
 import com.asia.paint.base.network.bean.GoodsRsp;
 import com.asia.paint.base.network.bean.OrderInfoRsp;
 import com.asia.paint.base.network.bean.ShopBannerRsp;
@@ -58,4 +59,49 @@ public interface VipService {
     @FormUrlEncoded
     @POST("api/vip/vip_index")
     Observable<BaseRsp<OrderInfoRsp>> queryVipOrderInfo(@Field("flow_type") int flow_type, @Field("address_id") Integer address_id, @Field("good_specs") String good_specs);
+
+    /**
+     * 生成VIP订单-POST
+     * @param flow_type (值只能等于6)0:购物车 1:组合 2:团购  3:秒杀 4:分销购买 5:直接购买 6:VIP购买
+     * @param address_id
+     * @param bonus_id
+     * @param description
+     * @param score
+     * @return
+     */
+    @FormUrlEncoded
+    @POST("api/order/done")
+    Observable<BaseRsp<CreateOrderRsp>> createOrder(@Field("flow_type") int flow_type, @Field("address_id") int address_id,
+                                                    @Field("bonus_id") int bonus_id, @Field("description") String description, @Field("good_specs") String good_specs, @Field("score") int score);
+    /**
+     * 生成VIP订单-POST
+     * @param flow_type (值只能等于6)0:购物车 1:组合 2:团购  3:秒杀 4:分销购买 5:直接购买 6:VIP购买
+     * @param address_id 收货地址address_id
+     * @param bonus_id 优惠券bonus_id
+     * @param description 订单备注
+     * @param score 抵扣积分
+     * @param receipt 发票id
+     * @param good_specs 物品
+     * @return
+     */
+    @FormUrlEncoded
+    @POST("api/vip/vip_done")
+    Observable<BaseRsp<CreateOrderRsp>> createOrder(@Field("flow_type") int flow_type, @Field("address_id") int address_id,
+                                                    @Field("bonus_id") int bonus_id, @Field("description") String description, @Field("score") int score,
+                                                    @Field("receipt") int receipt,@Field("good_specs") String good_specs);
+
+    /**
+     *
+     * @param flow_type (值只能等于6)0:购物车 1:组合 2:团购  3:秒杀 4:分销购买 5:直接购买 6:VIP购买
+     * @param address_id 收货地址address_id
+     * @param bonus_id 优惠券bonus_id
+     * @param description 订单备注
+     * @param score 抵扣积分
+     * @param good_specs 物品
+     * @return
+     */
+    @FormUrlEncoded
+    @POST("api/vip/vip_done")
+    Observable<BaseRsp<CreateOrderRsp>> createOrder(@Field("flow_type") int flow_type, @Field("address_id") int address_id,
+                                                    @Field("bonus_id") int bonus_id, @Field("description") String description, @Field("score") int score,@Field("good_specs") String good_specs);
 }
