@@ -5,6 +5,7 @@ import android.content.Context;
 import androidx.lifecycle.MutableLiveData;
 
 import com.asia.paint.base.container.BaseViewModel;
+import com.asia.paint.base.network.bean.Address;
 import com.asia.paint.base.network.bean.Goods;
 import com.asia.paint.base.network.bean.Specs;
 import com.asia.paint.biz.mine.vip.Dialog.VipGoodsSpecDialog;
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 public class VipGoodViewModel extends BaseViewModel {
 
     private MutableLiveData<ArrayList<CartList>> mVipCart = new MutableLiveData<ArrayList<CartList>>();
+    private MutableLiveData<Boolean> mSheetIsShow = new MutableLiveData<Boolean>(false);
     ;
 
     /**
@@ -71,6 +73,14 @@ public class VipGoodViewModel extends BaseViewModel {
     public void addCart(CartList cartList) {
         mCartLists.add(cartList);
         mVipCart.postValue(mCartLists);
+    }
+
+    public void setSheetIsShow(Boolean sheetIsShow) {
+        mSheetIsShow.postValue(sheetIsShow);
+    }
+
+    public Boolean getSheetIsShow() {
+        return mSheetIsShow.getValue();
     }
 
     public MutableLiveData<ArrayList<CartList>> getVipCart() {

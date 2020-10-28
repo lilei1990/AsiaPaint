@@ -22,6 +22,8 @@ import com.asia.paint.network.NetworkFactory
 import com.asia.paint.network.NetworkObservableTransformer
 import com.asia.paint.utils.callback.OnChangeCallback
 import com.asia.paint.utils.utils.AppUtils
+import com.flipboard.bottomsheet.BottomSheetLayout
+import com.flipboard.bottomsheet.OnSheetDismissedListener
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.dialog_vip_goods_cart.view.*
 
@@ -64,13 +66,31 @@ class VipGoodActivity : BaseTitleActivity<ActivityVipGoodBinding>(), OnChangeCal
         rvCartList.adapter = mVipGoodsAdapter
         val specView = LayoutInflater.from(mContext).inflate(R.layout.dialog_vip_goods_spec, mBinding.bottomsheet, false)
         mBinding.tvGoCart.setOnClickListener { v ->
-            //弹出View  bottomSheet即是要弹出的view+
-            mBinding.bottomsheet.showWithSheetView(cartView);
-
+            if (viewModel.vipCart.value == null) {
+                AppUtils.showMessage("购物车没有东西!")
+                return@setOnClickListener
+            }
+            if (!viewModel.sheetIsShow) {
+                //弹出View  bottomSheet即是要弹出的view+
+                viewModel.sheetIsShow = true
+                mBinding.bottomsheet.showWithSheetView(cartView);
+            } else {
+                viewModel.sheetIsShow=false
+                mBinding.bottomsheet.dismissSheet();
+            }
         }
+        //监听视图关闭
+        mBinding.bottomsheet.addOnSheetDismissedListener(object :OnSheetDismissedListener{
+            override fun onDismissed(bottomSheetLayout: BottomSheetLayout?) {
+                viewModel.sheetIsShow=false
+            }
+        })
         //关闭弹窗
         cartView.iv_close.setOnClickListener { v ->
-            mBinding.bottomsheet.dismissSheet();
+            if (viewModel.sheetIsShow) {
+                viewModel.sheetIsShow=false
+                mBinding.bottomsheet.dismissSheet();
+            }
         }
         //购物车显示
         viewModel.vipCart?.observe(this, Observer { t ->

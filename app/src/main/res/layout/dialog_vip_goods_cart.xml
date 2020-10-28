@@ -6,6 +6,11 @@
         android:layout_height="wrap_content"
         android:background="@color/color_FFFFFF">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_cart_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
         <ImageView
             android:id="@+id/iv_close"
             android:layout_width="wrap_content"
@@ -14,14 +19,6 @@
             android:layout_alignParentEnd="true"
             android:padding="14dp"
             android:src="@mipmap/ic_close" />
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_cart_list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/iv_close" />
-
     </RelativeLayout>
 
     <data>
