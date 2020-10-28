@@ -26,38 +26,45 @@ import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.dialog_vip_goods_cart.view.*
 
 class VipGoodActivity : BaseTitleActivity<ActivityVipGoodBinding>(), OnChangeCallback<Int> {
-    //    private val CATEGORY_FLASH_SALE = "秒杀"
-//    private val CATEGORY_GROUP = "火爆拼团"
     private val CATEGORY_ALL = "全部"
     lateinit var mGoodsPagerAdapter: VipGoodsPagerAdapter
 
     lateinit var mVipGoodsAdapter: VipCartGoodsAdapter
     lateinit var viewModel: VipGoodViewModel
+
     //存购物车数据
     private lateinit var mVipCartList: ArrayList<CartList>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = getViewModel(VipGoodViewModel::class.java)
-        Log.e("viewModel1", "打印viewModel地址:: "+viewModel.toString())
         mGoodsPagerAdapter = VipGoodsPagerAdapter(supportFragmentManager)
         mBinding.viewPager.setAdapter(mGoodsPagerAdapter)
         mBinding.tabLayout.setupWithViewPager(mBinding.viewPager)
 
         //去结算
-        mBinding.tvCheckout.setOnClickListener { v ->
-            OrderCheckoutActivity.start(mContext, OrderService.VIP_CART)
+        mBinding.tvCheckout.setOnClickListener {
+            if (viewModel.vipCart.value != null) {
+                OrderCheckoutActivity.start(mContext, OrderService.VIP_CART)
+            } else {
+                AppUtils.showMessage("购物车没有东西!")
+            }
         }
+        initCart()
+
+        loadCategory()
+    }
+
+    private fun initCart() {
         //购物车
         val cartView = LayoutInflater.from(mContext).inflate(R.layout.dialog_vip_goods_cart, mBinding.bottomsheet, false)
         val rvCartList = cartView.rv_cart_list
-        rvCartList.setLayoutManager(LinearLayoutManager(mContext, RecyclerView.VERTICAL, false))
-        rvCartList.addItemDecoration( DefaultItemDecoration(0, 0, 0, 1));
+        rvCartList.layoutManager = LinearLayoutManager(mContext, RecyclerView.VERTICAL, false)
+        rvCartList.addItemDecoration(DefaultItemDecoration(0, 0, 0, 1));
         mVipGoodsAdapter = VipCartGoodsAdapter(ArrayList(), mContext)
-        rvCartList.setAdapter(mVipGoodsAdapter)
+        rvCartList.adapter = mVipGoodsAdapter
         val specView = LayoutInflater.from(mContext).inflate(R.layout.dialog_vip_goods_spec, mBinding.bottomsheet, false)
         mBinding.tvGoCart.setOnClickListener { v ->
-            TODO("二次点击关闭的功能有待开发")
-            //弹出View  bottomSheet即是要弹出的view
+            //弹出View  bottomSheet即是要弹出的view+
             mBinding.bottomsheet.showWithSheetView(cartView);
 
         }
@@ -75,7 +82,6 @@ class VipGoodActivity : BaseTitleActivity<ActivityVipGoodBinding>(), OnChangeCal
             mVipGoodsAdapter.replaceData(mVipCartList)
             setCartCount(count)
         })
-        loadCategory()
     }
 
     private fun updateCategory(shopBannerRsp: ArrayList<VipCategory>) {

@@ -5,20 +5,12 @@ import android.content.Context;
 import androidx.lifecycle.MutableLiveData;
 
 import com.asia.paint.base.container.BaseViewModel;
-import com.asia.paint.base.network.api.OrderService;
 import com.asia.paint.base.network.bean.Goods;
 import com.asia.paint.base.network.bean.Specs;
-import com.asia.paint.base.network.core.DefaultNetworkObserver;
 import com.asia.paint.biz.mine.vip.Dialog.VipGoodsSpecDialog;
 import com.asia.paint.biz.mine.vip.data.CartList;
-import com.asia.paint.network.NetworkFactory;
-import com.asia.paint.network.NetworkObservableTransformer;
-import com.asia.paint.utils.callback.CallbackDate;
-import com.asia.paint.utils.callback.PairCallbackDate;
 
 import java.util.ArrayList;
-
-import io.reactivex.disposables.Disposable;
 
 /**
  * 作者 : LiLei
@@ -28,8 +20,6 @@ import io.reactivex.disposables.Disposable;
  */
 public class VipGoodViewModel extends BaseViewModel {
 
-    private CallbackDate<Boolean> mBuySuccess = new CallbackDate<>();
-    private PairCallbackDate<Specs, Integer> mSpecResult = new PairCallbackDate<>();
     private MutableLiveData<ArrayList<CartList>> mVipCart = new MutableLiveData<ArrayList<CartList>>();
     ;
 
@@ -57,60 +47,30 @@ public class VipGoodViewModel extends BaseViewModel {
                 .setSpec(selectedSpec)
                 .setCount(count)
                 .setSpecList(goods._specs)
+                .setGoodsName(goods.goods_name)
                 .build();
         dialog.setOnClickGoodsSpecListener(new VipGoodsSpecDialog.OnClickGoodsSpecListener() {
             @Override
-            public void onAddCart(Specs spec, int count) {
-                if (spec != null && count > 0) {
-                    addCart(spec, count);
+            public void onAddCart(CartList cartList) {
+                if (cartList.spec != null && cartList.count > 0) {
+                    addCart(cartList);
                 }
                 dialog.dismiss();
-            }
-
-            @Override
-            public void onBuy(Specs spec, int count) {
-                dialog.dismiss();
-            }
-
-            @Override
-            public void onDismiss(Specs spec, int count) {
-                mSpecResult.setData(spec, count);
             }
         });
         dialog.show(context);
 
     }
 
-    public CallbackDate<Boolean> directBuy(int spec_id, int count) {
-        NetworkFactory.createService(OrderService.class)
-                .directBuy(spec_id, count)
-                .compose(new NetworkObservableTransformer<>())
-                .subscribe(new DefaultNetworkObserver<String>() {
-                    @Override
-                    public void onSubscribe(Disposable d) {
-                        addDisposable(d);
-                    }
-
-                    @Override
-                    public void onResponse(String response) {
-                        mBuySuccess.setData(true);
-                    }
-
-                });
-        return mBuySuccess;
-    }
 
     /**
      * 添加到购物车
      */
-    ArrayList<CartList> objects = new ArrayList<>();
+    ArrayList<CartList> mCartLists = new ArrayList<>();
 
-    public void addCart(Specs spec, int count) {
-        CartList cartList = new CartList();
-        cartList.spec = spec;
-        cartList.count = count;
-        objects.add(cartList);
-        mVipCart.postValue(objects);
+    public void addCart(CartList cartList) {
+        mCartLists.add(cartList);
+        mVipCart.postValue(mCartLists);
     }
 
     public MutableLiveData<ArrayList<CartList>> getVipCart() {

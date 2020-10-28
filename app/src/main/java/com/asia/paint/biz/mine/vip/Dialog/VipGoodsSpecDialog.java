@@ -12,6 +12,7 @@ import com.asia.paint.base.container.BaseBottomDialogFragment;
 import com.asia.paint.base.network.bean.Specs;
 import com.asia.paint.base.widgets.flowlayout.FlowLayout;
 import com.asia.paint.base.widgets.flowlayout.TagAdapter;
+import com.asia.paint.biz.mine.vip.data.CartList;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
 import com.asia.paint.utils.utils.PriceUtils;
@@ -32,6 +33,7 @@ public class VipGoodsSpecDialog extends BaseBottomDialogFragment<DialogVipGoodsS
     private static final String DEFAULT_SPEC_TIPS = "请选择规格属性";
     private Builder mBuilder;
     private OnClickGoodsSpecListener mListener;
+
     private VipGoodsSpecDialog(Builder builder) {
         mBuilder = builder;
     }
@@ -95,14 +97,19 @@ public class VipGoodsSpecDialog extends BaseBottomDialogFragment<DialogVipGoodsS
         mBinding.viewCount.setMaxCount(mBuilder.maxCount);
         mBinding.viewCount.setMinCount(mBuilder.minCount);
 
-//添加到购物车
+        //添加到购物车
         mBinding.btnAddCart.setOnClickListener(new OnNoDoubleClickListener() {
             @Override
             public void onNoDoubleClick(View view) {
+                CartList cartList = new CartList();
+                cartList.spec = mBuilder.mSpec;
+                cartList.goodName = mBuilder.mGoodsName;
+                cartList.count = mBinding.viewCount.getCount();
+                cartList.iconUrl = mBuilder.iconUrl;
                 if (mListener != null) {
-                    mListener.onAddCart(mBuilder.mSpec, mBinding.viewCount.getCount());
+                    mListener.onAddCart(cartList);
                 }
-//                AppUtils.showMessage("加入购物车"+mListener);
+//AppUtils.showMessage("加入购物车"+mListener);
 
             }
         });
@@ -132,7 +139,9 @@ public class VipGoodsSpecDialog extends BaseBottomDialogFragment<DialogVipGoodsS
         private int count = 1;
         private int minCount = 1;
         private int maxCount;
+        private int mRecId;
         private String iconUrl;
+        private String mGoodsName;
         private String mSpecTips = DEFAULT_SPEC_TIPS;
 
         private Specs mSpec;
@@ -164,6 +173,10 @@ public class VipGoodsSpecDialog extends BaseBottomDialogFragment<DialogVipGoodsS
             this.minCount = minCount;
             return this;
         }
+        public Builder setRecId(int rec_id) {
+            this.mRecId = rec_id;
+            return this;
+        }
 
         public int getMaxCount() {
             return maxCount;
@@ -191,6 +204,10 @@ public class VipGoodsSpecDialog extends BaseBottomDialogFragment<DialogVipGoodsS
             }
             return this;
         }
+        public Builder setGoodsName(String goods_name) {
+            mGoodsName = goods_name;
+            return this;
+        }
 
 
         public VipGoodsSpecDialog build() {
@@ -215,9 +232,7 @@ public class VipGoodsSpecDialog extends BaseBottomDialogFragment<DialogVipGoodsS
 
     @Override
     public void dismiss() {
-        if (mListener != null) {
-            mListener.onDismiss(mBuilder.mSpec, mBinding.viewCount.getCount());
-        }
+
         super.dismiss();
     }
 
@@ -227,11 +242,9 @@ public class VipGoodsSpecDialog extends BaseBottomDialogFragment<DialogVipGoodsS
 
     public interface OnClickGoodsSpecListener {
 
-        void onAddCart(Specs spec, int count);
+        void onAddCart(CartList cartList);
 
-        void onBuy(Specs spec, int count);
 
-        void onDismiss(Specs spec, int count);
     }
 
 }

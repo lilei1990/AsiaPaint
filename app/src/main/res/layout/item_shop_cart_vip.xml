@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="132dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_FFFFFF"
+    android:orientation="vertical"
+    app:cardCornerRadius="7dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp">
+
+        <ImageView
+            android:id="@+id/iv_goods_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@+id/cb_check"
+            android:scaleType="center"
+            android:src="@mipmap/ic_default" />
+
+        <TextView
+            android:id="@+id/tv_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_goods_icon"
+            android:layout_marginStart="11dp"
+            android:lines="2"
+            android:ellipsize="end"
+            tools:text="商品名称"
+            android:layout_toEndOf="@id/iv_goods_icon"
+            android:textColor="@color/color_333333"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_goods_spec"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_goods_name"
+            android:layout_alignStart="@id/tv_goods_name"
+            android:layout_above="@id/tv_goods_price"
+            android:textColor="@color/color_999999"
+            android:paddingBottom="5dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:text="商品描述"
+            android:textSize="12sp" />
+
+        <com.asia.paint.biz.mine.vip.widget.CountViewVip
+            android:id="@+id/view_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="14dp"
+            app:count_layout="@layout/view_count_chop_cart" />
+
+        <TextView
+            android:id="@+id/tv_goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/tv_goods_name"
+            android:layout_alignBottom="@+id/view_count"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/color_F41021"
+            android:textSize="12sp"
+            tools:text="¥ 1200"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -279,6 +279,9 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
         VipGoodActivity activity = ActivityStack.getInstance().getActivity(VipGoodActivity.class);
         VipGoodViewModel vipGoodViewModel = ViewModelProviders.of(activity).get(VipGoodViewModel.class);
         ArrayList<CartList> vipCart = vipGoodViewModel.getVipCart().getValue();
+        if (vipCart==null) {
+            return new ArrayList<>();
+        }
         ArrayList<VipGoodSpec> vipGoodSpecs = new ArrayList<>();
         for (CartList cartList : vipCart) {
             VipGoodSpec vipGoodSpec = new VipGoodSpec(cartList.spec.goods_id,cartList.count,cartList.spec.spec_id);

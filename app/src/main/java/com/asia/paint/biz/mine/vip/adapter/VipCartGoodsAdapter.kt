@@ -2,12 +2,13 @@ package com.asia.paint.biz.mine.vip.adapter
 
 import android.content.Context
 import com.asia.paint.android.R
-import com.asia.paint.base.network.bean.CartGoods
 import com.asia.paint.base.recyclerview.BaseGlideAdapter
 import com.asia.paint.base.recyclerview.GlideViewHolder
 import com.asia.paint.base.widgets.CountView
 import com.asia.paint.biz.cart.CartFragment
 import com.asia.paint.biz.mine.vip.data.CartList
+import com.asia.paint.biz.mine.vip.widget.CountViewVip
+import com.asia.paint.biz.mine.vip.widget.CountViewVip.CountViewCallback
 import com.asia.paint.utils.utils.PriceUtils
 
 /**
@@ -16,46 +17,40 @@ import com.asia.paint.utils.utils.PriceUtils
  * 邮箱 :416587959@qq.com
  * 描述 :Vip购物车点击弹出的列表
  */
-class VipCartGoodsAdapter(data: ArrayList<CartList>, activity: Context) : BaseGlideAdapter<CartList>(R.layout.item_shop_cart, data) {
-    private val mMode: CartFragment.Mode? = null
+class VipCartGoodsAdapter(data: ArrayList<CartList>, activity: Context) : BaseGlideAdapter<CartList>(R.layout.item_shop_cart_vip, data), CountViewCallback {
     override fun convert(helper: GlideViewHolder, cartGoods: CartList) {
-//        val checkBox = helper.getView<CheckBox>(R.id.cb_check)
-//        checkBox.isChecked = true
-//        checkBox.setListener(object : OnCheckChangeListener {
-//            override fun onChange(isChecked: Boolean) {
-//                if (mMode == CartFragment.Mode.CART) {
-//                    if (mCallback != null) {
-//                        mCallback.onCheck(!isChecked, cartGoods)
-//                    }
-//                } else {
-//                    if (mSelectedCardGoods.contains(cartGoods)) {
-//                        mSelectedCardGoods.remove(cartGoods)
-//                    } else {
-//                        mSelectedCardGoods.add(cartGoods)
-//                    }
-//                    notifyDataSetChanged()
-//                    if (mCallback != null) {
-//                        mCallback.onEditCheckUpdate()
-//                    }
-//                }
-//            }
-//
-//            override fun changeBySelf(): Boolean {
-//                return false
-//            }
-//        })
 
-        helper.loadImage(R.id.iv_goods_icon, "cartGoods.goods_image")
-        helper.setText(R.id.tv_goods_name, "cartGoods.goods_name" + "\n")
-        helper.setText(R.id.tv_goods_spec, String.format("规格：%s", "cartGoods.specification"))
-        helper.setText(R.id.tv_goods_price, PriceUtils.getPrice("100"))
-        val countView = helper.getView<CountView>(R.id.view_count)
-        countView.setEnable(mMode == CartFragment.Mode.CART)
+
+        helper.loadImage(R.id.iv_goods_icon, cartGoods.iconUrl)
+        helper.setText(R.id.tv_goods_name,  cartGoods.goodName + "\n")
+        helper.setText(R.id.tv_goods_spec, String.format("规格：%s", cartGoods.spec.spec_1))
+        helper.setText(R.id.tv_goods_price, PriceUtils.getPrice(cartGoods.spec.price))
+        val countView = helper.getView<CountViewVip>(R.id.view_count)
+        countView.setEnable(true)
         countView.setMinCount(1)
         countView.specId = 111
         countView.setRecId(111)
-//        countView.setCallback(this)
-        countView.count = 1
+        countView.count = cartGoods.count
+        countView.setCallback((object : CountViewCallback {
+
+            override fun onChange(count: Int) {
+                cartGoods.count=count
+            }
+
+            override fun onUpdate() {
+            }
+
+        }))
+
+
+    }
+
+    override  fun onChange(count: Int) {
+
+    }
+
+    override fun onUpdate() {
+
     }
 
 

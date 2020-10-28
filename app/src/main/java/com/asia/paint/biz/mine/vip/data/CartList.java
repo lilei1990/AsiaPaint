@@ -5,4 +5,6 @@ import com.asia.paint.base.network.bean.Specs;
 public class CartList {
     public Specs spec;
     public int count;
+    public String goodName;
+    public String iconUrl;
 }
