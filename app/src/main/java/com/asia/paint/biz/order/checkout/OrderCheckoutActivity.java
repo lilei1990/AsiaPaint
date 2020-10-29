@@ -102,7 +102,6 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
     }
 
 
-
     public static void start(Context context, int type, Integer spec, Integer count) {
         Intent intent = new Intent(context, OrderCheckoutActivity.class);
         intent.putExtra(KEY_ORDER_TYPE, type);
@@ -196,25 +195,25 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
                     return;
                 }
                 int couponId = mCoupon != null ? mCoupon.bonus_id : 0;
-                String sVipGoodSpecs = JSON.toJSON(getVipGoodSpecs()).toString();
                 if (mType == OrderService.VIP_CART) {
+                    String sVipGoodSpecs = JSON.toJSON(getVipGoodSpecs()).toString();
                     //不开发票
                     if (mReceiptId == 0) {
                         mOrderViewModel.createVipOrder(6, mAddress.address_id, couponId,
-                                mBinding.etCustomerMsg.getText().toString(), usedScore(),sVipGoodSpecs)
+                                mBinding.etCustomerMsg.getText().toString(), usedScore(), sVipGoodSpecs)
                                 .setCallback(result -> {
                                     mCreateOrderRsp = result;
                                     startPay();
                                 });
                     } else {//开发票
                         mOrderViewModel.createVipOrder(6, mAddress.address_id, couponId,
-                                mBinding.etCustomerMsg.getText().toString(), usedScore(), usedReceipt(),sVipGoodSpecs)
+                                mBinding.etCustomerMsg.getText().toString(), usedScore(), usedReceipt(), sVipGoodSpecs)
                                 .setCallback(result -> {
                                     mCreateOrderRsp = result;
                                     startPay();
                                 });
                     }
-                }else {
+                } else {
                     //不开发票
                     if (mReceiptId == 0) {
                         mOrderViewModel.createOrder(mType, mAddress.address_id, couponId,
@@ -273,18 +272,19 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
 
     /**
      * 拿到vip购物车的数据
+     *
      * @return
      */
     private ArrayList<VipGoodSpec> getVipGoodSpecs() {
         VipGoodActivity activity = ActivityStack.getInstance().getActivity(VipGoodActivity.class);
         VipGoodViewModel vipGoodViewModel = ViewModelProviders.of(activity).get(VipGoodViewModel.class);
         ArrayList<CartList> vipCart = vipGoodViewModel.getVipCart().getValue();
-        if (vipCart==null) {
+        if (vipCart == null) {
             return new ArrayList<>();
         }
         ArrayList<VipGoodSpec> vipGoodSpecs = new ArrayList<>();
         for (CartList cartList : vipCart) {
-            VipGoodSpec vipGoodSpec = new VipGoodSpec(cartList.spec.goods_id,cartList.count,cartList.spec.spec_id);
+            VipGoodSpec vipGoodSpec = new VipGoodSpec(cartList.spec.goods_id, cartList.count, cartList.spec.spec_id);
             vipGoodSpecs.add(vipGoodSpec);
         }
         return vipGoodSpecs;
@@ -343,20 +343,14 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
         mBinding.layoutReceipt.setOnClickListener(new OnNoDoubleClickListener() {
             @Override
             public void onNoDoubleClick(View view) {
-                int page = 1;
-                mReceipts.clear();
-                mReceiptViewModel.loadReceipt(page).setCallback(result -> {
-                    if (result != null && result.data != null) {
-                        mReceipts.addAll(result.data);
-                        if (page < result.totalpage) {
-                            loadReceipt(page + 1);
-                        } else {
-                            updateDialog();
-                        }
-                    } else {
-                        updateDialog();
-                    }
+                ReceiptDialog receiptDialog = new ReceiptDialog();
+                receiptDialog.setReceipts(mReceipts);
+                receiptDialog.setCallback((receipts, receipt) -> {
+                    mReceipts.clear();
+                    mReceipts.addAll(receipts);
+                    setReceiptData(receipt);
                 });
+                receiptDialog.show(OrderCheckoutActivity.this);
             }
         });
     }
