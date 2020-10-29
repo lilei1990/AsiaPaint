@@ -131,14 +131,23 @@
                         android:src="@mipmap/ic_edit" />
 
                 </LinearLayout>
-
+                <TextView
+                    android:id="@+id/tv_valid_period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:textColor="@color/color_F6F6F6"
+                    android:layout_below="@+id/layout_username"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
                 <TextView
                     android:id="@+id/tv_phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/layout_username"
+                    android:layout_below="@+id/tv_valid_period"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="9dp"
+                    android:layout_marginTop="3dp"
                     android:textColor="@color/color_F6F6F6"
                     android:textSize="16sp" />
 

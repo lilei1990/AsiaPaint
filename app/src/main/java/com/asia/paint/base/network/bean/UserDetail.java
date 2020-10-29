@@ -56,7 +56,7 @@ public class UserDetail {
     public String ysh;
     public String code;
     //1：Vip    0：非Vip
-    public int is_vip;
+    private int is_vip;
 
     public boolean isSeller() {
         return is_seller > 0;
