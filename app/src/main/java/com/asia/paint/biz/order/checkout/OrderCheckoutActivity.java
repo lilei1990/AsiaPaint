@@ -273,7 +273,7 @@ public class OrderCheckoutActivity extends BaseActivity<ActivityOrderCheckoutBin
     /**
      * 拿到vip购物车的数据
      *
-     * @return
+     * @return 购物车的数据
      */
     private ArrayList<VipGoodSpec> getVipGoodSpecs() {
         VipGoodActivity activity = ActivityStack.getInstance().getActivity(VipGoodActivity.class);

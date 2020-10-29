@@ -1,5 +1,6 @@
 package com.asia.paint.base.widgets;
 
+import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.AttributeSet;
@@ -19,11 +20,13 @@ import com.asia.paint.base.network.bean.Specs;
 import com.asia.paint.biz.AsiaPaintApplication;
 import com.asia.paint.biz.main.MainActivity;
 import com.asia.paint.biz.mine.service.CustomerServiceActivity;
+import com.asia.paint.biz.mine.vip.TR_IMActivity;
 import com.asia.paint.biz.order.checkout.OrderCheckoutActivity;
 import com.asia.paint.biz.shop.detail.GoodsSpecDialog;
 import com.asia.paint.android.databinding.ViewBottomCartBinding;
 import com.asia.paint.utils.callback.OnChangeCallback;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
+import com.blankj.utilcode.util.ActivityUtils;
 import com.smarttop.library.utils.LogUtil;
 
 /**
@@ -123,7 +126,9 @@ public class BottomCart extends LinearLayout implements OnChangeCallback<Integer
         mBinding.tvToCustomerService.setOnClickListener(new OnNoDoubleClickListener() {
             @Override
             public void onNoDoubleClick(View view) {
-                CustomerServiceActivity.start(getContext(), 0);
+//                CustomerServiceActivity.start(getContext(), 0);
+//                改为天润客服
+                ActivityUtils.startActivity(TR_IMActivity.class);
             }
         });
     }

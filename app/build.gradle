@@ -87,6 +87,6 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:2.0.1'
     //底部弹出抽拉框
     implementation 'com.flipboard:bottomsheet-core:1.5.1'
-//    //工具类大全
-//    implementation "com.blankj:utilcodex:1.29.0"
+    //工具类大全
+    implementation "com.blankj:utilcodex:1.29.0"
 }

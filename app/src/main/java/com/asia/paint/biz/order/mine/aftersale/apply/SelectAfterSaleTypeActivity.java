@@ -11,8 +11,10 @@ import com.asia.paint.base.container.BaseTitleActivity;
 import com.asia.paint.base.network.bean.OrderDetail;
 import com.asia.paint.base.util.ImageUtils;
 import com.asia.paint.biz.mine.service.CustomerServiceActivity;
+import com.asia.paint.biz.mine.vip.TR_IMActivity;
 import com.asia.paint.utils.callback.OnNoDoubleClickListener;
 import com.asia.paint.utils.utils.AppUtils;
+import com.blankj.utilcode.util.ActivityUtils;
 
 import androidx.annotation.Nullable;
 
@@ -61,8 +63,10 @@ public class SelectAfterSaleTypeActivity extends BaseTitleActivity<ActivitySelec
         mBaseBinding.tvRightText.setOnClickListener(new OnNoDoubleClickListener() {
             @Override
             public void onNoDoubleClick(View view) {
-                CustomerServiceActivity.start(SelectAfterSaleTypeActivity.this, 0);
+//                CustomerServiceActivity.start(SelectAfterSaleTypeActivity.this, 0);
+                ActivityUtils.startActivity(TR_IMActivity.class);
             }
+
         });
         mBaseBinding.tvRightText.setTextColor(AppUtils.getColor(R.color.color_185ACF));
         mBinding.layoutReturn.setVisibility(mOverdue ? View.GONE : View.VISIBLE);
