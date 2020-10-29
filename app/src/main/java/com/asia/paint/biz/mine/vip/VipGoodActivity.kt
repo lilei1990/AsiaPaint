@@ -1,7 +1,6 @@
 package com.asia.paint.biz.mine.vip
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.lifecycle.Observer
@@ -16,7 +15,6 @@ import com.asia.paint.base.network.core.DefaultNetworkObserverList
 import com.asia.paint.base.network.data.VipCategory
 import com.asia.paint.base.recyclerview.DefaultItemDecoration
 import com.asia.paint.biz.mine.vip.adapter.VipCartGoodsAdapter
-import com.asia.paint.biz.mine.vip.data.CartList
 import com.asia.paint.biz.order.checkout.OrderCheckoutActivity
 import com.asia.paint.network.NetworkFactory
 import com.asia.paint.network.NetworkObservableTransformer
@@ -34,8 +32,6 @@ class VipGoodActivity : BaseTitleActivity<ActivityVipGoodBinding>(), OnChangeCal
     lateinit var mVipGoodsAdapter: VipCartGoodsAdapter
     lateinit var viewModel: VipGoodViewModel
 
-    //存购物车数据
-    private lateinit var mVipCartList: ArrayList<CartList>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = getViewModel(VipGoodViewModel::class.java)
@@ -58,11 +54,11 @@ class VipGoodActivity : BaseTitleActivity<ActivityVipGoodBinding>(), OnChangeCal
 
     private fun initCart() {
         //购物车
-        val cartView = LayoutInflater.from(mContext).inflate(R.layout.dialog_vip_goods_cart, mBinding.bottomsheet, false)
+        val cartView = LayoutInflater.from(this).inflate(R.layout.dialog_vip_goods_cart, mBinding.bottomsheet, false)
         val rvCartList = cartView.rv_cart_list
         rvCartList.layoutManager = LinearLayoutManager(mContext, RecyclerView.VERTICAL, false)
         rvCartList.addItemDecoration(DefaultItemDecoration(0, 0, 0, 1));
-        mVipGoodsAdapter = VipCartGoodsAdapter(ArrayList(), mContext)
+        mVipGoodsAdapter = VipCartGoodsAdapter(ArrayList(), viewModel)
         rvCartList.adapter = mVipGoodsAdapter
         val specView = LayoutInflater.from(mContext).inflate(R.layout.dialog_vip_goods_spec, mBinding.bottomsheet, false)
         mBinding.tvGoCart.setOnClickListener { v ->
@@ -94,12 +90,11 @@ class VipGoodActivity : BaseTitleActivity<ActivityVipGoodBinding>(), OnChangeCal
         }
         //购物车显示
         viewModel.vipCart?.observe(this, Observer { t ->
-            mVipCartList = t
             var count: Int = 0
             for (cartList in t) {
                 count += cartList.count
             }
-            mVipGoodsAdapter.replaceData(mVipCartList)
+            mVipGoodsAdapter.replaceData(t)
             setCartCount(count)
         })
     }

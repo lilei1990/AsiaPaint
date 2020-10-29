@@ -1,6 +1,8 @@
 package com.asia.paint.base.network.bean;
 
-public class Specs {
+import androidx.databinding.BaseObservable;
+
+public class Specs extends BaseObservable {
     /**
      * spec_id : 796
      * goods_id : 142

@@ -1,6 +1,8 @@
 package com.asia.paint.biz.mine.vip;
 
+import android.app.Notification;
 import android.content.Context;
+import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 
@@ -71,10 +73,31 @@ public class VipGoodViewModel extends BaseViewModel {
     ArrayList<CartList> mCartLists = new ArrayList<>();
 
     public void addCart(CartList cartList) {
+        int goods_id = cartList.spec.goods_id;
+        int spec_id = cartList.spec.spec_id;
+        int count = cartList.count;
+        for (CartList list : mCartLists) {
+            //如果商品和规格一样只是添加数量
+            if (goods_id == list.spec.goods_id) {
+                if (spec_id == list.spec.spec_id) {
+                    list.count += count;
+                    notification();
+                    return;
+                }
+            }
+        }
         mCartLists.add(cartList);
         mVipCart.postValue(mCartLists);
     }
 
+    /**
+     * 强制更新数据
+     */
+    public void notification() {
+        ArrayList<CartList> tem = new ArrayList<>();
+        tem.addAll(mCartLists);
+        mVipCart.postValue(mCartLists);
+    }
     public void setSheetIsShow(Boolean sheetIsShow) {
         mSheetIsShow.postValue(sheetIsShow);
     }
