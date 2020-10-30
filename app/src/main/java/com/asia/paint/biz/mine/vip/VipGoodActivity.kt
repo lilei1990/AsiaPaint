@@ -41,7 +41,7 @@ class VipGoodActivity : BaseTitleActivity<ActivityVipGoodBinding>(), OnChangeCal
 
         //去结算
         mBinding.tvCheckout.setOnClickListener {
-            if (viewModel.vipCart.value != null) {
+            if (viewModel.vipCart.value != null && viewModel.vipCart.value?.size!! > 0) {
                 OrderCheckoutActivity.start(mContext, OrderService.VIP_CART)
             } else {
                 AppUtils.showMessage("购物车没有东西!")
@@ -62,7 +62,7 @@ class VipGoodActivity : BaseTitleActivity<ActivityVipGoodBinding>(), OnChangeCal
         rvCartList.adapter = mVipGoodsAdapter
         val specView = LayoutInflater.from(mContext).inflate(R.layout.dialog_vip_goods_spec, mBinding.bottomsheet, false)
         mBinding.tvGoCart.setOnClickListener { v ->
-            if (viewModel.vipCart.value == null) {
+            if (viewModel.vipCart.value == null || viewModel.vipCart.value?.size == 0) {
                 AppUtils.showMessage("购物车没有东西!")
                 return@setOnClickListener
             }
@@ -71,20 +71,20 @@ class VipGoodActivity : BaseTitleActivity<ActivityVipGoodBinding>(), OnChangeCal
                 viewModel.sheetIsShow = true
                 mBinding.bottomsheet.showWithSheetView(cartView);
             } else {
-                viewModel.sheetIsShow=false
+                viewModel.sheetIsShow = false
                 mBinding.bottomsheet.dismissSheet();
             }
         }
         //监听视图关闭
-        mBinding.bottomsheet.addOnSheetDismissedListener(object :OnSheetDismissedListener{
+        mBinding.bottomsheet.addOnSheetDismissedListener(object : OnSheetDismissedListener {
             override fun onDismissed(bottomSheetLayout: BottomSheetLayout?) {
-                viewModel.sheetIsShow=false
+                viewModel.sheetIsShow = false
             }
         })
         //关闭弹窗
         cartView.iv_close.setOnClickListener { v ->
             if (viewModel.sheetIsShow) {
-                viewModel.sheetIsShow=false
+                viewModel.sheetIsShow = false
                 mBinding.bottomsheet.dismissSheet();
             }
         }
@@ -96,6 +96,12 @@ class VipGoodActivity : BaseTitleActivity<ActivityVipGoodBinding>(), OnChangeCal
             }
             mVipGoodsAdapter.replaceData(t)
             setCartCount(count)
+            //数据清空的时候
+            if (viewModel.vipCart.value?.size == 0) {
+                viewModel.sheetIsShow = false
+                mBinding.bottomsheet.dismissSheet();
+            }
+
         })
     }
 
