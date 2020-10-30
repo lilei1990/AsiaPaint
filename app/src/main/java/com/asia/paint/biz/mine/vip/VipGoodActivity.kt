@@ -58,7 +58,7 @@ class VipGoodActivity : BaseTitleActivity<ActivityVipGoodBinding>(), OnChangeCal
         val rvCartList = cartView.rv_cart_list
         rvCartList.layoutManager = LinearLayoutManager(mContext, RecyclerView.VERTICAL, false)
         rvCartList.addItemDecoration(DefaultItemDecoration(0, 0, 0, 1));
-        mVipGoodsAdapter = VipCartGoodsAdapter(ArrayList(), viewModel)
+        mVipGoodsAdapter = VipCartGoodsAdapter(viewModel.mCartLists, viewModel)
         rvCartList.adapter = mVipGoodsAdapter
         val specView = LayoutInflater.from(mContext).inflate(R.layout.dialog_vip_goods_spec, mBinding.bottomsheet, false)
         mBinding.tvGoCart.setOnClickListener { v ->

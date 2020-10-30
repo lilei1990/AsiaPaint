@@ -102,8 +102,8 @@ public class VipGoodsFragment extends BaseFragment<FragmentGoodsBinding> {
         mBinding.rvGoods.setAdapter(mVipGoodsAdapter);
         mVipGoodsAdapter.disableLoadMoreIfNotFullPage(mBinding.rvGoods);
         mVipGoodsAdapter.setOnItemClickListener((adapter, view, position) -> {
-            Goods goods = mVipGoodsAdapter.getData().get(position);
-            GoodsDetailActivity.start(mContext, goods.goods_id);
+//            Goods goods = mVipGoodsAdapter.getData().get(position);
+//            GoodsDetailActivity.start(mContext, goods.goods_id);
         });
         mVipGoodsAdapter.setOnChildLisenter(new VipGoodsAdapter.OnClickChildListener() {
             @Override

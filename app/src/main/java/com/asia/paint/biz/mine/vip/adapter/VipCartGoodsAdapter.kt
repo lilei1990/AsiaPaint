@@ -15,17 +15,17 @@ import com.asia.paint.utils.utils.PriceUtils
  * 邮箱 :416587959@qq.com
  * 描述 :Vip购物车点击弹出的列表
  */
-class VipCartGoodsAdapter(data: ArrayList<CartList>,  vipGoodViewModel: VipGoodViewModel) : BaseGlideAdapter<CartList>(R.layout.item_shop_cart_vip, data){
-    private val vipGoodViewModel:VipGoodViewModel = vipGoodViewModel
+class VipCartGoodsAdapter(data: ArrayList<CartList>, vipGoodViewModel: VipGoodViewModel) : BaseGlideAdapter<CartList>(R.layout.item_shop_cart_vip, data) {
+    private val vipGoodViewModel: VipGoodViewModel = vipGoodViewModel
     override fun convert(helper: GlideViewHolder, cartGoods: CartList) {
 
         helper.loadImage(R.id.iv_goods_icon, cartGoods.iconUrl)
-        helper.setText(R.id.tv_goods_name,  cartGoods.goodName + "\n")
+        helper.setText(R.id.tv_goods_name, cartGoods.goodName + "\n")
         helper.setText(R.id.tv_goods_spec, String.format("规格：%s", cartGoods.spec.spec_1))
         helper.setText(R.id.tv_goods_price, PriceUtils.getPrice(cartGoods.spec.price))
         val countView = helper.getView<CountViewVip>(R.id.view_count)
         countView.setEnable(true)
-        countView.setMinCount(1)
+        countView.setMinCount(0)
         countView.specId = 111
         countView.setRecId(111)
         countView.count = cartGoods.count
@@ -34,7 +34,11 @@ class VipCartGoodsAdapter(data: ArrayList<CartList>,  vipGoodViewModel: VipGoodV
         countView.setCallback((object : CountViewCallback {
 
             override fun onChange(count: Int) {
-                cartGoods.count=count
+                if (count == 0) {
+                    data.remove(cartGoods)
+                } else {
+                    cartGoods.count = count
+                }
                 vipGoodViewModel.notification()
             }
 
@@ -45,7 +49,6 @@ class VipCartGoodsAdapter(data: ArrayList<CartList>,  vipGoodViewModel: VipGoodV
 
 
     }
-
 
 
 }
